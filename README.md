@@ -83,6 +83,31 @@ Render the Markdown report as standalone HTML:
 python skills/obhrm-literature-monitor/scripts/render_report_html.py --input outputs/<run-folder>/obhrm_daily_report.md
 ```
 
+Publish a rendered HTML report into the static Netlify site directory:
+
+```powershell
+python skills/obhrm-literature-monitor/scripts/publish_report_site.py --input outputs/<run-folder>/obhrm_daily_report.html
+```
+
+The published report will be available under:
+
+```text
+site/reports/<run-folder>/
+```
+
+The public site copy removes email addresses found in article metadata. Local Markdown/CSV/HTML outputs remain unchanged.
+
+## Netlify Hosting
+
+This repository includes `netlify.toml`. In Netlify, connect this GitHub repository and use:
+
+```text
+Build command: leave empty
+Publish directory: site
+```
+
+After each weekly report, run `publish_report_site.py`, commit the updated `site/` files, and push to GitHub. Netlify will redeploy the public report link automatically.
+
 ## Lark Push
 
 Check local configuration:

@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBHRM Weekly Literature Report</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #647084;
+  --line: #d9e0ea;
+  --soft: #f7f9fc;
+  --panel: #ffffff;
+  --accent: #1f5fbf;
+  --accent-strong: #123b77;
+  --accent-soft: #eaf2ff;
+  --warn: #b42318;
+  --warn-soft: #fff1f0;
+  --ok: #067647;
+  --ok-soft: #ecfdf3;
+  --shadow: 0 18px 44px rgba(24, 33, 47, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Microsoft YaHei", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #f4f7fb 0%, #eef3f8 260px, #f7f9fc 100%);
+  line-height: 1.55;
+}
+main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 34px auto 56px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px 34px;
+  box-shadow: var(--shadow);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--accent), #6a9af6);
+}
+h1 {
+  margin: 0 0 18px;
+  color: var(--accent-strong);
+  font-size: 34px;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+.meta-item {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.meta-label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section {
+  margin-top: 30px;
+}
+h2 {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-size: 23px;
+  line-height: 1.25;
+}
+h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+  line-height: 1.35;
+}
+.article {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0;
+  margin: 18px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfe;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.article-content {
+  padding: 18px 24px 22px;
+}
+.note {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 6px;
+  color: #243b63;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(24, 33, 47, 0.04);
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.stat-value {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent-strong);
+  font-size: 26px;
+  font-weight: 800;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  vertical-align: top;
+}
+th {
+  background: #f1f4f9;
+  color: #344054;
+  text-align: left;
+}
+tr:last-child td { border-bottom: 0; }
+.field-name {
+  width: 170px;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 18px;
+}
+.field-value {
+  color: #263244;
+}
+.abstract-block {
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.abstract-label {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.abstract-text {
+  max-width: 78ch;
+  margin: 0;
+  color: #263244;
+}
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.badge.available { color: var(--ok); background: var(--ok-soft); }
+.badge.missing { color: var(--warn); background: var(--warn-soft); }
+.badge.journal {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+.badge.date {
+  color: #475467;
+  background: #f2f4f7;
+}
+.doi-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #b7cdfb;
+  border-radius: 999px;
+  background: #f7faff;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+a:hover { text-decoration: underline; }
+@media (max-width: 720px) {
+  main { width: min(100% - 20px, 1120px); margin-top: 16px; }
+  .hero { padding: 22px 20px; }
+  h1 { font-size: 26px; }
+  .article-header {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .article-meta {
+    justify-content: flex-start;
+  }
+  .article-content { padding: 16px 18px 18px; }
+  tr, td { display: block; width: 100%; }
+  td { border-bottom: 0; padding: 4px 0; }
+  tr {
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0;
+  }
+  .field-name { white-space: normal; }
+}
+</style>
+</head>
+<body>
+  <main>
+<section class="hero">
+<h1>OBHRM Weekly Literature Report</h1>
+<div class="meta-grid"><div class="meta-item"><span class="meta-label">Window</span><strong>2026-05-18T00:00:00+09:00 to 2026-05-25T00:00:00+09:00</strong></div>
+<div class="meta-item"><span class="meta-label">Concepts</span><strong>AI; LLM; Large Language Model</strong></div>
+<div class="meta-item"><span class="meta-label">Target journal/platform whitelist size</span><strong>198</strong></div>
+<div class="meta-item"><span class="meta-label">Matched articles</span><strong>19</strong></div>
+<div class="meta-item"><span class="meta-label">Missing abstracts</span><strong>7</strong></div></div>
+</section>
+<section class="section"><h2>At a Glance</h2>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-label">Matched articles</span><span class="stat-value">19</span></div>
+<div class="stat-card"><span class="stat-label">Articles with abstracts</span><span class="stat-value">12</span></div>
+<div class="stat-card"><span class="stat-label">Missing abstracts</span><span class="stat-value">7</span></div>
+<div class="stat-card"><span class="stat-label">Target sources</span><span class="stat-value">198</span></div>
+</div>
+<p class="note">Publication metadata often has date-level rather than hour-level precision. This report uses the requested Tokyo-time window and public metadata API date filters.</p>
+<p class="note">Full-text boundary: this report provides DOI and publisher links only. Readers must manually use their own authorized university account for full-text access. The monitor does not log in, bypass access controls, or download PDFs.</p>
+<section class="section"><h2>Articles With Abstracts</h2>
+<article class="article">
+<div class="article-header">
+<h3>1. Voluntary Food Safety Information Disclosure and Firm Innovation</h3>
+<div class="article-meta"><span class="badge journal">Journal of Business Ethics</span>
+<span class="badge date">2026-05-20</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Journal of Business Ethics</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-20</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1007/s10551-026-06349-x" target="_blank" rel="noopener">https://doi.org/10.1007/s10551-026-06349-x</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Suyun Chen; Zongze Li; Hanwen Chen; Feixue Xie</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Department of Economics and Finance, Woody L. Hunt College of Business, University of Texas at El Paso, 500 W University Ave, El Paso, TX, USA; Henan Cancer Hospital; Nanjing Audit University; School of Internal Auditing, Nanjing Audit University, No.86 Yushan West Road, Pukou District, Nanjing City, Jiangsu Province, China; The Affiliated Cancer Hospital of Zhengzhou University &amp; Henan Cancer Hospital, 127 Dongming Road, Jinshui District, Zhengzhou City, Henan Province, China; The University of Texas at El Paso</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Using a sample of A-share listed food-related firms in China from 2008 to 2023, this study investigates the impact of voluntary food safety information disclosure (VFSID) on firm innovation. Employing the philosophy–action–outcome framework, we apply large language model (LLM)-based text analysis to evaluate disclosure practices and construct a comprehensive VFSID index. Our results indicate that VFSID significantly enhances firm innovation, with a one-standard-deviation increase in disclosure quality associated with a 21% increase in patent output. Mechanism analyses reveal that VFSID operates through signaling effects by alleviating financing constraints and improving firms’ human capital structures. The innovation-enhancing effect of VFSID is stronger for firms that disclose more substantive content, are non-state-owned, exhibit lower ESG rating divergence, and operate outside agricultural product processing sectors. Additional analysis shows that VFSID enhances both green innovation and innovation persistence. By developing a stakeholder-centric evaluation framework for voluntary safety disclosure, this study provides stronger support for the signaling theory-based explanation than for the competing legitimacy theory-based explanation on the innovation-enhancing effect of VFSID.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Food Safety and Hygiene; Corporate Social Responsibility Reporting; Organic Food and Agriculture; Voluntary disclosure; Business; Business ethics; Construct (python library); Quality (philosophy); Sample (material); Legitimacy; Food safety; Product (mathematics); Quality of Life Research; Turnover; Industrial organization; Mechanism (biology); Human capital; Accounting; Marketing; China; Capital (architecture); Affect (linguistics); Information asymmetry; Relational capital; Content analysis; Investment (military); Large sample; Capital market; Intellectual capital; Workplace safety; Product market</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI; LLM; Large Language Model</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>2. Affective processes in perceived inclusive EFL classrooms: Linking self-efficacy, engagement, resilience, and attitudes toward generative AI</h3>
+<div class="article-meta"><span class="badge journal">Acta Psychologica</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Acta Psychologica</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.actpsy.2026.107103" target="_blank" rel="noopener">https://doi.org/10.1016/j.actpsy.2026.107103</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Wei Tian; Yunsong Wang; Yongliang Wang</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Anshan Normal University; Nanjing Normal University; North China Electric Power University; North China University of Water Resources and Electric Power; School of Foreign Languages and Cultures, Nanjing Normal University, China. Electronic address: [email removed]; School of Foreign Languages, Anshan Normal University, Anshan, Liaoning, China. Electronic address: [email removed]; School of Foreign Studies, North China University of Water Resources and Electric Power, China. Electronic address: [email removed]</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Inclusive education, extending beyond classroom access to emphasize affective support, equitable participation, and learner diversity, frames this study of university English as a foreign language (EFL) learning in the age of artificial intelligence (AI). We examined affective processes linking academic self-efficacy, classroom engagement, resilience, and attitudes toward generative AI within learners&#x27; perceived inclusive EFL classroom contexts. A cross-sectional survey was administered to 345 undergraduates from four comprehensive universities in China. Structural equation modeling revealed that self-efficacy significantly predicted both engagement and resilience, with engagement partially mediating this relationship. Resilience was positively associated with learners&#x27; attitudes toward generative AI, whereas AI attitudes did not significantly moderate the other structural paths. The model explained 29% of the variance in engagement, 58% in resilience, and 63% in AI attitudes. These findings highlight the role of learners&#x27; affective resources in relation to engagement, resilience, and evaluations of AI-assisted learning, offering a delimited, affect-focused account rather than evidence of broad inclusion or AI-driven equity effects.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Grit, Self-Efficacy, and Motivation; EFL/ESL Teaching and Learning; AI in Service Interactions; Psychology; Generative grammar; Cognitive psychology; Social psychology; Perception; Affect (linguistics); Generative model; Cognition; Developmental psychology; Perspective (graphical); Linguistics</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>3. Convenience or risk? Understanding users&#x27; continuance intention toward AI health assistants</h3>
+<div class="article-meta"><span class="badge journal">Acta Psychologica</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Acta Psychologica</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.actpsy.2026.106929" target="_blank" rel="noopener">https://doi.org/10.1016/j.actpsy.2026.106929</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">yang li; Yang, Yi, 1981-; Silu Bao</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Faculty of Information Engineering, Xinjiang Institute of Technology, 843100, Aksu, China. Electronic address: [email removed]; Jiangnan University; Nanning Normal University; School Of Design, Jiangnan University, 214122, Wuxi, China. Electronic address: [email removed]; School Of Media, Guangxi Vocational &amp; Technical College, 530000, Nanning, China. Electronic address: [email removed]; Xinjiang Institute of Engineering</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">In recent years, AI health assistants have rapidly proliferated in the field of personal health management, yet systematic explanations of the mechanisms underlying users&#x27; continuance intention remain lacking. Building upon the Expectation-Confirmation Model (ECM), this study integrates variables including task-technology fit (TTF), perceived risk, AI literacy, perceived value, and AI hallucination to construct an extended model that explores the relationships among confirmation, perceived usefulness, satisfaction, and continuance intention. This study employs a two-stage research design: Study 1 collects 700 valid samples through online questionnaires and utilizes structural equation modeling (SEM) to test hypothesized relationships and the moderating effects of gender differences, while Study 2, based on 300 samples, conducts exploratory factor analysis (EFA) combined with open-ended questionnaire data to further identify key driving and inhibiting factors affecting continuance intention. The results indicate that confirmation significantly enhances perceived usefulness and satisfaction, with satisfaction further promoting continuance intention. Additionally, TTF and AI literacy exert significant positive effects on both satisfaction and continuance intention, whereas perceived risk demonstrates significant negative effects on confirmation and satisfaction, and AI hallucination negatively influences satisfaction. Gender exhibits significant moderating effects on the pathways through which TTF, satisfaction, and AI literacy affect continuance intention. Study 2 further reveals that factors such as emotional engagement, cognitive support, tool effectiveness, and perceived ease of use constitute important facilitators of continued use, whereas technical burden, emotional detachment, and resource constraints represent major barriers. This study not only validates and extends the applicability of ECM in the AI health assistant context but also provides theoretical foundations and practical insights for product optimization and differentiated promotion of AI health assistants.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">AI in Service Interactions; Artificial Intelligence in Healthcare and Education; Digital Mental Health Interventions; Continuance; Psychology; Social psychology; Applied psychology; Occupational safety and health; Poison control; Health care; MEDLINE; Nursing; Human factors and ergonomics; Medical education</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>4. Leveraging machine learning algorithms and explainable AI for predicting mental health disorder treatment at the workplace</h3>
+<div class="article-meta"><span class="badge journal">Acta Psychologica</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Acta Psychologica</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.actpsy.2026.107081" target="_blank" rel="noopener">https://doi.org/10.1016/j.actpsy.2026.107081</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Daniela Candanedo; Edmund Agyemang; Farhana Chaudhry; Taylor Franks; Bailey Taylor; Kevin Siliezar; Samuel Kakraba</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Department of Biostatistics and Data Science, Celia Scott Weatherhead School of Public Health and Tropical Medicine at Tulane University, New Orleans, LA, USA; Department of Biostatistics and Data Science, Celia Scott Weatherhead School of Public Health and Tropical Medicine at Tulane University, New Orleans, LA, USA; Center for Aging, School of Medicine, Tulane University, New Orleans, LA, 70112, USA; Conolly Alexander Institute of Data Science (CAIDS), Tulane University, New Orleans, LA, 70112, USA. Electronic address: [email removed]; Department of Epidemiology, Celia Scott Weatherhead School of Public Health and Tropical Medicine at Tulane University, New Orleans, LA, USA; Tulane University</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Mental health disorders in the workplace pose a significant global public health challenge, often resulting in reduced productivity. Timely and accurate prediction is essential for facilitating early and effective interventions. In this study, we evaluated six machine learning (ML) algorithms namely logistic regression, random forest, gradient boosting (GB), categorical boosting (CB), support vector machine, and neural network for their ability to predict treatment of mental health disorders using data from the Open Sourcing Mental Health (OSMH) Dataset. To enhance model interpretability and transparency, we incorporated explainable AI techniques, specifically SHapley Additive exPlanations (SHAP), to identify the most influential features driving model predictions. Key predictors included work interference, family history, age, available care options, and help-seeking behavior. The top 10 features identified by the CB and GB models were merged to form the final feature set for model development. Our results demonstrate that ML algorithms can effectively predict mental health outcomes in workplace settings, with the SHAP-enhanced CB and GB models showing the highest clinical relevance and potential for supporting early intervention strategies. The CB and GB models, optimized through feature selection using SHAP, both demonstrated superior performance on the testing data. The CB model achieved an accuracy of 0.8452, precision of 0.8278, recall of 0.9058, and F1 score of 0.8651, while the GB model achieved an accuracy of 0.8254, precision of 0.8357, recall of 0.8478, and F1 score of 0.8417. Both models also yielded the highest AUC scores (0.9101 for CB and 0.9070 for GB) indicating excellent discrimination ability. SHAP analysis revealed that work interference and family history were the most influential features positively impacting the prediction of mental health treatment (mean SHAP values: CB = +0.1724 and + 0.0354; GB = +0.1747 and + 0.0184, respectively), whereas coworkers and seeking help negatively impacted prediction (mean SHAP values: CB = -0.0329 and - 0.0120; GB = -0.0332 and - 0.0111, respectively). These findings highlight the potential of interpretable machine learning models to support targeted workplace mental health interventions. However, the results should be interpreted considering the pre-pandemic 2014 survey context, reliance on self-reported data, and the absence of external validation.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Mental Health via Writing; Explainable Artificial Intelligence (XAI); Digital Mental Health Interventions; Machine learning; Mental health; Psychology; Artificial intelligence; Algorithm; Computer science; Occupational safety and health; Applied psychology; Psychiatry; Clinical psychology; Human factors and ergonomics; MEDLINE; Psychotherapist; Suicide prevention; Poison control</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>5. Addressing AI-related fears: the impact of technological social responsibility on employees’ attitudes towards AI integration at work</h3>
+<div class="article-meta"><span class="badge journal">Review of Managerial Science</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Review of Managerial Science</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1007/s11846-026-01037-6" target="_blank" rel="noopener">https://doi.org/10.1007/s11846-026-01037-6</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Katarzyna Piwowar-Sulej; Qaisar Iqbal; Andreas Kallmuenzer</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Al Yamamah University; College of Business, Al Yamamah University,  King Fahd Branch Rd, Al Qirawan,, 13541, Riyadh, Saudi Arabia; Department of Strategy, Excelia Business School – CERIIM, 102 rue de Coureilles, 17000, La Rochelle, France; Excelia Business School; Wroclaw University of Economics and Business; Wroclaw University of Economics and Business, Komandorska 118/120, 53-345, Wrocław, Poland</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Abstract Considering the need to explore employee responses to ongoing technological changes and drawing on the assumptions of the Conservation of Resources theory, this study examines the indirect impact of technological social responsibility (TSR, an organizational factor) on employees’ attitudes toward AI integration through their resistance to technological change (a personal factor). It also investigates whether perceived media emphasis on AI-related job loss (an environmental factor) moderates the relationship between TSR and resistance to technological change. It uses data collected from employees working in 504 large companies in Poland and applies PLS-SEM analyses. The empirical findings show that TSR reduces resistance to technological change which is a crucial factor in increasing positive attitudes towards AI integration at work. Resistance to technological change mediates between TSR and employees’ AI-related attitudes, however media activities do not play moderating role in the model. This study contributes to the limited empirical understanding of TSR by demonstrating its indirect effect on employee behavior during digital transformation. The findings offer practical implications for organizations aiming to facilitate AI integration at work by strengthening TSR-based strategies to reduce employee resistance.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Technostress in Professional Settings; Ethics and Social Impacts of AI; Cyberloafing and Workplace Behavior; Resistance (ecology); Technological change; Work (physics); Business; Organizational change; Empirical research; Public relations; Conservation of resources theory; Marketing; Empirical evidence; Social responsibility; Psychology; Knowledge management; Social influence; Organizational commitment; Technology integration; Social media; Human resources; Variety (cybernetics)</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>6. Structural centrality of artificial intelligence and technology transfer: evidence from pharmaceutical innovation labs</h3>
+<div class="article-meta"><span class="badge journal">The Journal of Technology Transfer</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">The Journal of Technology Transfer</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1007/s10961-026-10347-6" target="_blank" rel="noopener">https://doi.org/10.1007/s10961-026-10347-6</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Galo Peralta; Blanca Sánchez; Raj Ratwani</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Instituto de Investigación Marqués de Valdecilla; Instituto de Investigación Marqués de Valdecilla (IDIVAL), Santander, Spain; Marqués de Valdecilla University Hospital; MedStar Health; MedStar Health Research Institute, Washington, DC, USA; Servicio de Farmacología Clínica, Marqués de Valdecilla University Hospital, Santander, Spain</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Abstract Artificial intelligence is increasingly reshaping pharmaceutical research and development, yet limited attention has been paid to how firms organise the integration and governance of AI-related capabilities. This study examines how large pharmaceutical companies structure innovation labs as organisational interfaces for mobilising and coordinating AI-driven knowledge and technologies. Building on technology transfer and organisational design theory, we conceptualise the structural centrality of artificial intelligence within innovation labs as a key design variable shaping governance arrangements, collaboration patterns, and appropriability conditions. Drawing on an original dataset of 138 innovation labs established by 24 of the world’s largest pharmaceutical companies, we classify labs according to whether artificial intelligence is absent, embedded within broader innovation portfolios, or structurally centralised in dedicated units. Using a configuration-based descriptive approach, we analyse differences in strategic orientation, collaborative models, and activity profiles across these configurations. The findings are consistent with the view that variation in structural centrality is associated with systematically different patterns of capability governance. Labs in which artificial intelligence is embedded appear to rely on diffusion-oriented and partnership-based arrangements, supporting cross-domain experimentation. In contrast, dedicated artificial intelligence labs display characteristics consistent with more internalised and governance-intensive configurations. Moreover, AI-focused infrastructures are highly concentrated among the largest firms, suggesting scale-dependent conditions for orchestrating data-intensive capabilities. By conceptualising innovation labs as differentiated organisational interfaces for AI-related technology transfer, this study extends contingent models of technology transfer into the domain of digital transformation in regulated, science-based industries.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Innovative Approaches in Technology and Social Development; Facilities and Workplace Management; Innovation and Knowledge Management; Centrality; Knowledge management; Corporate governance; Enabling; Key (lock); Artificial intelligence; Knowledge transfer; Domain (mathematical analysis); Computer science; Ambidexterity; Engineering; Digital transformation; Technology transfer; Applications of artificial intelligence; Business; Social network analysis; Data science; High tech; Artificial neural network; Innovation management</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>7. Is It Fair to be Accurate? Moral-Emotional Responses to Organizations’ AI Orientation Choices</h3>
+<div class="article-meta"><span class="badge journal">Business &amp; Society</span>
+<span class="badge date">2026-05-24</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Business &amp; Society</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-24</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1177/00076503261448488" target="_blank" rel="noopener">https://doi.org/10.1177/00076503261448488</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Flore Vancompernolle Vromman; Corentin Hericher; Corentin Vande Kerckhove; Nicolas Raineri</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Centre Européen de Recherche en Economie Financière et Gestion des Entreprises; ICN Business School, Université de Lorraine, CEREFIGE, Nancy, France; UCLouvain; UCLouvain – Louvain Research Institute in Management and Organizations, Louvain-la-Neuve, Belgium; UCLouvain – Louvain Research Institute in Management and Organizations, Mons, Belgium; Université de Lorraine</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">While research on algorithmic decision-making has grown substantially, little is known about people’s moral reactions to organizations’ artificial intelligence (AI) orientation choices. Drawing on deonance theory, we hypothesize that an organization’s choice between an algorithm maximizing accuracy at the expense of fairness and one prioritizing fairness over accuracy triggers distinct moral-emotional responses among third-party observers. We conducted three vignette-based experiments comparing accuracy- and fairness-oriented algorithms in hiring (Studies 1 and 3) and dismissal (Study 2), with different degrees of accuracy loss (Study 3). Results indicate that moral emotions (i.e., other-condemning and other-praising) mediate the effects of this choice on observers’ behavioral responses (i.e., negative and positive word-of-mouth) toward the organization. By highlighting how accuracy–fairness trade-offs shape observers’ moral appraisals of organizations, this article advances management research on algorithmic decision-making and extends deonance theory to algorithmic human resource management, establishing AI orientation choices as a moral context informing observers’ approval or disapproval of organizations.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Ethics and Social Impacts of AI; AI in Service Interactions; Digital Economy and Work Transformation; Dismissal; Orientation (vector space); Context (archaeology); Social psychology; Psychology; Cognitive psychology; Computer science; Business ethics; Behavioral economics; Resource (disambiguation); Experimental economics; Social cognitive theory of morality; Human resource management; Decision theory; Organizational behavior; Artificial intelligence; Heuristics</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>8. Advancing Sustainable Buildings and Infrastructure Management: A RAG and LLM Approach</h3>
+<div class="article-meta"><span class="badge journal">Journal of Management in Engineering</span>
+<span class="badge date">2026-05-24</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Journal of Management in Engineering</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-24</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1061/jmenea.meeng-7355" target="_blank" rel="noopener">https://doi.org/10.1061/jmenea.meeng-7355</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Khalid K. Naji; Murat Gündüz; Amr Mohamed; Awad Alomari</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Associate Professor of Civil and Environmental Engineering, College of Engineering, Qatar Univ., Doha 2713, Qatar; Dept. Head of Computer Science and Engineering, College of Engineering, Qatar Univ., Doha 2713, Qatar; Ph.D. Candidate, Engineering Management Dept., Qatar Univ., Doha 2713, Qatar; Professor of Civil and Environmental Engineering, College of Engineering, Qatar Univ., Doha 2713, Qatar (corresponding author). ORCID: ; Qatar University</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Sustainability goals in construction and infrastructure projects depend on the integration and management of complex, multisource data. However, engineering management practitioners frequently encounter fragmented regulatory documentation, dispersed standards, and inaccessible sustainability guidance. This paper presents a decision-support platform, the sustainability knowledge hub, developed using retrieval-augmented generation (RAG) and large language models (LLMs). Designed to centralize and contextualize global sustainability assessment system (GSAS) requirements, the system supports project managers, consultants, and contractors by providing accurate, clause-grounded responses to sustainability-related queries. Six retrieval strategies were benchmarked across three LLMs (GPT-3.5 Turbo, Gemini 2 Flash, and Llama 3.1 8B Instruct) using the retrieval-augmented generation assessment system (RAGAS) to assess retrieval precision, answer correctness, and semantic alignment. The results reveal consistent advantages for parent-document, cross-encoder, and ensemble-based pipelines, while also quantifying latency trade-offs between lightweight and more computationally intensive configurations. A user-based pilot study with a 55-question benchmark shows that the chatbot allows practitioners to obtain correct answers more than two orders of magnitude faster than manual PDF search, with a 1.4-fold improvement in accuracy. Beyond technical performance, this paper highlights implications for engineering management practice, including improved compliance tracking, streamlined decision workflows, and enhanced stakeholder communication. Future research directions include exploring lightweight embeddings, domain-specific LLMs, and extended field deployments to broaden adoption in sustainability-driven engineering projects.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Sustainable Building Design and Assessment; Construction Project Management and Performance; BIM and Construction Integration; Sustainability; Stakeholder; Engineering; Benchmark (surveying); Field (mathematics); Systems engineering; Engineering management; Computer science; Construction engineering; Risk analysis (engineering); Process management; Stakeholder engagement; Decision support system; Sustainable development; Management science; Construction management; Risk management; Chatbot; Knowledge management; Integrated project delivery; Triple bottom line; Stakeholder management; Project management</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI; LLM; Large Language Model</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>9. The association between generative artificial intelligence use and foreign language classroom anxiety</h3>
+<div class="article-meta"><span class="badge journal">Acta Psychologica</span>
+<span class="badge date">2026-05-25</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Acta Psychologica</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-25</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.actpsy.2026.107132" target="_blank" rel="noopener">https://doi.org/10.1016/j.actpsy.2026.107132</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Mingxing Yang; Wei Yang</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Coconut Research Institute; Moutai Institute, China; Moutai Institute, China. Electronic address: [email removed]; Yangzhou University</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">This study examines the association between Generative Artificial Intelligence use and foreign language classroom anxiety (FLCA) among undergraduates in an under-resourced private university in Western China. Data were collected from 630 first- and second-year students using the Foreign Language Classroom Anxiety Scale (FLCAS). Analyses included descriptive statistics, t-tests, analysis of variance (ANOVA), Pearson correlations, and hierarchical regression. Results showed that gender significantly predicted frequency of Artificial Intelligence (AI) use (female &gt; male, p &lt; .01), but not FLCA or its two factors, Classroom Performance Anxiety (CPA) and Learning Process Anxiety (LPA). English proficiency significantly influenced both AI use frequency and FLCA (p &lt; .05): higher-proficiency students used AI more frequently but reported lower anxiety, whereas age and socioeconomic status showed no significant effects. Regression analyses indicated that, after controlling for proficiency, frequency of AI use significantly predicted overall FLCA (B = 0.253, p &lt; .001), CPA (B = 0.288, p &lt; .001), and LPA (B = 0.235, p &lt; .001). Moderation analysis further showed that English proficiency attenuated the relationship between AI use frequency and anxiety, particularly for LPA. The final models explained 11.9% of the variance in overall FLCA, 10.8% in CPA, and 11.3% in LPA. These findings suggest that frequent AI use may be associated with heightened anxiety in under-resourced contexts, while higher English proficiency serves an attenuating role, underscoring the need for scaffolded AI literacy training and differentiated instructional support when integrating AI tools.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">EFL/ESL Teaching and Learning; Technology-Enhanced Education Studies; Emotional Intelligence and Performance; Psychology; Association (psychology); Anxiety; Cognitive psychology; Generative grammar; Foreign language anxiety; Foreign language; Developmental psychology; Artificial intelligence; Emotional intelligence; Cognition; Language acquisition; Constructed language; Social psychology; Cognitive science</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>10. Governing the Issue: Strategic Delayed Moralization of AI in Law Enforcement</h3>
+<div class="article-meta"><span class="badge journal">Business &amp; Society</span>
+<span class="badge date">2026-05-25</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Business &amp; Society</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-25</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1177/00076503261447590" target="_blank" rel="noopener">https://doi.org/10.1177/00076503261447590</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Martina Frizzo; Elanor Colleoni; Stefania Romenti</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">IULM University; IULM University, Milano, Italy</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Artificial intelligence (AI) technologies are typically first adopted as embodiments of rationality and neutrality, and only later do their moral implications receive public scrutiny. This temporal gap between adoption and moral recognition has been widely observed, yet how organizations actively sustain it remains undertheorized. This study theorizes strategic delayed moralization as the process through which organizations actively shape the timing and trajectory of AI transition from technical artifacts to morally recognized objects. We focus on ShotSpotter, an AI-powered gunshot detection system used in law enforcement, analyzing a decade of organizational communications and public discourse. Combining issue management and strategic ambiguity theory, we develop a process model showing how organizations deploy evolving forms of strategic ambiguity to delay moral recognition, and how this process is ultimately constrained by societal moralization that progressively narrows the space for ambiguity. This research contributes to research on AI in society by showing how business and society interact in shaping the moral trajectory of AI.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Ethics and Social Impacts of AI; Psychology of Moral and Emotional Judgment; Management and Organizational Studies; Ambiguity; Rationality; Law enforcement; Process (computing); Law and economics; Enforcement; Sociology; Law; Business; Strategic Choice; Space (punctuation); Strategic intelligence; Focus (optics); Public relations; Political science; Strategic planning; Economics; Moral disengagement; Organizational behavior; Business ethics</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>11. Algorithmic HRM and the illusion of autonomy: a critical perspective on empowerment under platform governance</h3>
+<div class="article-meta"><span class="badge journal">Employee Relations</span>
+<span class="badge date">2026-05-25</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Employee Relations</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-25</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1108/er-08-2025-0643" target="_blank" rel="noopener">https://doi.org/10.1108/er-08-2025-0643</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Zhisheng Chen</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Wuxi Taihu Hospital; Wuxi Taihu University , ,</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Purpose This article examines how generative artificial intelligence (GAI), when embedded in platform-based HR systems, changes the nature of empowerment in human resource management. Design/methodology/approach The article develops a conceptual framework combining insights from critical management studies, platform governance and HRM literature. It introduces a three-part empowerment model: instrumental, relational and structural. Findings GAI appears to empower HR professionals by improving efficiency and personalization. However, when implemented through platform infrastructures, it often reduces human discretion, obscures decision logic and shifts control to external systems. This leads to a condition of pseudo-empowerment. Originality/value This study reframes digital empowerment as a contested and layered process. It highlights the hidden power dynamics behind AI adoption in HR and offers a theoretical model to explain how GAI reprograms six core HRM functions.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Digital Economy and Work Transformation; Employer Branding and e-HRM; Ethics and Social Impacts of AI; Empowerment; Corporate governance; Generative grammar; Knowledge management; Human resource management; Control (management); Power (physics); Delegation; Sociology; Perspective (graphical); Illusion; Public relations; Human resources; Business; Political science; Conceptual framework; Management; Autonomy; Government (linguistics); Illusion of control; Process management</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>12. LLM-Based Multiagent System for Construction Job Safety Analysis</h3>
+<div class="article-meta"><span class="badge journal">Journal of Management in Engineering</span>
+<span class="badge date">2026-05-25</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Journal of Management in Engineering</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-25</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1061/jmenea.meeng-7335" target="_blank" rel="noopener">https://doi.org/10.1061/jmenea.meeng-7335</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Khashayar Ghorab; Pouya Zangeneh</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Univ. of Calgary; University of Calgary</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">Job safety analysis (JSA) is a safety management framework for the construction sector that relies on manual processes and is constrained by the limitations of manual performance. Although single-agent large language model (LLM) applications have shown potential for automating aspects of safety management, they lack contextual depth and multistep reasoning. This study introduces an LLM-based multiagent system to automate JSA and enhance construction safety management. This system employs multiple agents, each specialized in distinct phases of JSA. The systematic design, development, and evaluation of the framework highlight the advantages of the multiagent approach. Compared with alternative approaches, the system produced more accurate and comprehensive safety risk identification, assessment, and management. Both automated evaluation and expert reviewers confirmed its effectiveness and practical applicability in advancing safety management practices. Furthermore, several key parameters, such as prompt engineering, fine-tuning, and the integration of feedback loops, and their influence on the performance of multiagent systems are explored. This study offers a range of applicable insights for designing high-performance multiagent systems in the construction safety domain, considering factors such as task complexity, cost, and time.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Occupational Health and Safety Research; BIM and Construction Integration; Construction Project Management and Performance; Key (lock); Task (project management); Computer science; Risk analysis (engineering); Multi-agent system; System safety; Systems engineering; Management system; Construction site safety; Construction management; Risk management; Range (aeronautics); Engineering; Expert system; Unified Modeling Language; Software engineering; Process management</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI; LLM; Large Language Model</td></tr></table>
+</div>
+</article>
+<section class="section"><h2>Missing Abstract</h2>
+<article class="article">
+<div class="article-header">
+<h3>1. Integrating large language models for data-driven adaptive decision support in floriculture production: Managing contextual heterogeneity</h3>
+<div class="article-meta"><span class="badge journal">International Journal of Production Economics</span>
+<span class="badge date">2026-05-19</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">International Journal of Production Economics</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-19</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.ijpe.2026.110072" target="_blank" rel="noopener">https://doi.org/10.1016/j.ijpe.2026.110072</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Claire Y.T. Chen; Edward W. Sun; Chloe Y.H. Huang; Siyuan Lu</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Carnegie Mellon University; Carnegie Mellon University, USA; KEDGE Business School, France; Karlsruhe Institute of Technology; Karlsruhe Institute of Technology (KIT), Germany; Kedge Business School; MBS &amp; MRM, University of Montpellier, France; Renmin University of China; Sino-French Institute, Renmin University of China (RUC), PR China; Université de Montpellier</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Greenhouse Technology and Climate Control; Smart Agriculture and AI; Plant Molecular Biology Research; Computer science; Robustness (evolution); ENCODE; Adaptability; Decision support system; Flexibility (engineering); Data mining; Production (economics); Industrial engineering; Data-driven; Machine learning; Process (computing); Adaptive management; Consistency (knowledge bases); Fusion mechanism; Representation (politics); Data modeling; Artificial intelligence; Big data; Empirical research; Nonlinear system; Encoder; Decision tree; Product lifecycle; Model predictive control; Knowledge acquisition; Data science; New product development; Predictive modelling; Process management; Sensor fusion; Tree (set theory); External Data Representation; Floriculture</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI; Large Language Model</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>2. Empowering Flexible Manufacturing Systems through Generative-AI: A Pathway to Intelligent and Adaptive Production Systems</h3>
+<div class="article-meta"><span class="badge journal">Global Journal of Flexible Systems Management</span>
+<span class="badge date">2026-05-20</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Global Journal of Flexible Systems Management</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-20</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1007/s40171-026-00501-2" target="_blank" rel="noopener">https://doi.org/10.1007/s40171-026-00501-2</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Naveen Virmani; Rajesh Kumar Singh; Srikant Gupta</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Institute of Management Studies (IMS) Ghaziabad-B School, Ghaziabad, India; Institute of Management Technology; Jaipuria Institute of Management; Jaipuria Institute of Management, Jaipur, India; Management Development Institute; Management Development Institute, Gurgaon, India</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Digital Transformation in Industry; Flexible and Reconfigurable Manufacturing Systems; Scheduling and Optimization Algorithms; Computer science; Production (economics); Flexible manufacturing system; Manufacturing engineering; Production system (computer science); Business; Advanced manufacturing; Production planning; Computer-integrated manufacturing; Manufacturing; Automotive industry; Adaptive system; Manufacturing execution system; Systems engineering; Key (lock)</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>3. Prescriptive technology intelligence for technology opportunity discovery: An LLM-based automated framework for narrating promising technology concepts</h3>
+<div class="article-meta"><span class="badge journal">Technovation</span>
+<span class="badge date">2026-05-20</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Technovation</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-20</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.technovation.2026.103584" target="_blank" rel="noopener">https://doi.org/10.1016/j.technovation.2026.103584</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Myeongsang Yoo; Jungmin Hwang; Hakyeon Lee</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Department of Data Science, Seoul National University of Science and Technology, 232 Gongneung-ro, Nowon-gu, Seoul, 01811, Republic of Korea; Department of Industrial Engineering, Seoul National University of Science and Technology, 232 Gongneung-ro, Nowon-gu, Seoul, 01811, Republic of Korea; Seoul National University of Science and Technology</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Intellectual Property and Patents; Advanced Text Analysis Techniques; Open Source Software Innovations; Computer science; Knowledge management; Engineering management; Management science; Data science; Engineering; Ambient intelligence; Systems engineering; Engineering ethics; Process management; Intelligence analysis; Key (lock); Business; Technology innovation</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">LLM</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>4. Glitter: Exploring an LLM Virtual Agent for Supporting Practitioners in Behavioral Interventions of Autistic Children</h3>
+<div class="article-meta"><span class="badge journal">International Journal of Human-Computer Interaction</span>
+<span class="badge date">2026-05-21</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">International Journal of Human-Computer Interaction</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-21</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1080/10447318.2026.2659953" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2026.2659953</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Xin Tong; Liwen He; Zhaowen Deng; Weibo Li; Ziheng Tang; Yixuan Li; Yutong Ren; Matthew Louis Mauriello; Ming Li</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Data Science Research Center, Duke Kunshan University; Department of Computer and Information Sciences, University of Delaware; Digital Innovation Research Center, Duke Kunshan University; Duke Kunshan University; Electronical and Computer Engineering, Duke Kunshan University; Hong Kong University of Science and Technology; School of Information, University of Michigan; School of Mechanical Engineering, Tsinghua University; Shenzhen International Gradute School, Tsinghua Campus, The University Town, Tsinghua University; The Future Laboratory, Tsinghua University; Thrust of Computational Media and Arts, Hong Kong University of Science and Technology (Guangzhou); Tsinghua University; Tsinghua–Berkeley Shenzhen Institute; Undergraduate, Duke Kunshan University; University Town of Shenzhen; University of Delaware; University of Hong Kong; University of Michigan</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Autism Spectrum Disorder Research; Social Robot Interaction and HRI; Digital Mental Health Interventions; Psychology; Psychological intervention; Intervention (counseling); Applied psychology; Psychotherapist; Developmental psychology; Autism; Clinical psychology; Qualitative research; Action (physics); Context (archaeology)</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">LLM</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>5. Optimizing AI adoption through HR practices: Systematic review and theoretical framework for improved employee well-being</h3>
+<div class="article-meta"><span class="badge journal">Human Resource Management Review</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Human Resource Management Review</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1016/j.hrmr.2026.101152" target="_blank" rel="noopener">https://doi.org/10.1016/j.hrmr.2026.101152</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Sitong Yu; Shota Kawasaki; Federico Magni; Kang Yang Trevor Yu; Vijayan P. Munusamy</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">not available</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">AI and HR Technologies; Ethics and Social Impacts of AI; Employer Branding and e-HRM; Knowledge management; Process management; Business; Computer science; Management science; Human resource management; Operations management; Risk analysis (engineering); Employee morale; Systematic review; Psychology; Key (lock)</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>6. University student perspectives on generative AI: reconfiguring competence, fairness, and authorship in academic work</h3>
+<div class="article-meta"><span class="badge journal">Studies in Higher Education</span>
+<span class="badge date">2026-05-23</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Studies in Higher Education</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-23</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1080/03075079.2026.2658738" target="_blank" rel="noopener">https://doi.org/10.1080/03075079.2026.2658738</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">Wendy Wenxi Hu</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Education University of Hong Kong; The Education University of Hong Kong</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Artificial Intelligence in Healthcare and Education; Ethics and Social Impacts of AI; AI in Service Interactions; Higher education; Generative grammar; Work (physics); Sociology; Pedagogy; Mathematics education; Engineering ethics; Psychology; Graduate students; Qualitative research; Student engagement; Generative model; Research methodology; Public university; Academic advising; Teaching method; Academic achievement</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+<article class="article">
+<div class="article-header">
+<h3>7. Measuring Love Toward AI: Development and Validation of the Love Attitudes Scale Toward Artificial Intelligence (LAS-AI)</h3>
+<div class="article-meta"><span class="badge journal">International Journal of Human-Computer Interaction</span>
+<span class="badge date">2026-05-25</span>
+<span class="badge missing">Missing</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">International Journal of Human-Computer Interaction</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2026-05-25</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1080/10447318.2026.2665410" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2026.2665410</a></td></tr>
+<tr><td class="field-name">Authors</td><td class="field-value">R K Li; Lanbing Li; Yuan Zheng; C Li; Xianglong Zeng</td></tr>
+<tr><td class="field-name">Affiliations</td><td class="field-value">Beijing Key Laboratory of Applied Experimental Psychology, Faculty of Psychology, Beijing Normal University; Beijing Normal University</td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge missing">Missing</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text">_No public abstract found._</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">AI in Service Interactions; Social Robot Interaction and HRI; Ethics and Social Impacts of AI; Psychology; Scale (ratio); Social psychology; Artificial intelligence; Computer science; Measure (data warehouse); Validation test; Psychometrics; Applied psychology; Test (biology); Cognitive psychology</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">AI</td></tr></table>
+</div>
+</article>
+  </main>
+</body>
+</html>

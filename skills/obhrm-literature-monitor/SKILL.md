@@ -111,4 +111,11 @@ Generate the standalone HTML report from Markdown with:
 python skills/obhrm-literature-monitor/scripts/render_report_html.py --input outputs/<run-folder>/obhrm_daily_report.md
 ```
 
-The HTML file is a static page suitable for Netlify or similar hosting.
+Publish the HTML report into the Netlify static site directory with:
+
+```powershell
+python skills/obhrm-literature-monitor/scripts/publish_report_site.py --input outputs/<run-folder>/obhrm_daily_report.html
+```
+
+The generated public path is `site/reports/<run-folder>/`. Netlify should publish the repository's `site` directory.
+The public site copy removes email addresses found in article metadata while leaving local Markdown/CSV/HTML outputs unchanged.
