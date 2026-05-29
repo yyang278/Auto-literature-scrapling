@@ -1,0 +1,18 @@
+timezone: Asia/Tokyo
+default_window:
+  weekly_push_day: Monday
+  weekly_push_time: "08:00"
+outputs:
+  root: outputs
+  report_name: obhrm_daily_report.md
+  csv_name: obhrm_daily_records.csv
+push:
+  lark_enabled: false
+keyword_groups:
+  active:
+    name: ai-llm-weekly
+    match_mode: any
+    concepts:
+      - AI
+      - LLM
+      - Large Language Model

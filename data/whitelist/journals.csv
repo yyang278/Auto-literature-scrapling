@@ -1,0 +1,871 @@
+﻿journal_title,normalized_title,issn,eissn,publisher,abdc_rating,abdc_for,ajg2024,ajg_field,in_ft50,in_utd24,in_hci_sjr_q1,is_preprint_platform,source_lists,obhrm_candidate,inclusion_reason,review_status
+Abacus,abacus,0001-3072,1467-6281,Wiley-Blackwell Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Academy of Management Annals,academy of management annals,1941-6520,1941-6067,Academy of Management,A*,3507,4*,ETHICS-CSR-MAN,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'academy of management'; FT50/UTD management-general journal,include_candidate
+Academy of Management Discoveries,academy of management discoveries,2168-1007,,Academy of Management,A*,3507,,,False,False,False,False,ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'academy of management',include_candidate
+Academy of Management Journal,academy of management journal,0001-4273,1948-0989,Academy of Management,A*,3507,4*,ETHICS-CSR-MAN,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'academy of management'; FT50/UTD management-general journal,include_candidate
+Academy of Management Learning and Education,academy of management learning and education,1537-260X,1944-9585,Academy of Management,A*,3507,4*,MDEV&EDU,False,False,False,False,AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field MDEV&EDU; title keyword 'academy of management',include_candidate
+Academy of Management Perspectives,academy of management perspectives,1558-9080,1943-4529,Academy of Management,A,3507,4,ETHICS-CSR-MAN,False,False,False,False,AJG2024_4;ABDC_A,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'academy of management',include_candidate
+Academy of Management Review,academy of management review,0363-7425,1930-3807,Academy of Management,A*,3507,4*,ETHICS-CSR-MAN,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'academy of management'; FT50/UTD management-general journal,include_candidate
+Accident Analysis and Prevention,accident analysis and prevention,0001-4575,1879-2057,Elsevier,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Accounting and Business Research,accounting and business research,0001-4788,2159-4260,Taylor & Francis Online,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting and Finance,accounting and finance,0810-5391,1467-629X,Wiley-Blackwell Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting Auditing and Accountability Journal,accounting auditing and accountability journal,0951-3574,1758-4205,Emerald Group Publishing Limited,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Accounting Education,accounting education,0963-9284,1468-4489,Taylor & Francis Online,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting Forum,accounting forum,0155-9982,1467-6303,Taylor & Francis Online,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting History,accounting history,1032-3732,1749-3374,Sage Publications,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting Horizons,accounting horizons,0888-7993,1558-7975,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Accounting in Europe,accounting in europe,1744-9480,1744-9499,Taylor & Francis Online,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Accounting, Organizations and Society",accounting organizations and society,0361-3682,1873-6289,Elsevier,A*,3501,4*,ACCOUNT,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+ACM Transactions on Computer-Human Interaction,acm transactions on computer human interaction,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+ACM Transactions on Human-Robot Interaction,acm transactions on human robot interaction,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+ACM Transactions on Privacy and Security,acm transactions on privacy and security,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+Acta Psychologica,acta psychologica,0001-6918,1873-6297,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Adelaide Law Review,adelaide law review,0065-1915,,University of Adelaide,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Administrative Science Quarterly,administrative science quarterly,0001-8392,1930-3815,Sage Publications,A*,3507,4*,ETHICS-CSR-MAN,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'administrative science'; FT50/UTD management-general journal,include_candidate
+Advances in Accounting,advances in accounting,0882-6110,1046-5715,Elsevier,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Advances in Accounting Behavioral Research,advances in accounting behavioral research,1475-1488,,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Advances in Applied Probability,advances in applied probability,0001-8678,1475-6064,Applied Probability Trust,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Advances in Experimental Social Psychology,advances in experimental social psychology,0065-2601,1557-8410,Elsevier,A*,3507,,,False,False,False,False,ABDC_A*,True,ABDC FoR 3507,needs_review
+Advances in Management Accounting,advances in management accounting,1474-7871,,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Agricultural Economics,agricultural economics,0169-5150,1574-0862,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+AIS Transactions on Human-Computer Interaction,ais transactions on human computer interaction,1944-3900,,Association for Information Systems,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Alternatives: global, local, political",alternatives global local political,0304-3754,2163-3150,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+American Business Law Journal,american business law journal,0002-7766,1744-1714,Wiley-Blackwell Publishing,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+American Economic Journal: Applied Economics,american economic journal applied economics,1945-7782,1945-7790,American Economic Association,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+American Economic Journal: Economic Policy,american economic journal economic policy,1945-7731,1945-774X,American Economic Association,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Economic Journal: Macroeconomics,american economic journal macroeconomics,1945-7707,1945-7715,American Economic Association,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+American Economic Journal: Microeconomics,american economic journal microeconomics,1945-7669,1945-7685,American Economic Association,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Economic Review: Insights,american economic review insights,2640-205X,2640-2068,American Economic Association,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Journal of Agricultural Economics,american journal of agricultural economics,0002-9092,1467-8276,Oxford University Press,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Journal of Comparative Law,american journal of comparative law,0002-919X,2326-9197,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+American Journal of Health Economics,american journal of health economics,2332-3493,2332-3507,MIT Press,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Journal of Political Science,american journal of political science,0092-5853,1540-5907,Wiley-Blackwell Publishing,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Journal of Public Health,american journal of public health,0090-0036,1541-0048,The American Public Health Association,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Journal of Sociology,american journal of sociology,0002-9602,1537-5390,The University of Chicago Press,A*,3507,4*,SOC SCI,False,False,False,False,AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+American Political Science Review,american political science review,0003-0554,1537-5943,Cambridge University Press,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+American Psychologist,american psychologist,0003-066X,1935-990X,American Psychological Association,A*,3507,,,False,False,False,False,ABDC_A*,True,ABDC FoR 3507,needs_review
+American Sociological Review,american sociological review,0003-1224,1939-8271,Sage Publications,A*,3507,4*,SOC SCI,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Annals of Actuarial Science,annals of actuarial science,1748-4995,1748-5002,Cambridge University Press,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Annals of Applied Probability,annals of applied probability,1050-5164,2168-8737,Institute of Mathematical Statistics,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Annals of Applied Statistics,annals of applied statistics,1932-6157,1941-7330,Institute of Mathematical Statistics,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Annals of Operations Research,annals of operations research,0254-5330,1572-9338,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; broad-management/noise keyword needs human check,needs_review
+Annals of Probability,annals of probability,0091-1798,2168-894X,Institute of Mathematical Statistics,A*,4905,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Annals of Statistics,annals of statistics,0090-5364,,Institute of Mathematical Statistics,A*,4905,4*,ECON,False,False,False,False,AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Annals of the Institute of Statistical Mathematics,annals of institute of statistical mathematics,0020-3157,1572-9052,Springer International Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Annals of Tourism Research,annals of tourism research,0160-7383,1873-7722,Elsevier,A*,3508,4,SECTOR,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Annual Review of Economics,annual review of economics,1941-1383,1941-1391,Annual Reviews,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Annual Review of Organizational Psychology and Organizational Behavior,annual review of organizational psychology and organizational behavior,2327-0616,,Annual Reviews,A*,3507,,,False,False,False,False,ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'organizational',include_candidate
+Annual Review of Psychology,annual review of psychology,0066-4308,1545-2085,Annual Reviews,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Annual Review of Sociology,annual review of sociology,0360-0572,1545-2115,Annual Reviews,A*,3507,4*,SOC SCI,False,False,False,False,AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Anti Trust Law Journal,anti trust law journal,0003-6056,,American Bar Association,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Appetite,appetite,0195-6663,1095-8304,Elsevier,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Applied Economics,applied economics,0003-6846,1466-4283,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Applied Energy,applied energy,0306-2619,,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Applied Psychology: An International Review,applied psychology an international review,0269-994X,1464-0597,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'applied psychology',include_candidate
+Asia Pacific Journal of Management,asia pacific journal of management,0217-4561,1572-9958,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Asia Pacific Journal of Marketing and Logistics,asia pacific journal of marketing and logistics,1355-5855,1758-4248,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Asia Pacific Journal of Tourism Research,asia pacific journal of tourism research,1094-1665,1741-6507,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Asia-Pacific Journal of Human Resources,asia pacific journal of human resources,1038-4111,1744-7941,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+ASTIN Bulletin,astin bulletin,0515-0361,1783-1350,Cambridge University Press,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Auditing: A Journal of Practice and Theory,auditing a journal of practice and theory,0278-0380,1558-7991,American Accounting Association,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Australasian Journal of Information Systems,australasian journal of information systems,1449-8618,1326-2238,Australasian Association for Information Systems (AAIS),A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australasian Marketing Journal,australasian marketing journal,1441-3582,1839-3349,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian and New Zealand Journal of Criminology,australian and new zealand journal of criminology,0004-8658,1837-9273,Sage Publications,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian and New Zealand Journal of Statistics,australian and new zealand journal of statistics,1369-1473,1467-842X,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Bar Review,australian bar review,0814-8589,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Business Law Review,australian business law review,0310-1053,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of Corporate Law,australian journal of corporate law,1037-4124,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of International Affairs,australian journal of international affairs,1035-7718,1465-332X,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of Labour Law,australian journal of labour law,1030-7222,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of Management,australian journal of management,0312-8962,1327-2020,Sage Publications,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of Political Science,australian journal of political science,1036-1146,1363-030X,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Journal of Public Administration,australian journal of public administration,0313-6647,1467-8500,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Law Journal,australian law journal,0004-9611,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Australian Tax Forum,australian tax forum,0812-695X,,Tax Institute,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Australian Tax Review,australian tax review,0311-094X,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Bayesian Analysis,bayesian analysis,1936-0975,1931-6690,International Society for Bayesian Analysis,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Behavioral and Brain Sciences,behavioral and brain sciences,1469-1825,,Cambridge University Press,,,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Behavioral Research in Accounting,behavioral research in accounting,1050-4753,1558-8009,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Behaviour and Information Technology,behaviour and information technology,0144-929X,1362-3001,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Berkeley Technology Law Journal,berkeley technology law journal,1086-3818,,University of California Berkeley School of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Bernoulli,bernoulli,1350-7265,1573-9759,Bernoulli Society for Mathematical Statistics and Probability,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Bioinformatics,bioinformatics,1367-4803,1460-2059,Oxford University Press,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Biometrika,biometrika,0006-3444,1464-3510,Oxford University Press,A*,4905,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Biostatistics,biostatistics,1465-4644,1468-4357,Oxford University Press,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Boston University Law Review,boston university law review,0006-8047,,Boston University School of Law,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+British Accounting Review,british accounting review,0890-8389,1095-8347,Elsevier,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+British Journal of Educational Technology,british journal of educational technology,0007-1013,1467-8535,Wiley-Blackwell Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+British Journal of Industrial Relations,british journal of industrial relations,0007-1080,1467-8543,Wiley-Blackwell Publishing,A*,3505,4,HRM&EMP,False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3505; AJG field HRM&EMP; title keyword 'industrial relations',include_candidate
+British Journal of Management,british journal of management,1045-3172,1467-8551,Wiley-Blackwell Publishing,A*,3507,4,ETHICS-CSR-MAN,False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507,include_candidate
+British Journal of Political Science,british journal of political science,0007-1234,1469-2112,Cambridge University Press,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+British Journal of Social Psychology,british journal of social psychology,0144-6665,2044-8309,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+British Journal of Sociology,british journal of sociology,0007-1315,1468-4446,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+British Tax Review,british tax review,0007-1870,,Sweet & Maxwell,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Brookings Papers on Economic Activity,brookings papers on economic activity,0007-2303,1533-4465,Brookings Institutions,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Building Research and Information,building research and information,0961-3218,1466-4321,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Business & Information Systems Engineering,business and information systems engineering,2363-7005,1867-0202,Springer International Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Business and Society,business and society,0007-6503,1552-4205,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Business Ethics Quarterly,business ethics quarterly,1052-150X,2153-3326,Cambridge University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Business History,business history,0007-6791,1743-7938,Taylor & Francis Online,A*,3505,4,BUS HIST & ECON HIST,False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3505,needs_review
+Business History Review,business history review,0007-6805,2044-768X,Cambridge University Press,A,3505,4,BUS HIST & ECON HIST,False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3505,needs_review
+Business Strategy and the Environment,business strategy and environment,0964-4733,1099-0836,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+California Management Review,california management review,0008-1256,2162-8564,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Cambridge Journal of Economics,cambridge journal of economics,0309-166X,1464-3545,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Cambridge Law Journal,cambridge law journal,0008-1973,1469-2139,Cambridge University Press,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Canadian Business Law Journal,canadian business law journal,0319-3322,,Canada Law Book,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Canadian Journal of Agricultural Economics / Revue Canadienne d Agroeconomie,canadian journal of agricultural economics revue canadienne d agroeconomie,0008-3976,1744-7976,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Canadian Journal of Economics / Revue Canadienne D'Economique,canadian journal of economics revue canadienne d economique,0008-4085,1540-5982,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Canadian Journal of Statistics,canadian journal of statistics,0319-5724,1708-945X,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Canadian Tax Journal,canadian tax journal,0008-5111,,Canadian Tax Foundation,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Capital Markets Law Journal,capital markets law journal,1750-7219,1750-7227,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Career Development International,career development international,1362-0436,1758-6003,Emerald Group Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+China Accounting and Finance Review,china accounting and finance review,1029-807X,2307-3055,Hong Kong Polytechnic University,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+China Economic Review,china economic review,1043-951X,1873-7781,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+China Finance Review International,china finance review international,2044-1398,2044-1401,Emerald Group Publishing Limited,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+China Journal of Accounting Research,china journal of accounting research,1755-3091,2214-1421,Elsevier,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Civil Justice Quarterly,civil justice quarterly,0261-9261,,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Cognition,cognition,1873-7838,,Elsevier,,,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Columbia Business Law Review,columbia business law review,0898-0721,1930-7934,Columbia Business Law Review,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Columbia Journal of Asian Law,columbia journal of asian law,1094-8449,2373-0498,Columbia Law School,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Columbia Journal of Law and the Arts,columbia journal of law and arts,1544-4848,,Columbia University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Columbia Journal of Transnational Law,columbia journal of transnational law,0010-1931,2159-1814,Columbia Society of International Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Columbia Law Review,columbia law review,0010-1958,1945-2268,"Columbia Law Review Association, Inc.",A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Communication Research,communication research,0093-6502,1552-3810,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Communication Theory,communication theory,1050-3293,1468-2885,Oxford University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Communications of the Association for Information Systems,communications of association for information systems,1529-3181,,Association for Information Systems (AIS),A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Company and Securities Law Journal,company and securities law journal,0729-2775,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Comparative Labor Law and Policy Journal,comparative labor law and policy journal,1095-6654,,University of Illinois Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Comparative Political Studies,comparative political studies,0010-4140,1552-3829,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Comparative Politics,comparative politics,0010-4159,2151-6227,City University of New York,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Competition and Consumer Law Journal,competition and consumer law journal,1039-5598,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Computational Statistics and Data Analysis,computational statistics and data analysis,0167-9473,1872-7352,Elsevier,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Computers & Industrial Engineering,computers and industrial engineering,0360-8352,1879-0550,Elsevier,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Computers and Operations Research,computers and operations research,0305-0548,1873-765X,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Computers in Human Behavior,computers in human behavior,0747-5632,1873-7692,Elsevier,A,4609,,,False,False,True,False,ABDC_A;HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+Construction Management and Economics,construction management and economics,0144-6193,1466-433X,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Contemporary Accounting Research,contemporary accounting research,0823-9150,1911-3846,Wiley-Blackwell Publishing,A*,3501,4,ACCOUNT,True,False,False,False,FT50;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Cornell Hospitality Quarterly,cornell hospitality quarterly,1938-9655,1938-9663,Sage Publications,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Cornell Law Review,cornell law review,0010-8847,,Cornell Law School,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Corporate Governance: an international review,corporate governance an international review,0964-8410,1467-8683,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Critical Finance Review,critical finance review,2164-5744,2164-5760,Now Publishers,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Critical Perspectives on Accounting,critical perspectives on accounting,1045-2354,1095-9955,Elsevier,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Current Directions in Psychological Science,current directions in psychological science,1467-8721,,SAGE,,,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Current Issues in Tourism,current issues in tourism,1368-3500,1747-7603,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Current Legal Problems,current legal problems,0070-1998,,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Dalhousie Law Journal,dalhousie law journal,0317-1663,,Dalhousie University Faculty of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Data Base for Advances in Information Systems,data base for advances in information systems,0095-0033,1532-0936,Sheridan Press,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Deakin Law Review,deakin law review,1835-9264,,Deakin University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Decision Analysis,decision analysis,1545-8490,1545-8504,The Institute for Operations Research and the Management Sciences (INFORMS),A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Decision Sciences,decision sciences,0011-7315,1540-5915,Wiley-Blackwell Publishing,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Decision Support Systems,decision support systems,0167-9236,1873-5797,Elsevier,A*,4609,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Delaware Journal of Corporate Law,delaware journal of corporate law,0364-9490,1943-7331,Delaware Law School of Widener College,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Demographic Research,demographic research,1435-9871,,Max Planck Institute for Demographic Research,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Demography,demography,0070-3370,1533-7790,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Design Studies,design studies,0142-694X,1872-6909,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Disasters,disasters,0361-3666,1467-7717,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Discourse & Communication,discourse and communication,1750-4813,1750-4821,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Discourse & Society,discourse and society,0957-9265,1460-3624,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Discourse Studies,discourse studies,1461-4456,1461-7080,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Duke Journal of Comparative and International Law,duke journal of comparative and international law,1053-6736,2328-9708,Duke University School of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Ecological Economics,ecological economics,0921-8009,1873-6106,Elsevier,A,3899,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Ecology,ecology,0012-9658,1939-9170,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Econometric Reviews,econometric reviews,0747-4938,1532-4168,Taylor & Francis Online,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Econometric Theory,econometric theory,0266-4666,1469-4360,Cambridge University Press,A*,3802,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Econometrica,econometrica,0012-9682,1468-0262,Wiley-Blackwell Publishing,A*,3802,4*,ECON,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Econometrics Journal,econometrics journal,1368-4221,1368-423X,Oxford University Press,A*,3802,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Economic Analysis and Policy,economic analysis and policy,0313-5926,2204-2296,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic and Industrial Democracy: an international journal,economic and industrial democracy an international journal,0143-831X,1461-7099,Sage Publications,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic Development and Cultural Change,economic development and cultural change,0013-0079,1539-2988,The University of Chicago Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic Geography,economic geography,0013-0095,1944-8287,Taylor & Francis Online,A,3801,4,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Economic History Review,economic history review,1468-0289,,Wiley-Blackwell,,,4,BUS HIST & ECON HIST,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Economic Inquiry,economic inquiry,0095-2583,1465-7295,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic Modelling,economic modelling,0264-9993,1873-6122,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic Policy: a European forum,economic policy a european forum,0266-4658,1468-0327,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economic Theory,economic theory,0938-2259,1432-0479,Springer International Publishing,A*,3803,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Economica,economica,0013-0427,1468-0335,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics & Politics,economics and politics,0954-1985,1468-0343,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics and Human Biology,economics and human biology,1570-677X,1873-6130,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics and Philosophy,economics and philosophy,0266-2671,1474-0028,Cambridge University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics Letters,economics letters,0165-1765,1873-7374,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics of Education Review,economics of education review,0272-7757,1873-7382,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economics of Transition and Institutional Change,economics of transition and institutional change,2577-6975,2577-6983,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Economy and Society,economy and society,0308-5147,1469-5766,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Education Finance and Policy,education finance and policy,1557-3060,1557-3079,MIT Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Educational and Psychological Measurement,educational and psychological measurement,0013-1644,1552-3888,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+eJournal of Tax Research,ejournal of tax research,1448-2398,,Australian School of Taxation and Business Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Electronic Commerce Research,electronic commerce research,1389-5753,1572-9362,Springer International Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Electronic Journal of Probability,electronic journal of probability,,1083-6489,Institute of Mathematical Statistics,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Electronic Markets,electronic markets,1019-6781,1422-8890,Springer Nature,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Emerging Markets Review,emerging markets review,1566-0141,1873-6173,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Empirical Economics,empirical economics,0377-7332,1435-8921,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Employee Relations,employee relations,0142-5455,1758-7069,Emerald Group Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Energy Economics,energy economics,0140-9883,1873-6181,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Energy Journal,energy journal,0195-6574,1944-9089,Sage Publications,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Energy Policy,energy policy,0301-4215,1873-6777,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Engineering, Construction and Architectural Management",engineering construction and architectural management,0969-9988,1365-232X,Emerald Group Publishing,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Enterprise and Society,enterprise and society,1467-2227,1467-2235,Cambridge University Press,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Enterprise Information Systems,enterprise information systems,1751-7575,1751-7583,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Entrepreneurship and Regional Development,entrepreneurship and regional development,0898-5626,1464-5114,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Entrepreneurship Theory and Practice,entrepreneurship theory and practice,1042-2587,1540-6520,Sage Publications,A*,3507,4*,ENT-SBM,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Environment and Planning A: Economy and Space,environment and planning a economy and space,0308-518X,1472-3409,Sage Publications,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Environment and Planning B: Urban Analytics and City Science,environment and planning b urban analytics and city science,0265-8135,1472-3417,Sage Publications,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Environment and Planning D: society and space,environment and planning d society and space,0263-7758,1472-3433,Sage Publications,A,3599,4,SOC SCI,False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Environmental and Ecological Statistics,environmental and ecological statistics,1352-8505,1573-3009,Springer International Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Environmental and Resource Economics,environmental and resource economics,0924-6460,1573-1502,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Environmental Education Research,environmental education research,1350-4622,1469-5871,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Environmental Innovation and Societal Transitions,environmental innovation and societal transitions,,2210-4224,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Ethics: an international journal of social, political, and legal philosophy",ethics an international journal of social political and legal philosophy,0014-1704,1539-297X,The University of Chicago Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+European Competition Law Review,european competition law review,0144-3054,,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Economic Review,european economic review,0014-2921,1873-572X,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+European Financial Management,european financial management,1354-7798,1468-036X,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Intellectual Property Review,european intellectual property review,0142-0461,1749-5083,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of Health Economics,european journal of health economics,1618-7598,1618-7601,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of Industrial Relations,european journal of industrial relations,0959-6801,1461-7129,Sage Publications,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'industrial relations',include_candidate
+European Journal of Information Systems,european journal of information systems,0960-085X,1476-9344,Taylor & Francis Online,A*,4609,4,INFO MAN,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+European Journal of International Law,european journal of international law,0938-5428,1464-3596,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of International Relations,european journal of international relations,1354-0661,1460-3713,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of Marketing,european journal of marketing,0309-0566,1758-7123,Emerald Group Publishing,A*,3506,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+European Journal of Operational Research,european journal of operational research,0377-2217,1872-6860,Elsevier,A*,3507,4,OR&MANSCI,False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+European Journal of Personality,european journal of personality,0890-2070,1099-0984,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+European Journal of Political Economy,european journal of political economy,0176-2680,1873-5703,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of Political Research,european journal of political research,0304-4130,1475-6765,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Journal of Social Psychology,european journal of social psychology,0046-2772,1099-0992,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+European Journal of Work and Organizational Psychology,european journal of work and organizational psychology,1359-432X,1464-0643,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,manual core OBHRM title; ABDC FoR 3507; title keyword 'organizational',include_candidate
+European Law Review,european law review,0307-5400,,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Management Journal,european management journal,0263-2373,1873-5681,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+European Research on Management and Business Economics,european research on management and business economics,2444-8834,2444-8842,European Academy of Management and Business Economics (AEDEM) - Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Review of Agricultural Economics,european review of agricultural economics,0165-1587,1464-3618,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Review of Economic History,european review of economic history,1361-4916,1474-0044,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Sport Management Quarterly,european sport management quarterly,1618-4742,1746-031X,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+European Urban and Regional Studies,european urban and regional studies,0969-7764,1461-7145,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Evaluation Review,evaluation review,0193-841X,1552-3926,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Event Management,event management,1525-9951,1943-4308,Cognizant Communication Corporation,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Experimental Economics,experimental economics,1386-4157,1573-6938,Springer International Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Explorations in Economic History,explorations in economic history,0014-4983,1090-2457,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Family Business Review,family business review,0894-4865,1741-6248,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Federal Law Review,federal law review,0067-205X,,Australian National University,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Feminist Economics,feminist economics,1354-5701,1466-4372,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Finance and Stochastics,finance and stochastics,0949-2984,1432-1122,Springer International Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Finance Research Letters,finance research letters,1544-6123,1544-6131,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Financial Accountability and Management,financial accountability and management,0267-4424,1468-0408,Wiley-Blackwell Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Financial Analysts Journal,financial analysts journal,0015-198X,1938-3312,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Financial Management,financial management,0046-3892,1755-053X,Wiley-Blackwell Publishing,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+"Financial Markets, Institutions and Instruments",financial markets institutions and instruments,0963-8008,1468-0416,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Financial Review (US),financial review,0732-8516,1540-6288,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Food Quality and Preference,food quality and preference,0950-3293,,Elsevier,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Foundations and Trends in Accounting,foundations and trends in accounting,1554-0642,1554-0650,Now Publishers,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Games and Economic Behavior,games and economic behavior,0899-8256,1090-2473,Elsevier,A*,3803,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Gender and Society,gender and society,0891-2432,1552-3977,Sage Publications,A*,3507,,,False,False,False,False,ABDC_A*,True,ABDC FoR 3507,needs_review
+"Gender, Work and Organization",gender work and organization,0968-6673,1468-0432,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'organization',include_candidate
+Global Environmental Change,global environmental change,0959-3780,1872-9495,Elsevier,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Global Finance Journal,global finance journal,1044-0283,1873-5665,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Global Journal of Flexible Systems Management,global journal of flexible systems management,0972-2696,0974-0198,Springer Nature,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Global Networks: A Journal of Transnational Affairs,global networks a journal of transnational affairs,1470-2266,1471-0374,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Global Strategy Journal,global strategy journal,2042-5791,2042-5805,Wiley-Blackwell Publishing,A,3507,4,STRAT,False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3507,needs_review
+Governance,governance,1468-0491,,Wiley-Blackwell,,,4,PUB SEC,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Government Information Quarterly,government information quarterly,0740-624X,1872-9517,Elsevier,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Group & Organization Management,group and organization management,1059-6011,1552-3993,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Group Decision and Negotiation,group decision and negotiation,0926-2644,1572-9907,Springer International Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Habitat International,habitat international,0197-3975,1873-5428,Elsevier,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Harvard Business Review,harvard business review,0017-8012,,Harvard Business Publishing,A,3507,,,True,False,False,False,FT50;ABDC_A,True,ABDC FoR 3507,needs_review
+Harvard Environmental Law Review,harvard environmental law review,0147-8257,,Harvard Environmental Law Review,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Harvard International Law Journal,harvard international law journal,0017-8063,2153-2494,Harvard University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Harvard Journal of Law and Public Policy,harvard journal of law and public policy,0193-4872,2374-6572,Harvard Society for Law and Public Policy,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Harvard Journal of Law and Technology,harvard journal of law and technology,0897-3393,2153-263X,Harvard University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Harvard Law Review,harvard law review,0017-811X,2161-976X,Harvard University Press,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Health Care Management Review,health care management review,0361-6274,1550-5030,Lippincott Williams & Wilkins,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Health Economics,health economics,1057-9230,1099-1050,Wiley-Blackwell Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Health Policy,health policy,0168-8510,1872-6054,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Health Promotion International,health promotion international,0957-4824,1460-2245,Oxford University Press,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Health Services Research,health services research,0017-9124,1475-6773,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+History of Political Economy,history of political economy,0018-2702,1527-1919,Duke University Press,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Hong Kong Law Journal,hong kong law journal,0378-0600,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Housing Studies,housing studies,0267-3037,1466-1810,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Human Performance,human performance,0895-9285,1532-7043,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Human Relations,human relations,0018-7267,1741-282X,Sage Publications,A*,3507,4,ORG STUD,True,False,False,False,FT50;AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field ORG STUD; title keyword 'human relations',include_candidate
+Human Resource Development Quarterly,human resource development quarterly,1044-8004,1532-1096,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'human resource',include_candidate
+Human Resource Management (US),human resource management,0090-4848,1099-050X,Wiley-Blackwell Publishing,A*,3505,4,HRM&EMP,True,False,False,False,FT50;AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3505; AJG field HRM&EMP; title keyword 'human resource',include_candidate
+Human Resource Management Journal (UK),human resource management journal,0954-5395,1748-8583,Wiley-Blackwell Publishing,A*,3505,4*,HRM&EMP,False,False,False,False,AJG2024_4*;ABDC_A*,True,ABDC FoR 3505; AJG field HRM&EMP; title keyword 'human resource',include_candidate
+Human Resource Management Review,human resource management review,1053-4822,1873-7889,Elsevier,A,3505,,,False,False,False,False,ABDC_A,True,manual core OBHRM title; ABDC FoR 3505; title keyword 'human resource',include_candidate
+Human-Computer Interaction,human computer interaction,0737-0024,1532-7051,Taylor & Francis Online,A,4609,,,False,False,True,False,ABDC_A;HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+IEEE Transactions on Engineering Management,ieee transactions on engineering management,1558-0040,0018-9391,Institute of Electrical and Electronics Engineers,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+IEEE Transactions on Evolutionary Computation,ieee transactions on evolutionary computation,1941-0026,,IEEE,,,4,OR&MANSCI,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+IEEE Transactions on Human-Machine Systems,ieee transactions on human machine systems,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+IEEE Transactions on Intelligent Transportation Systems,ieee transactions on intelligent transportation systems,1524-9050,1558-0016,Institute of Electrical and Electronics Engineers,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+IEEE Transactions on Visualization and Computer Graphics,ieee transactions on visualization and computer graphics,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+IIC International Review of Intellectual Property and Competition Law,iic international review of intellectual property and competition law,0018-9855,2195-0237,Springer International Publishing,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+IISE Transactions,iise transactions,0740-817X,1545-8830,Taylor & Francis Online,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+ILR Review (Industrial and Labor Relations Review),ilr review,0019-7939,2162-271X,Sage Publications,A*,3505,,,False,False,False,False,ABDC_A*,True,manual core OBHRM title; ABDC FoR 3505,include_candidate
+IMF Economic Review,imf economic review,2041-4161,2041-417X,Palgrave Macmillan,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Industrial and Corporate Change,industrial and corporate change,0960-6491,1464-3650,Oxford University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Industrial Law Journal,industrial law journal,0305-9332,1464-3669,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Industrial Management & Data Systems,industrial management and data systems,0263-5577,1758-5783,Emerald Group Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Industrial Marketing Management,industrial marketing management,0019-8501,1873-2062,Elsevier,A*,3506,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Industrial Relations Journal,industrial relations journal,0019-8692,1468-2338,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'industrial relations',include_candidate
+Industrial Relations: a journal of economy and society,industrial relations,0019-8676,1468-232X,Wiley-Blackwell Publishing,A*,3505,4,HRM&EMP,False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3505; AJG field HRM&EMP; title keyword 'industrial relations',include_candidate
+Industry and Innovation,industry and innovation,1366-2716,1469-8390,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Information & Management,information and management,0378-7206,1872-7530,Elsevier,A*,4609,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Information and Organization,information and organization,1471-7727,1873-7919,Elsevier,A*,4609,,,False,False,False,False,ABDC_A*,True,title keyword 'organization',include_candidate
+Information Economics and Policy,information economics and policy,0167-6245,1873-5975,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Information Systems Frontiers,information systems frontiers,1387-3326,1572-9419,Springer International Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Information Systems Journal,information systems journal,1350-1917,1365-2575,Wiley-Blackwell Publishing,A*,4609,4,INFO MAN,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Information Systems Management,information systems management,1058-0530,1934-8703,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Information Systems Research,information systems research,1047-7047,1526-5536,The Institute for Operations Research and the Management Sciences (INFORMS),A*,4609,4*,INFO MAN,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Information Technology & People,information technology and people,0959-3845,1758-5813,Emerald Group Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Information Technology & Tourism,information technology and tourism,1098-3058,1943-4294,Springer International Publishing,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Information Technology for Development,information technology for development,0268-1102,1554-0170,Association for Information Systems (AIS),A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Information, Communication & Society",information communication and society,1369-118X,1468-4462,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+INFORMS Journal on Computing,informs journal on computing,1091-9856,1526-5528,The Institute for Operations Research and the Management Sciences (INFORMS),A,3507,,,False,True,False,False,UTD24;ABDC_A,True,ABDC FoR 3507,needs_review
+Insolvency Law Journal,insolvency law journal,1039-3293,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Insurance Law Journal,insurance law journal,1030-2379,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Insurance: Mathematics & Economics,insurance mathematics and economics,0167-6687,1873-5959,Elsevier,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Intellectual Property Journal,intellectual property journal,0824-7064,,HAB Press Limited,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International & Comparative Law Quarterly,international and comparative law quarterly,0020-5893,1471-6895,Cambridge University Press,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+International Affairs,international affairs,0020-5850,1468-2346,Oxford University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Business Review,international business review,0969-5931,1873-6149,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Economic Review,international economic review,0020-6598,1468-2354,Wiley-Blackwell Publishing,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+"International Environmental Agreements: Politics, Law and Economics",international environmental agreements politics law and economics,1567-9764,1573-1553,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Accounting Information Systems,international journal of accounting information systems,1467-0895,1873-4723,Elsevier,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Advertising,international journal of advertising,0265-0487,1759-3948,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Auditing,international journal of auditing,1090-6738,1099-1123,Wiley-Blackwell Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Bank Marketing,international journal of bank marketing,0265-2323,1758-5937,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Central Banking,international journal of central banking,1815-4654,,Association of the International Journal of Central Banking,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Conflict Management,international journal of conflict management,1044-4068,1758-8545,Emerald Group Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+International Journal of Consumer Studies,international journal of consumer studies,1470-6423,1470-6431,Wiley-Blackwell Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Contemporary Hospitality Management,international journal of contemporary hospitality management,0959-6119,1757-1049,Emerald Group Publishing,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Cultural Policy,international journal of cultural policy,1028-6632,1477-2833,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Disaster Risk Reduction,international journal of disaster risk reduction,2212-4209,,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Electronic Commerce,international journal of electronic commerce,1086-4415,1557-9301,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Entrepreneurial Behaviour and Research,international journal of entrepreneurial behaviour and research,1355-2554,1758-6534,Emerald Group Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Journal of Forecasting,international journal of forecasting,0169-2070,1872-8200,Elsevier,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Game Theory,international journal of game theory,0020-7276,1432-1270,Springer International Publishing,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of General Systems,international journal of general systems,0308-1079,1563-5104,Taylor & Francis Online,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Hospitality Management,international journal of hospitality management,0278-4319,1873-4693,Elsevier,A*,3504,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+International Journal of Human Resource Management,international journal of human resource management,0958-5192,1466-4399,Taylor & Francis Online,A,3505,,,False,False,False,False,ABDC_A,True,manual core OBHRM title; ABDC FoR 3505; title keyword 'human resource',include_candidate
+International Journal of Human-Computer Interaction,international journal of human computer interaction,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+International Journal of Human-Computer Studies,international journal of human computer studies,,,,,,,,False,False,True,False,HCI_SJR_Q1,True,HCI selected journal with SJR Q1,include_candidate
+International Journal of Industrial Organization,international journal of industrial organization,0167-7187,1873-7986,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,True,title keyword 'organization',include_candidate
+International Journal of Information Management,international journal of information management,0268-4012,1873-4707,Elsevier,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Law and Information Technology,international journal of law and information technology,0967-0769,1464-3693,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Management Reviews,international journal of management reviews,1460-8545,1468-2370,Wiley-Blackwell Publishing,A*,3507,,,False,False,False,False,ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507,include_candidate
+International Journal of Managerial Finance,international journal of managerial finance,1743-9132,1758-6569,Emerald Group Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Manpower,international journal of manpower,0143-7720,1758-6577,Emerald Group Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+International Journal of Market Research,international journal of market research,1470-7853,2515-2173,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Operations & Production Management,international journal of operations and production management,0144-3577,1758-6593,Emerald Group Publishing,A,3507,4,OPS&TECH,False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3507; broad-management/noise keyword needs human check,needs_review
+International Journal of Physical Distribution & Logistics Management,international journal of physical distribution and logistics management,0960-0035,1758-664X,Emerald Group Publishing,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Production Economics,international journal of production economics,0925-5273,1873-7579,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Journal of Production Research,international journal of production research,0020-7543,1366-588X,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Journal of Project Management,international journal of project management,0263-7863,1873-4634,Elsevier,A*,3507,,,False,False,False,False,ABDC_A*,True,ABDC FoR 3507,needs_review
+International Journal of Public Opinion Research,international journal of public opinion research,,1471-6909,Oxford University Press,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Research in Marketing,international journal of research in marketing,0167-8116,1873-8001,Elsevier,A*,3506,4,MKT,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+International Journal of Retail & Distribution Management,international journal of retail and distribution management,0959-0552,1758-6690,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Journal of Selection and Assessment,international journal of selection and assessment,0965-075X,1468-2389,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+International Journal of Stress Management,international journal of stress management,1072-5245,1573-3424,American Psychological Association,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Journal of Tourism Research,international journal of tourism research,1099-2340,1522-1970,Wiley-Blackwell Publishing,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Marketing Review,international marketing review,0265-1335,1758-6763,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Migration,international migration,0020-7985,1468-2435,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Migration Review,international migration review,0197-9183,1747-7379,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Negotiation: a journal of theory and practice,international negotiation a journal of theory and practice,1382-340X,1571-8069,Brill,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+International Review of Economics & Finance,international review of economics and finance,1059-0560,1873-8036,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Review of Finance,international review of finance,1369-412X,1468-2443,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Review of Financial Analysis,international review of financial analysis,1057-5219,1873-8079,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"International Review of Law, Computers and Technology",international review of law computers and technology,1360-0869,1364-6885,Taylor & Francis Online,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Small Business Journal,international small business journal,0266-2426,1741-2870,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+International Statistical Review,international statistical review,0306-7734,1751-5823,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Studies Quarterly,international studies quarterly,0020-8833,1468-2478,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+International Tax and Public Finance,international tax and public finance,0927-5940,1573-6970,Springer International Publishing,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Internet Research,internet research,1066-2243,2054-5657,Emerald Group Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Issues in Accounting Education,issues in accounting education,0739-3172,1558-7983,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+IZA Journal of Labor Economics,iza journal of labor economics,,2193-8997,Springer Nature,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Accounting and Economics,journal of accounting and economics,0165-4101,,Elsevier,A*,3501,4*,ACCOUNT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Accounting and Public Policy,journal of accounting and public policy,0278-4254,1873-2070,Elsevier,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Accounting Auditing and Finance,journal of accounting auditing and finance,0148-558X,2160-4061,Sage Publications,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Accounting Literature,journal of accounting literature,0737-4607,,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Accounting Research,journal of accounting research,0021-8456,1475-679X,Wiley-Blackwell Publishing,A*,3501,4*,ACCOUNT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Advertising,journal of advertising,0091-3367,1557-7805,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Advertising Research,journal of advertising research,0021-8499,1740-1909,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of African Economies,journal of african economies,0963-8024,1464-3723,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Agricultural and Resource Economics,journal of agricultural and resource economics,1068-5502,2327-8285,Western Agricultural Economics Association,A,3899,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Agricultural Economics,journal of agricultural economics,0021-857X,1477-9552,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Air Law and Commerce,journal of air law and commerce,0021-8642,,Southern Methodist University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Applied Corporate Finance,journal of applied corporate finance,1078-1196,1745-6622,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Applied Econometrics,journal of applied econometrics,0883-7252,1099-1255,Wiley-Blackwell Publishing,A*,3802,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Applied Probability,journal of applied probability,0021-9002,1475-6072,Applied Probability Trust,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Applied Psychology,journal of applied psychology,0021-9010,1939-1854,American Psychological Association,A*,3507,4*,PSYCH (WOP-OB),True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB); title keyword 'applied psychology',include_candidate
+Journal of Applied Sport Psychology,journal of applied sport psychology,1041-3200,1533-1571,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Australian Taxation,journal of australian taxation,1440-0405,,Monash University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Banking & Finance,journal of banking and finance,0378-4266,1872-6372,Elsevier,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Banking and Finance - Law and Practice,journal of banking and finance law and practice,1034-3040,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Behavioral and Experimental Economics,journal of behavioral and experimental economics,2214-8043,,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Behavioral and Experimental Finance,journal of behavioral and experimental finance,2214-6350,,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Behavioral Decision Making,journal of behavioral decision making,0894-3257,1099-0771,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Behavioral Finance,journal of behavioral finance,1542-7560,1542-7579,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Brand Management,journal of brand management,1350-231X,1479-1803,Springer International Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Business & Economic Statistics,journal of business and economic statistics,0735-0015,1537-2707,Taylor & Francis Online,A*,3802,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Business & Industrial Marketing,journal of business and industrial marketing,0885-8624,2052-1189,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Business and Psychology,journal of business and psychology,0889-3268,1573-353X,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Business Ethics,journal of business ethics,0167-4544,1573-0697,Springer International Publishing,A,3507,,,True,False,False,False,FT50;ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Business Finance & Accounting,journal of business finance and accounting,0306-686X,1468-5957,Wiley-Blackwell Publishing,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Business Law,journal of business law,0021-9460,,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Business Logistics,journal of business logistics,0735-3766,2158-1592,Wiley-Blackwell Publishing,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Business Research,journal of business research,0148-2963,1873-7978,Elsevier,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Business Venturing,journal of business venturing,0883-9026,1873-2003,Elsevier,A*,3507,4*,ENT-SBM,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Journal of Business Venturing Insights,journal of business venturing insights,2352-6734,,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Career Assessment,journal of career assessment,1069-0727,1552-4590,Sage Publications,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Journal of Choice Modelling,journal of choice modelling,1755-5345,,Elsevier,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Commodity Markets,journal of commodity markets,2405-8513,2405-8505,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Communication,journal of communication,0021-9916,1460-2466,Oxford University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Comparative Economics,journal of comparative economics,0147-5967,1095-7227,Elsevier,A,3899,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Computational and Graphical Statistics,journal of computational and graphical statistics,1061-8600,1537-2715,Taylor & Francis Online,A*,4905,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Computer Information Systems,journal of computer information systems,0887-4417,2380-2057,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Conflict Resolution,journal of conflict resolution,0022-0027,1552-8766,Sage Publications,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Construction Engineering and Management,journal of construction engineering and management,0733-9364,1943-7862,American Society of Civil Engineers,A*,3504,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Consumer Affairs,journal of consumer affairs,0022-0078,1745-6606,Wiley-Blackwell Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Consumer Behaviour,journal of consumer behaviour,1472-0817,1479-1838,Wiley-Blackwell Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Consumer Marketing,journal of consumer marketing,0736-3761,2052-1200,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Consumer Psychology,journal of consumer psychology,1057-7408,1532-7663,Wiley-Blackwell Publishing,A*,3506,4*,MKT,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Consumer Research,journal of consumer research,0093-5301,1537-5277,Oxford University Press,A*,3506,4*,MKT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Contemporary Accounting and Economics,journal of contemporary accounting and economics,1815-5669,,Elsevier,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Contract Law,journal of contract law,1030-7230,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Corporate Finance,journal of corporate finance,0929-1199,1872-6313,Elsevier,A*,3502,4,FINANCE,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Corporate Law Studies,journal of corporate law studies,1473-5970,1757-8426,Taylor & Francis Online,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Corporation Law,journal of corporation law,0360-795X,,University of Iowa College of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Cross-Cultural Psychology,journal of cross cultural psychology,0022-0221,1552-5422,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Cultural Economics,journal of cultural economics,0885-2545,1573-6997,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Database Management,journal of database management,1063-8016,1533-8010,IGI Global,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Destination Marketing & Management,journal of destination marketing and management,2212-571X,2212-5752,Elsevier,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Development Economics,journal of development economics,0304-3878,1872-6089,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Development Studies,journal of development studies,0022-0388,1743-9140,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Econometrics,journal of econometrics,0304-4076,1872-6895,Elsevier,A*,3802,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Economic Behavior and Organization,journal of economic behavior and organization,0167-2681,1879-1751,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,True,title keyword 'organization',include_candidate
+Journal of Economic Dynamics and Control,journal of economic dynamics and control,0165-1889,1879-1743,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Economic Geography,journal of economic geography,1468-2702,1468-2710,Oxford University Press,A,3899,4,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Journal of Economic Growth,journal of economic growth,1381-4338,1573-7020,Springer International Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Economic Literature,journal of economic literature,0002-0515,2328-8175,American Economic Association,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Economic Perspectives,journal of economic perspectives,0895-3309,1944-7965,American Economic Association,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Economic Psychology,journal of economic psychology,0167-4870,1872-7719,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Economic Science Association,journal of economic science association,2199-6776,2199-6784,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Economic Surveys,journal of economic surveys,0950-0804,1467-6419,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Economic Theory,journal of economic theory,0022-0531,1095-7235,Elsevier,A*,3803,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Economics & Management Strategy,journal of economics and management strategy,1058-6407,1530-9134,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Empirical Finance,journal of empirical finance,0927-5398,1879-1727,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Empirical Legal Studies,journal of empirical legal studies,1740-1453,1740-1461,Wiley-Blackwell Publishing,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Employment Counseling,journal of employment counseling,0022-0787,2161-1920,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'employment',include_candidate
+Journal of Enterprise Information Management,journal of enterprise information management,1741-0398,1758-7409,Emerald Group Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Environmental Economics and Management,journal of environmental economics and management,0095-0696,1096-0449,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Environmental Psychology,journal of environmental psychology,0272-4944,1522-9610,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of European Public Policy,journal of european public policy,1350-1763,1466-4429,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Evolutionary Economics,journal of evolutionary economics,0936-9937,1432-1386,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Experimental Psychology: Applied,journal of experimental psychology applied,1076-898X,1939-2192,American Psychological Association,A,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Experimental Psychology: general,journal of experimental psychology general,0096-3445,1939-2222,American Psychological Association,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+"Journal of Experimental Psychology: learning, memory, and cognition",journal of experimental psychology learning memory and cognition,0278-7393,1939-1285,American Psychological Association,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Experimental Social Psychology,journal of experimental social psychology,0022-1031,1096-0465,Elsevier,A,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Financial and Quantitative Analysis,journal of financial and quantitative analysis,0022-1090,1756-6916,Cambridge University Press,A*,3502,4,FINANCE,True,False,False,False,FT50;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Financial Econometrics,journal of financial econometrics,1479-8409,1479-8417,Oxford University Press,A*,3802,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Financial Economics,journal of financial economics,0304-405X,,Elsevier,A*,3502,4*,FINANCE,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Financial Intermediation,journal of financial intermediation,1042-9573,1096-0473,Elsevier,A*,3502,4,FINANCE,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Financial Markets,journal of financial markets,1386-4181,1878-576X,Elsevier,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Financial Reporting,journal of financial reporting,2380-2154,2380-2146,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Financial Research,journal of financial research,0270-2592,1475-6803,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Financial Services Research,journal of financial services research,0920-8550,1573-0735,Springer International Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Financial Stability,journal of financial stability,1572-3089,1878-0962,Elsevier,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Forecasting,journal of forecasting,0277-6693,1099-131X,Wiley-Blackwell Publishing,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Gambling Studies,journal of gambling studies,1050-5350,1573-3602,Springer International Publishing,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Global Information Management,journal of global information management,1062-7375,1533-7995,IGI Global,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Health Economics,journal of health economics,0167-6296,1879-1646,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+"Journal of Health Politics, Policy and Law",journal of health politics policy and law,0361-6878,1527-1927,Duke University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Hospitality and Tourism Management,journal of hospitality and tourism management,1447-6770,1839-5260,Elsevier,A*,3508,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Hospitality and Tourism Research,journal of hospitality and tourism research,1096-3480,1557-7554,Sage Publications,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Hospitality Marketing and Management,journal of hospitality marketing and management,1936-8623,1936-8631,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Housing Economics,journal of housing economics,1051-1377,1096-0791,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Human Capital,journal of human capital,1932-8575,1932-8664,The University of Chicago Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Human Resources,journal of human resources,0022-166X,1548-8004,The University of Wisconsin Press,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Industrial Relations,journal of industrial relations,0022-1856,1472-9269,Sage Publications,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'industrial relations',include_candidate
+Journal of Information Systems,journal of information systems,0888-7985,1558-7959,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Information Technology,journal of information technology,0268-3962,1466-4437,Sage Publications,A*,4609,4,INFO MAN,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Interactive Marketing,journal of interactive marketing,1094-9968,1520-6653,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of International Accounting Research,journal of international accounting research,1542-6297,1558-8025,American Accounting Association,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of International Business Studies,journal of international business studies,0047-2506,1478-6990,Springer International Publishing,A*,3507,4*,IB&AREA,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507; FT50/UTD management-general journal,include_candidate
+Journal of International Economic Law,journal of international economic law,1369-3034,1464-3758,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of International Economics,journal of international economics,0022-1996,1873-0353,Elsevier,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of International Financial Management and Accounting,journal of international financial management and accounting,0954-1314,1467-646X,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Journal of International Financial Markets, Institutions and Money",journal of international financial markets institutions and money,1042-4431,1873-0612,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of International Management,journal of international management,1075-4253,1873-0620,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of International Marketing,journal of international marketing,1069-031X,1547-7215,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of International Money and Finance,journal of international money and finance,0261-5606,1873-0639,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Knowledge Management,journal of knowledge management,1367-3270,1758-7484,Emerald Group Publishing,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Labor Economics,journal of labor economics,0734-306X,1537-5307,University of Chicago Press,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+"Journal of Law, Economics and Organization",journal of law economics and organization,8756-6222,1465-7341,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,True,title keyword 'organization',include_candidate
+Journal of Leadership and Organizational Studies,journal of leadership and organizational studies,1548-0518,1939-7089,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'leadership',include_candidate
+Journal of Leisure Research,journal of leisure research,0022-2216,2159-6417,Taylor & Francis Ltd.,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Macroeconomics,journal of macroeconomics,0164-0704,1873-152X,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Macromarketing,journal of macromarketing,0276-1467,1552-6534,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Management,journal of management,0149-2063,1557-1211,Sage Publications,A*,3507,4*,ETHICS-CSR-MAN,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507,include_candidate
+Journal of Management & Organization,journal of management and organization,1833-3672,1839-3527,Cambridge University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Journal of Management Accounting Research,journal of management accounting research,1049-2127,1558-8033,American Accounting Association,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Management Control,journal of management control,2191-4761,2191-477X,Springer International Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Management in Engineering,journal of management in engineering,0742-597X,1943-5479,American Society of Civil Engineers,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Management Information Systems,journal of management information systems,0742-1222,1557-928X,Taylor & Francis Online,A*,4609,4,INFO MAN,True,False,False,False,FT50;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Management Inquiry,journal of management inquiry,1056-4926,1552-6542,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Management Studies,journal of management studies,0022-2380,1467-6486,Wiley-Blackwell Publishing,A*,3507,4,ETHICS-CSR-MAN,True,False,False,False,FT50;AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507,include_candidate
+Journal of Maritime Law and Commerce,journal of maritime law and commerce,0022-2410,,Jefferson Law Book Company of Baltimore,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Marketing,journal of marketing,0022-2429,1547-7185,Sage Publications,A*,3506,4*,MKT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Marketing Management,journal of marketing management,0267-257X,1472-1376,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Marketing Research,journal of marketing research,0022-2437,1547-7193,Sage Publications,A*,3506,4*,MKT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Mathematical Economics,journal of mathematical economics,0304-4068,1873-1538,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Monetary Economics,journal of monetary economics,0304-3932,1873-1295,Elsevier,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+"Journal of Money, Credit and Banking",journal of money credit and banking,0022-2879,1538-4616,Wiley-Blackwell Publishing,A*,3801,4,FINANCE,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Multivariate Analysis,journal of multivariate analysis,0047-259X,1095-7243,Elsevier,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Occupational and Organizational Psychology,journal of occupational and organizational psychology,0963-1798,2044-8325,Wiley-Blackwell Publishing,A*,3507,4,PSYCH (WOP-OB),False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB); title keyword 'organizational',include_candidate
+Journal of Occupational Health Psychology,journal of occupational health psychology,1076-8998,1939-1307,American Psychological Association,A,3507,4,PSYCH (WOP-OB),False,False,False,False,AJG2024_4;ABDC_A,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB),include_candidate
+Journal of Operations Management,journal of operations management,0272-6963,1873-1317,Wiley-Blackwell Publishing,A*,3507,4*,OPS&TECH,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507; broad-management/noise keyword needs human check,needs_review
+Journal of Optimization Theory and Applications,journal of optimization theory and applications,0022-3239,1573-2878,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Organizational Behavior,journal of organizational behavior,0894-3796,1099-1379,Wiley-Blackwell Publishing,A*,3507,4,PSYCH (WOP-OB),False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB); title keyword 'organizational',include_candidate
+Journal of Organizational Computing and Electronic Commerce,journal of organizational computing and electronic commerce,1091-9392,1532-7744,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,True,title keyword 'organizational',include_candidate
+Journal of Personal Selling & Sales Management,journal of personal selling and sales management,0885-3134,1557-7813,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Personality,journal of personality,0022-3506,1467-6494,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Personality and Social Psychology,journal of personality and social psychology,0022-3514,1939-1315,American Psychological Association,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Journal of Policy Analysis and Management,journal of policy analysis and management,0276-8739,1520-6688,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Policy Modeling,journal of policy modeling,0161-8938,1873-8060,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Political Economy,journal of political economy,0022-3808,1537-534X,The University of Chicago Press,A*,3801,4*,ECON,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of Political Economy: Macroeconomics,journal of political economy macroeconomics,2832-9341,2832-935X,University of Chicago Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Political Economy: Microeconomics,journal of political economy microeconomics,2832-9368,2832-9376,University of Chicago Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Population Economics,journal of population economics,0933-1433,1432-1475,Springer International Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Population Research,journal of population research,1443-2447,1835-9469,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Product & Brand Management,journal of product and brand management,1061-0421,2054-1643,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Product Innovation Management,journal of product innovation management,0737-6782,1540-5885,Wiley-Blackwell Publishing,A*,3599,4,INNOV,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Productivity Analysis,journal of productivity analysis,0895-562X,1573-0441,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Professions and Organization,journal of professions and organization,2051-8803,2051-8811,Oxford University Press,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'organization',include_candidate
+Journal of Public Administration Research and Theory,journal of public administration research and theory,1053-1858,1477-9803,Oxford University Press,A,3599,4,PUB SEC,False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Journal of Public Economic Theory,journal of public economic theory,1097-3923,1467-9779,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Public Economics,journal of public economics,0047-2727,1879-2316,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Public Policy and Marketing,journal of public policy and marketing,0743-9156,1547-7207,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Purchasing and Supply Management,journal of purchasing and supply management,1478-4092,1873-6505,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Quality Technology,journal of quality technology,0022-4065,2575-6230,Taylor & Francis Online,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Real Estate Finance and Economics,journal of real estate finance and economics,0895-5638,1573-045X,Springer International Publishing,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Regional Science,journal of regional science,0022-4146,1467-9787,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Regulatory Economics,journal of regulatory economics,0922-680X,1573-0468,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Retailing,journal of retailing,0022-4359,1873-3271,Elsevier,A*,3506,4,MKT,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Retailing and Consumer Services,journal of retailing and consumer services,0969-6989,1873-1384,Elsevier,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Risk and Insurance,journal of risk and insurance,0022-4367,1539-6975,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Risk and Uncertainty,journal of risk and uncertainty,0895-5646,1573-0476,Springer International Publishing,A*,3803,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Safety Research,journal of safety research,0022-4375,1879-1247,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Service Management,journal of service management,1757-5818,1757-5826,Emerald Group Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Service Research,journal of service research,1094-6705,1552-7379,Sage Publications,A*,3506,4,SECTOR,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Service Theory and Practice,journal of service theory and practice,2055-6225,2055-6233,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Services Marketing,journal of services marketing,0887-6045,2054-1651,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Small Business Management,journal of small business management,0047-2778,1540-627X,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Social Issues,journal of social issues,0022-4537,1540-4560,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Social Policy,journal of social policy,0047-2794,1469-7823,Cambridge University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of Sport Management,journal of sport management,0888-4773,1543-270X,"Human Kinetics Publishers, Inc.",A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Statistical Planning and Inference,journal of statistical planning and inference,0378-3758,1873-1171,Elsevier,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Statistical Software,journal of statistical software,1548-7660,,Foundation for Open Access Statistics,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Strategic Information Systems,journal of strategic information systems,0963-8687,1873-1198,Elsevier,A*,4609,4,INFO MAN,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Strategic Marketing,journal of strategic marketing,0965-254X,1466-4488,Taylor & Francis Online,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Supply Chain Management,journal of supply chain management,1523-2409,1745-493X,Wiley-Blackwell Publishing,A*,3509,4,OPS&TECH,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Sustainable Tourism,journal of sustainable tourism,0966-9582,1747-7646,Taylor & Francis Online,A*,3508,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Technology Transfer,journal of technology transfer,0892-9912,1573-7047,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Journal of the Academy of Marketing Science,journal of academy of marketing science,0092-0703,1552-7824,Springer International Publishing,A*,3506,4*,MKT,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of the American Statistical Association,journal of american statistical association,0162-1459,1537-274X,Taylor & Francis Online,A*,4905,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of the American Taxation Association,journal of american taxation association,0198-9073,1558-8017,American Accounting Association,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of the Association for Information Systems,journal of association for information systems,1536-9323,1558-3457,Association for Information Systems (AIS),A*,4609,4*,INFO MAN,False,False,False,False,AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Journal of the Association of Environmental and Resource Economists,journal of association of environmental and resource economists,2333-5955,2333-5963,University of Chicago Press,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of the European Economic Association,journal of european economic association,1542-4766,1542-4774,Oxford University Press,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of the Japanese and International Economies,journal of japanese and international economies,0889-1583,1095-8681,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of the Operational Research Society,journal of operational research society,0160-5682,1476-9360,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+"Journal of the Royal Statistical Society, Series A (Statistics in Society)",journal of royal statistical society series a,,1467-985X,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Journal of the Royal Statistical Society, Series B (Statistical Methodology)",journal of royal statistical society series b,,1467-9868,Wiley-Blackwell Publishing,A*,4905,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+"Journal of the Royal Statistical Society, Series C (Applied Statistics)",journal of royal statistical society series c,,1467-9876,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Journal of the Royal Statistical Society, Series D (The Statistician)",journal of royal statistical society series d,,1467-9884,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of the Royal Statistical Society. Series B: Statistical Methodology,journal of royal statistical society series b statistical methodology,1467-9868,,Wiley-Blackwell,,,4,ECON,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Journal of Theoretical Probability,journal of theoretical probability,0894-9840,1572-9230,Springer International Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Time Series Analysis,journal of time series analysis,0143-9782,1467-9892,Wiley-Blackwell Publishing,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Transport Geography,journal of transport geography,0966-6923,1873-1236,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Travel & Tourism Marketing,journal of travel and tourism marketing,1054-8408,1540-7306,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Travel Research,journal of travel research,0047-2875,1552-6763,Sage Publications,A*,3508,4,SECTOR,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Journal of Urban Affairs,journal of urban affairs,0735-2166,1467-9906,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Urban Economics,journal of urban economics,0094-1190,1095-9068,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Journal of Vacation Marketing,journal of vacation marketing,1356-7667,1479-1870,Sage Publications,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Journal of Vocational Behavior,journal of vocational behavior,0001-8791,1095-9084,Elsevier,A*,3507,4,PSYCH (WOP-OB),False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB),include_candidate
+Journal of World Business,journal of world business,1090-9516,1878-5573,Elsevier,A*,3507,4,IB&AREA,False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Journal of World Investment and Trade,journal of world investment and trade,1660-7112,2211-9000,Brill,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Judgment and Decision Making,judgment and decision making,1930-2975,,Society for Judgment and Decision Making,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Knowledge Management Research and Practice,knowledge management research and practice,1477-8238,1477-8246,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Kyklos,kyklos,0023-5962,1467-6435,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Labor History,labor history,0023-656X,1469-9702,Taylor & Francis Online,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Labour Economics,labour economics,0927-5371,1879-1034,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Labour History: a journal of labour and social history,labour history a journal of labour and social history,0023-6942,0023-6942,Liverpool University Press,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Land Economics,land economics,0023-7639,1543-8325,University of Wisconsin Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Land Use Policy,land use policy,0264-8377,1873-5754,Elsevier,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Law and Policy,law and policy,0265-8240,1467-9930,Wiley-Blackwell Publishing,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Law Quarterly Review,law quarterly review,0023-933X,,Sweet & Maxwell,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Legal Issues of Economic Integration,legal issues of economic integration,1566-6573,0377-0915,Kluwer Law International,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Leisure Sciences: an interdisciplinary journal,leisure sciences an interdisciplinary journal,0149-0400,1521-0588,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Leisure Studies,leisure studies,0261-4367,1466-4496,Taylor & Francis Online,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Lloyd's Maritime and Commercial Law Quarterly,lloyd s maritime and commercial law quarterly,0306-2945,,Informa Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Local Government Studies,local government studies,0300-3930,1743-9388,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Long Range Planning,long range planning,0024-6301,1873-1872,Elsevier,A*,3507,4,STRAT,False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Macroeconomic Dynamics,macroeconomic dynamics,1365-1005,1469-8056,Cambridge University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Management Accounting Research,management accounting research,1044-5005,1096-1224,Elsevier,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Management and Organization Review,management and organization review,1740-8776,1740-8784,Cambridge University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Management International Review,management international review,0938-8249,1861-8901,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Management Learning,management learning,1350-5076,1461-7307,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Management Science,management science,0025-1909,1526-5501,INFORMS,A*,3507,4*,OR&MANSCI,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Managerial Auditing Journal,managerial auditing journal,0268-6902,1758-7735,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Manufacturing and Service Operations Management,manufacturing service operations management,1523-4614,1526-5498,INFORMS,A*,3509,,,True,True,False,False,FT50;UTD24;ABDC_A*,False,,excluded_by_scope
+Marine Policy,marine policy,0308-597X,1872-9460,Elsevier,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Marine Resource Economics,marine resource economics,0738-1360,2334-5985,University of Chicago Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Marketing Intelligence & Planning,marketing intelligence and planning,0263-4503,1758-8049,Emerald Group Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Marketing Letters,marketing letters,0923-0645,1573-059X,Springer International Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Marketing Science,marketing science,0732-2399,1526-548X,INFORMS,A*,3506,4*,MKT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+Marketing Theory,marketing theory,1470-5931,1741-301X,Sage Publications,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Mathematical Finance,mathematical finance,0960-1627,1467-9965,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Mathematical Programming,mathematical programming,1436-4646,,Springer Nature,,,4,OR&MANSCI,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Mathematical Social Sciences,mathematical social sciences,0165-4896,1879-3118,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Mathematics of Operations Research,mathematics of operations research,0364-765X,1526-5471,INFORMS,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; broad-management/noise keyword needs human check,needs_review
+Meditari Accountancy Research,meditari accountancy research,2049-372X,2049-3738,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Melbourne Journal of International Law,melbourne journal of international law,1444-8602,1444-8610,The University of Melbourne,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Melbourne University Law Review,melbourne university law review,0025-8938,1839-3810,Melbourne University Law Review Association,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+MIS Quarterly,mis quarterly,0276-7783,2162-9730,University of Minnesota Press,A*,4609,4*,INFO MAN,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+MIS Quarterly Executive,mis quarterly executive,1540-1960,1540-1979,"Kelley School of Business, Department of Information Systems, Indiana University",A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+MIT Sloan Management Review,mit sloan management review,1532-9194,1532-8937,MIT Press,A,3507,,,True,False,False,False,FT50;ABDC_A,True,ABDC FoR 3507,needs_review
+Monash University Law Review,monash university law review,0311-3140,,Monash University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Motivation and Emotion,motivation and emotion,0146-7239,1573-6644,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+National Tax Journal,national tax journal,0028-0283,1944-7477,National Tax Association,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+NBER,nber,,,,,,,,False,False,False,True,PREPRINT_PLATFORM,True,approved preprint platform,include_candidate
+NBER Macroeconomics Annual,nber macroeconomics annual,0889-3365,1537-2642,University of Chicago Press,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+New Political Economy,new political economy,1356-3467,1469-9923,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"New Technology, Work & Employment",new technology work and employment,0268-1072,1468-005X,Wiley-Blackwell Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'employment',include_candidate
+New Zealand Journal of Taxation Law and Policy,new zealand journal of taxation law and policy,1322-4417,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+New Zealand Universities Law Review,new zealand universities law review,0549-0618,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Nonprofit and Voluntary Sector Quarterly,nonprofit and voluntary sector quarterly,0899-7640,1552-7395,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+North American Actuarial Journal,north american actuarial journal,1092-0277,2325-0453,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Omega,omega,0305-0483,1873-5274,Elsevier,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Operations Research,operations research,0030-364X,1526-5463,INFORMS,A*,3507,4*,OR&MANSCI,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507; broad-management/noise keyword needs human check,needs_review
+Oregon Law Review,oregon law review,0196-2043,,University of Oregon,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Organization,organization,1350-5084,1461-7323,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Organization & Environment,organization and environment,1086-0266,1552-7417,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Organization Science,organization science,1047-7039,1526-5455,INFORMS,A*,3507,4*,ORG STUD,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field ORG STUD; title keyword 'organization'; FT50/UTD management-general journal,include_candidate
+Organization Studies,organization studies,0170-8406,1741-3044,Sage Publications,A*,3507,4,ORG STUD,True,False,False,False,FT50;AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field ORG STUD; title keyword 'organization',include_candidate
+Organization Theory,organization theory,2631-7877,2631-7877,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Organizational Behavior and Human Decision Processes,organizational behavior and human decision processes,0749-5978,1095-9920,Elsevier,A*,3507,4,PSYCH (WOP-OB),True,False,False,False,FT50;AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB); title keyword 'organizational',include_candidate
+Organizational Dynamics,organizational dynamics,0090-2616,1873-3530,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organizational',include_candidate
+Organizational Psychology Review,organizational psychology review,2041-3866,2041-3874,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organizational',include_candidate
+Organizational Research Methods,organizational research methods,1094-4281,1552-7425,Sage Publications,A*,3507,4,ORG STUD,False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field ORG STUD; title keyword 'organizational',include_candidate
+Osgoode Hall Law Journal,osgoode hall law journal,0030-6185,,Osgoode Hall Law School of York University,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Oxford Bulletin of Economics and Statistics,oxford bulletin of economics and statistics,0305-9049,1468-0084,Wiley-Blackwell Publishing,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Oxford Economic Papers,oxford economic papers,0030-7653,1464-3812,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Oxford Journal of Legal Studies,oxford journal of legal studies,0143-6503,1464-3820,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Oxford Review of Economic Policy,oxford review of economic policy,0266-903X,1460-2121,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Oxford University Commonwealth Law Journal,oxford university commonwealth law journal,1472-9342,1757-8469,Taylor & Francis Online,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Pacific-Basin Finance Journal,pacific basin finance journal,0927-538X,1879-0585,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Papers in Regional Science,papers in regional science,1056-8190,1435-5957,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Personality and Individual Differences,personality and individual differences,0191-8869,1873-3549,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Personality and Social Psychology Bulletin,personality and social psychology bulletin,0146-1672,1552-7433,Sage Publications,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Personnel Psychology,personnel psychology,0031-5826,1744-6570,Wiley-Blackwell Publishing,A*,3507,4*,PSYCH (WOP-OB),False,False,False,False,AJG2024_4*;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field PSYCH (WOP-OB); title keyword 'personnel',include_candidate
+Personnel Review,personnel review,0048-3486,1758-6933,Emerald Group Publishing,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'personnel',include_candidate
+PharmacoEconomics,pharmacoeconomics,1170-7690,1179-2027,Springer International Publishing,A,3899,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Philosophy & Public Affairs,philosophy and public affairs,0048-3915,1088-4963,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Policy and Politics: an international journal,policy and politics an international journal,0305-5736,1470-8442,Policy Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Political Communication,political communication,1058-4609,1091-7675,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Political Science Quarterly,political science quarterly,,1538-165X,Oxford University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Politics and Gender,politics and gender,1743-923X,1743-9248,Cambridge University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Population and Development Review,population and development review,0098-7921,1728-4457,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Population and Environment,population and environment,0199-0039,1573-7810,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Population Research and Policy Review,population research and policy review,0167-5923,1573-7829,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Population Studies: a journal of demography,population studies a journal of demography,0032-4728,1477-4747,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Population, Space and Place",population space and place,1544-8444,1544-8452,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Probability Theory and Related Fields,probability theory and related fields,0178-8051,1432-2064,Springer International Publishing,A*,4905,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Production and Operations Management,production and operations management,1059-1478,1937-5956,Sage Publications,A*,3509,4,OPS&TECH,True,True,False,False,FT50;UTD24;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Production Planning and Control,production planning and control,0953-7287,1366-5871,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Psychological Bulletin,psychological bulletin,0033-2909,1939-1455,American Psychological Association,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Psychological Research,psychological research,0340-0727,1430-2772,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Psychological Review,psychological review,0033-295X,1939-1471,American Psychological Association,A*,3507,4,PSYCH (GENERAL),False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Psychological Science,psychological science,0956-7976,1467-9280,Sage Publications,A*,3507,4*,PSYCH (GENERAL),True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Psychology & Marketing,psychology and marketing,0742-6046,1520-6793,Wiley-Blackwell Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Psychology of Women Quarterly,psychology of women quarterly,0361-6843,1471-6402,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Public Administration,public administration,1467-9299,,Wiley-Blackwell,,,4,PUB SEC,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Public Administration and Development,public administration and development,0271-2075,1099-162X,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Administration Quarterly,public administration quarterly,0734-9149,2327-4433,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Administration Review,public administration review,0033-3352,1540-6210,Wiley-Blackwell Publishing,A,3599,4*,PUB SEC,False,False,False,False,AJG2024_4*;ABDC_A,False,,excluded_by_scope
+Public Administration: an international journal,public administration an international journal,0033-3298,1467-9299,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Choice,public choice,0048-5829,1573-7101,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Law: the constitutional and administrative law of the Commonwealth,public law constitutional and administrative law of commonwealth,0033-3565,,Sweet & Maxwell,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Management Review,public management review,1471-9037,1471-9045,Taylor & Francis Online,A,3507,4,PUB SEC,False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3507,needs_review
+Public Money & Management,public money and management,0954-0962,1467-9302,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Public Opinion Quarterly,public opinion quarterly,0033-362X,1537-5331,Oxford University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Public Relations Review,public relations review,0363-8111,1873-4537,Elsevier,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Qualitative Research in Accounting and Management,qualitative research in accounting and management,1176-6093,1758-7654,Emerald Group Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Quality of Life Research,quality of life research,0962-9343,1573-2649,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Quantitative Economics,quantitative economics,1759-7323,1759-7331,Wiley-Blackwell Publishing,A*,3802,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Quantitative Finance,quantitative finance,1469-7688,1469-7696,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Quantitative Marketing and Economics,quantitative marketing and economics,1570-7156,1573-711X,Springer International Publishing,A,3506,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Quarterly Journal of Experimental Psychology,quarterly journal of experimental psychology,1747-0218,1747-0226,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Quarterly Journal of Finance,quarterly journal of finance,2010-1392,2010-1406,World Scientific Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+R&D Management,randd management,0033-6807,1467-9310,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+RAND Journal of Economics,rand journal of economics,0741-6261,1756-2171,Wiley-Blackwell Publishing,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Real Estate Economics,real estate economics,1080-8620,1540-6229,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Regional Science and Urban Economics,regional science and urban economics,0166-0462,1879-2308,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Regional Studies,regional studies,0034-3404,1360-0591,Taylor & Francis Online,A*,3599,4,"REGIONAL STUDIES, PLANNING AND ENVIRONMENT",False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+"Regional Studies, Regional Science",regional studies regional science,,2168-1376,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Regulation and Governance,regulation and governance,,1748-5991,Wiley-Blackwell Publishing,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Reliability Engineering & System Safety,reliability engineering and system safety,0951-8320,1879-0836,Elsevier,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Renewable and Sustainable Energy Reviews,renewable and sustainable energy reviews,1364-0321,1879-0690,Elsevier ScienceDirect,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Research in International Business and Finance,research in international business and finance,0275-5319,1878-3384,Elsevier,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Research in Organizational Behavior,research in organizational behavior,0191-3085,,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organizational',include_candidate
+Research Policy,research policy,0048-7333,1873-7625,Elsevier,A*,3507,4*,INNOV,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507,needs_review
+Resource and Energy Economics,resource and energy economics,0928-7655,,Elsevier,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Restitution Law Review,restitution law review,1351-170X,,Marenex Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Accounting Studies,review of accounting studies,1380-6653,1573-7136,Springer International Publishing,A*,3501,4,ACCOUNT,True,False,False,False,FT50;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Review of Asset Pricing Studies,review of asset pricing studies,2045-9920,2045-9939,Oxford University Press,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Review of Corporate Finance,review of corporate finance,2693-9312,2693-9320,Now Publishers,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Corporate Finance Studies,review of corporate finance studies,2046-9128,2046-9136,Oxford University Press,A*,3502,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Review of Development Economics,review of development economics,1363-6669,1467-9361,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Economic Dynamics,review of economic dynamics,1094-2025,1096-6099,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Review of Economics of the Household,review of economics of household,1569-5239,1573-7152,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Environmental Economics and Policy,review of environmental economics and policy,1750-6816,1750-6824,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Finance,review of finance,1572-3097,1573-692X,Oxford University Press,A*,3502,4,FINANCE,True,False,False,False,FT50;AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Review of Income and Wealth,review of income and wealth,,1475-4991,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Industrial Organization,review of industrial organization,0889-938X,1573-7160,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,True,title keyword 'organization',include_candidate
+Review of International Economics,review of international economics,0965-7576,1467-9396,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of International Political Economy,review of international political economy,0969-2290,1466-4526,Taylor & Francis Online,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Review of Managerial Science,review of managerial science,1863-6691,1863-6683,Springer Nature,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Risk Analysis,risk analysis,1539-6924,,Wiley-Blackwell,,,4,SOC SCI,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Safety Science,safety science,0925-7535,,Elsevier,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Scandinavian Actuarial Journal,scandinavian actuarial journal,0346-1238,1651-2030,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scandinavian Journal of Economics,scandinavian journal of economics,0347-0520,1467-9442,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scandinavian Journal of Hospitality and Tourism,scandinavian journal of hospitality and tourism,1502-2250,1502-2269,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scandinavian Journal of Information Systems,scandinavian journal of information systems,0905-0167,,University of Aalborg,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scandinavian Journal of Statistics,scandinavian journal of statistics,,1467-9469,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Science Communication,science communication,1075-5470,1552-8545,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Science, Technology, & Human Values",science technology and human values,0162-2439,1552-8251,Sage Publications,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scientometrics,scientometrics,0138-9130,1588-2861,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Scottish Journal of Political Economy,scottish journal of political economy,0036-9292,1467-9485,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Security Dialogue,security dialogue,0967-0106,1460-3640,Sage Publications,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Sex Roles,sex roles,0360-0025,1573-2762,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+SIAM Journal on Applied Mathematics,siam journal on applied mathematics,0036-1399,1095-712X,SIAM Publications Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Singapore Journal of Legal Studies,singapore journal of legal studies,0218-2173,,National University of Singapore,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Small Business Economics,small business economics,0921-898X,1573-0913,Springer International Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Small Group Research,small group research,1046-4964,1552-8278,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Social Choice and Welfare,social choice and welfare,0176-1714,1432-217X,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Social Forces,social forces,0037-7732,1534-7605,Oxford University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Social Indicators Research,social indicators research,0303-8300,1573-0921,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Social Policy & Administration,social policy and administration,0144-5596,1467-9515,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Social Problems,social problems,0037-7791,1533-8533,Oxford University Press,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Social Science & Medicine,social science and medicine,0277-9536,1873-5347,Elsevier ScienceDirect,A,3899,4,SOC SCI,False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Socio-Economic Review,socio economic review,1475-1461,1475-147X,Oxford University Press,A,3801,4,SOC SCI,False,False,False,False,AJG2024_4;ABDC_A,False,,excluded_by_scope
+Sociological Inquiry,sociological inquiry,,1475-682X,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Sociological Methodology,sociological methodology,0081-1750,1467-9531,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Sociological Theory,sociological theory,0735-2751,1467-9558,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Sociology,sociology,0038-0385,1469-8684,Sage Publications,A*,3507,4,SOC SCI,False,False,False,False,AJG2024_4;ABDC_A*,True,ABDC FoR 3507,needs_review
+Sociology of Sport Journal,sociology of sport journal,0741-1235,1543-2785,"Human Kinetics Publishers, Inc.",A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Southern Economic Journal,southern economic journal,0038-4038,2325-8012,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Sport Management Review,sport management review,1441-3523,1839-2083,Elsevier,A,3504,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+SSRN,ssrn,,,,,,,,False,False,False,True,PREPRINT_PLATFORM,True,approved preprint platform,include_candidate
+Stanford Journal of International Law,stanford journal of international law,0731-5082,,Stanford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Stanford Journal of Law, Business and Finance",stanford journal of law business and finance,1078-8794,,Stanford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statistica Neerlandica,statistica neerlandica,0039-0402,1467-9574,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statistica Sinica,statistica sinica,1017-0405,,Statistica Sinica,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statistical Science,statistical science,0883-4237,,Institute of Mathematical Statistics,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statistics and Computing,statistics and computing,0960-3174,1573-1375,Springer International Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statistics in Medicine,statistics in medicine,0277-6715,1097-0258,Wiley-Blackwell Publishing,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Statute Law Review,statute law review,0144-3593,1464-3863,Oxford University Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Stochastic Processes and their Applications,stochastic processes and their applications,0304-4149,1879-209X,Elsevier,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Strategic Entrepreneurship Journal,strategic entrepreneurship journal,1932-4391,1932-443X,Wiley-Blackwell Publishing,A,3507,4,ENT-SBM,True,False,False,False,FT50;AJG2024_4;ABDC_A,True,ABDC FoR 3507,needs_review
+Strategic Management Journal,strategic management journal,0143-2095,1097-0266,Wiley-Blackwell Publishing,A*,3507,4*,STRAT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,True,ABDC FoR 3507; FT50/UTD management-general journal,include_candidate
+Strategic Organization,strategic organization,1476-1270,1741-315X,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507; title keyword 'organization',include_candidate
+Strategy Science,strategy science,2333-2050,2333-2077,INFORMS,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Stress and Health,stress and health,1532-3005,1532-2998,Wiley-Blackwell Publishing,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Structural Equation Modelling: A Multidisciplinary Journal,structural equation modelling a multidisciplinary journal,1070-5511,1532-8007,Taylor & Francis Online,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Studies in Comparative International Development,studies in comparative international development,0039-3606,1936-6167,Springer International Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Studies in Higher Education,studies in higher education,0307-5079,1470-174X,Taylor & Francis Online,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505,needs_review
+Studies in Nonlinear Dynamics & Econometrics,studies in nonlinear dynamics and econometrics,1081-1826,1558-3708,De Gruyter,A,3802,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Supply Chain Management: an international journal,supply chain management an international journal,1359-8546,1758-6852,Emerald Group Publishing,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Sustainability Accounting, Management and Policy Journal",sustainability accounting management and policy journal,2040-8021,,Emerald Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+System Dynamics Review,system dynamics review,,1099-1727,Wiley-Blackwell Publishing,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Systems Research and Behavioral Science,systems research and behavioral science,1092-7026,1099-1743,Wiley-Blackwell Publishing,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tax Law Review,tax law review,0040-0041,,New York University School of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Technological Forecasting and Social Change,technological forecasting and social change,0040-1625,1873-5509,Elsevier,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Technometrics,technometrics,0040-1706,1537-2723,American Statistical Association,A,3503,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Technovation,technovation,0166-4972,1879-2383,Elsevier,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+Texas International Law Journal,texas international law journal,0163-7479,,University of Texas School of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Accounting Review,accounting review,0001-4826,1558-7967,American Accounting Association,A*,3501,4*,ACCOUNT,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The American Economic Review,american economic review,0002-8282,0065-812X,American Economic Association,A*,3801,4*,ECON,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The Australian Journal of Agricultural and Resource Economics,australian journal of agricultural and resource economics,1364-985X,1467-8489,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The BE Journal of Economic Analysis and Policy,be journal of economic analysis and policy,1935-1682,1555-0494,De Gruyter,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The BE Journal of Macroeconomics,be journal of macroeconomics,1935-1690,,De Gruyter,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The BE Journal of Theoretical Economics,be journal of theoretical economics,1935-1704,,De Gruyter,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Business Lawyer,business lawyer,0007-6899,,American Bar Association,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The China Quarterly,china quarterly,0305-7410,1468-2648,Cambridge University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Economic History Review: a journal of economic and social history,economic history review a journal of economic and social history,0013-0117,1468-0289,Wiley-Blackwell Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The Economic Journal,economic journal,0013-0133,1468-0297,Wiley-Blackwell Publishing,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+The Economic Record,economic record,0013-0249,1475-4932,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Electronic Journal of Statistics,electronic journal of statistics,1935-7524,,The Institute of Mathematical Statistics and the Bernoulli Society,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The European Accounting Review,european accounting review,0963-8180,1468-4497,Taylor & Francis Online,A*,3501,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The European Journal of Finance,european journal of finance,1351-847X,1466-4364,Taylor & Francis Online,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Florida Tax Review,florida tax review,1066-3487,,University of Florida Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Information Society,information society,0197-2243,1087-6537,Taylor & Francis Online,A,4609,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The International Journal of Accounting,international journal of accounting,1094-4060,2213-3933,World Scientific Publishing,A,3501,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The International Journal of Logistics Management,international journal of logistics management,0957-4093,1758-6550,Emerald Group Publishing,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Journal of Derivatives,journal of derivatives,1074-1240,,S&P Global,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Journal of Economic History,journal of economic history,0022-0507,1471-6372,Cambridge University Press,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The Journal of Economic Inequality,journal of economic inequality,1569-1721,1573-8701,Springer International Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Journal of Finance,journal of finance,0022-1082,1540-6261,American Finance Association,A*,3502,4*,FINANCE,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The Journal of Fixed Income,journal of fixed income,1059-8596,,S&P Global,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Journal of Futures Markets,journal of futures markets,0270-7314,1096-9934,Wiley-Blackwell Publishing,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Journal of Industrial Economics,journal of industrial economics,0022-1821,1467-6451,Wiley-Blackwell Publishing,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The Journal of Law and Economics,journal of law and economics,0022-2186,1537-5285,University of Chicago Law School,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The Journal of Portfolio Management,journal of portfolio management,0095-4918,,S&P Global,A,3502,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Leadership Quarterly,leadership quarterly,1048-9843,1873-3409,Elsevier,A*,3507,4,ORG STUD,False,False,False,False,AJG2024_4;ABDC_A*,True,manual core OBHRM title; ABDC FoR 3507; AJG field ORG STUD; title keyword 'leadership',include_candidate
+The Modern Law Review,modern law review,0026-7961,1468-2230,Wiley-Blackwell Publishing,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The Pacific Review,pacific review,0951-2748,1470-1332,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Quarterly Journal of Economics,quarterly journal of economics,0033-5533,1531-4650,MIT Press,A*,3801,4*,ECON,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The Review of Economic Studies,review of economic studies,0034-6527,1467-937X,Oxford University Press,A*,3801,4*,ECON,True,False,False,False,FT50;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The Review of Economics and Statistics,review of economics and statistics,0034-6535,1530-9142,The MIT Press,A*,3801,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+The Review of Financial Studies,review of financial studies,0893-9454,1465-7368,Oxford University Press,A*,3502,4*,FINANCE,True,True,False,False,FT50;UTD24;AJG2024_4*;ABDC_A*,False,,excluded_by_scope
+The Sociological Review,sociological review,0038-0261,1467-954X,Sage Publications,A,3507,,,False,False,False,False,ABDC_A,True,ABDC FoR 3507,needs_review
+The Sydney Law Review,sydney law review,0082-0512,,Sydney Law School,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+The World Bank Economic Review,world bank economic review,0258-6770,1564-698X,Oxford University Press,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The World Economy,world economy,0378-5920,1467-9701,Wiley-Blackwell Publishing,A,3801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+The Yale Law Journal,yale law journal,0044-0094,1939-8611,"The Yale Law Journal Company, Inc.",A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Theoretical Economics,theoretical economics,1933-6837,1555-7561,The Econometric Society,A*,3803,4,ECON,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Theory and Decision: an international journal for multidisciplinary advances in decision sciences,theory and decision an international journal for multidisciplinary advances in decision sciences,0040-5833,1573-7187,Springer International Publishing,A,3803,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Theory of Probability and its Applications,theory of probability and its applications,0040-585X,1095-7219,SIAM Publications Online,A,4905,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Third World Quarterly,third world quarterly,0413-6597,1360-2241,Taylor & Francis Online,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tort Law Review,tort law review,1039-3285,,Thomson Reuters,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Torts Law Journal,torts law journal,1038-5967,,LexisNexis,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Analysis,tourism analysis,1083-5423,1943-3999,Cognizant Communication Corporation,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Economics,tourism economics,1354-8166,2044-0375,Sage Publications,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Geographies,tourism geographies,1461-6688,1470-1340,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Management,tourism management,0261-5177,1879-3193,Elsevier,A*,3508,4,SECTOR,False,False,False,False,AJG2024_4;ABDC_A*,False,,excluded_by_scope
+Tourism Management Perspectives,tourism management perspectives,2211-9736,,Elsevier,A*,3508,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Tourism Planning & Development,tourism planning and development,2156-8316,2156-8324,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Recreation Research,tourism recreation research,0250-8281,2320-0308,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tourism Review,tourism review,1660-5373,1759-8451,Emerald Group Publishing,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Transport Policy,transport policy,0967-070X,1879-310X,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Transport Reviews,transport reviews,0144-1647,1464-5327,Taylor & Francis Online,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Transportation,transportation,0049-4488,1572-9435,Springer International Publishing,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Transportation Research Part A: Policy and Practice,transportation research part a policy and practice,0965-8564,1879-2375,Elsevier,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Transportation Research Part B: Methodological,transportation research part b methodological,0191-2615,1879-2367,Elsevier,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Transportation Research Part C: Emerging Technologies,transportation research part c emerging technologies,0968-090X,1879-2359,Elsevier,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Transportation Research Part D: Transport and Environment,transportation research part d transport and environment,1361-9209,1879-2340,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Transportation Research Part E: Logistics and Transportation Review,transportation research part e logistics and transportation review,1366-5545,1878-5794,Elsevier,A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Transportation Research Part F: Traffic Psychology and Behaviour,transportation research part f traffic psychology and behaviour,1369-8478,1873-5517,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Transportation Research, Series B: Methodological",transportation research series b methodological,1879-2367,,Elsevier,,,4,SECTOR,False,False,False,False,AJG2024_4,False,,excluded_by_scope
+Transportation Science,transportation science,0041-1655,1526-5447,The Institute for Operations Research and the Management Sciences (INFORMS),A*,3509,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Travel Behaviour and Society,travel behaviour and society,2214-367X,,Elsevier,A,3509,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Tulane Maritime Law Journal,tulane maritime law journal,1048-3748,,Tulane University Law School,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+University of Chicago Law Review,university of chicago law review,0041-9494,1939-859X,University of Chicago Law School,A*,4801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+University of New South Wales Law Journal,university of new south wales law journal,0313-0096,,University of New South Wales,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+University of Toronto Law Journal,university of toronto law journal,0042-0220,1710-1174,University of Toronto Press,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Urban Studies: an international journal for research in urban studies,urban studies an international journal for research in urban studies,0042-0980,1360-063X,Sage Publications,A*,3599,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+Value in Health,value in health,1098-3015,,Elsevier ScienceDirect / ISPOR,A,3899,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Virginia Tax Review,virginia tax review,0735-9004,,University of Virginia School of Law,A,4801,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Visitor Studies,visitor studies,1064-5578,1934-7715,Taylor & Francis Online,A,3508,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+Water Resources Research,water resources research,0043-1397,1944-7973,Wiley-Blackwell Publishing,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope
+"Work & Stress: An international Journal of Work, Health and Organisations",work and stress an international journal of work health and organisations,0267-8373,1464-5335,Taylor & Francis Online,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'work',include_candidate
+Work and Occupations,work and occupations,0730-8884,1552-8464,Sage Publications,A,3505,,,False,False,False,False,ABDC_A,True,ABDC FoR 3505; title keyword 'work',include_candidate
+Work and Stress,work and stress,1464-5335,,Taylor & Francis,,,4,PSYCH (WOP-OB),False,False,False,False,AJG2024_4,True,manual core OBHRM title; AJG field PSYCH (WOP-OB); title keyword 'work',include_candidate
+"Work, Employment and Society",work employment and society,0950-0170,1469-8722,Sage Publications,A,3505,4,HRM&EMP,False,False,False,False,AJG2024_4;ABDC_A,True,ABDC FoR 3505; AJG field HRM&EMP; title keyword 'employment',include_candidate
+World Development,world development,0305-750X,1873-5991,Elsevier,A*,3801,,,False,False,False,False,ABDC_A*,False,,excluded_by_scope
+World Politics,world politics,0043-8871,1086-3338,Johns Hopkins University Press,A,3599,,,False,False,False,False,ABDC_A,False,,excluded_by_scope

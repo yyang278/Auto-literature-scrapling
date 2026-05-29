@@ -1,0 +1,4 @@
+interface:
+  display_name: "OBHRM Literature Monitor"
+  short_description: "Monitor OBHRM top-journal articles and prepare daily reports."
+  default_prompt: "Find new OBHRM top-journal articles for my active keywords and prepare the daily report."

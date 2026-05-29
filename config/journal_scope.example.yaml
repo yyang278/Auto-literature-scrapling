@@ -1,0 +1,25 @@
+scope_name: obhrm-default
+include_for_codes:
+  - "3505"
+  - "3507"
+include_ajg_fields:
+  - HRM&EMP
+  - ORG STUD
+  - PSYCH (WOP-OB)
+  - MDEV&EDU
+title_keywords:
+  - academy of management
+  - administrative science
+  - applied psychology
+  - employment
+  - human resource
+  - human relations
+  - industrial relations
+  - leadership
+  - organization
+  - organisational
+  - organizational
+  - personnel
+  - work
+manual_include_titles: []
+manual_exclude_titles: []
