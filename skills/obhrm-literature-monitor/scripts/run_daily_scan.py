@@ -850,8 +850,14 @@ def send_lark(text: str) -> None:
         response.read()
 
 
-def build_lark_summary(articles: list[Article], concepts: list[str], start: datetime, end: datetime) -> str:
-    journal_counts = Counter(article.journal or "Unknown journal" for article in articles)
+def format_lark_summary(
+    journal_counts: Counter[str],
+    concepts: list[str],
+    start: datetime,
+    end: datetime,
+    public_report_url: str = "",
+    public_index_url: str = "",
+) -> str:
     lines = [
         "OBHRM Weekly Literature Report",
         f"Concepts: {csv_value(concepts)}",
@@ -864,7 +870,25 @@ def build_lark_summary(articles: list[Article], concepts: list[str], start: date
             lines.append(f"- {journal}: {count}")
     else:
         lines.append("- No matched articles")
+    if public_report_url or public_index_url:
+        lines.append("")
+    if public_report_url:
+        lines.extend(["Full report:", public_report_url])
+    if public_index_url:
+        lines.extend(["Report index:", public_index_url])
     return "\n".join(lines)
+
+
+def build_lark_summary(
+    articles: list[Article],
+    concepts: list[str],
+    start: datetime,
+    end: datetime,
+    public_report_url: str = "",
+    public_index_url: str = "",
+) -> str:
+    journal_counts = Counter(article.journal or "Unknown journal" for article in articles)
+    return format_lark_summary(journal_counts, concepts, start, end, public_report_url, public_index_url)
 
 
 def parse_args() -> argparse.Namespace:
@@ -885,6 +909,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--per-keyword", type=int, default=200)
     parser.add_argument("--max-pages", type=int, default=3)
     parser.add_argument("--push-lark", action="store_true")
+    parser.add_argument("--public-report-url", help="Public URL for the full hosted HTML report.")
+    parser.add_argument("--public-index-url", help="Public URL for the hosted report index page.")
     return parser.parse_args()
 
 
@@ -957,7 +983,16 @@ def main() -> int:
 
     if args.push_lark:
         try:
-            send_lark(build_lark_summary(articles, concepts, start, end))
+            send_lark(
+                build_lark_summary(
+                    articles,
+                    concepts,
+                    start,
+                    end,
+                    public_report_url=args.public_report_url or "",
+                    public_index_url=args.public_index_url or "",
+                )
+            )
             log.append("Lark push: OK")
         except Exception as exc:  # noqa: BLE001
             log.append(f"Lark push: FAILED {exc}")

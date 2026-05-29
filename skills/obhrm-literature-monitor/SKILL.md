@@ -65,6 +65,12 @@ To test a specific full week manually, pass Monday 00:00 to the following Monday
 python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --start 2026-05-18T00:00 --end 2026-05-25T00:00
 ```
 
+When a hosted HTML report exists and the scan has already been run, push only the short Lark summary without re-scanning:
+
+```powershell
+python skills/obhrm-literature-monitor/scripts/push_lark_report_summary.py --csv outputs/<run-folder>/obhrm_daily_records.csv --start 2026-05-18T00:00 --end 2026-05-25T00:00 --concepts "AI; LLM; Large Language Model" --public-report-url https://example.netlify.app/reports/<run-folder>/ --public-index-url https://example.netlify.app/
+```
+
 ### Check Push Configuration
 
 Run:
