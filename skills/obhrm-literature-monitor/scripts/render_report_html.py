@@ -312,6 +312,21 @@ a:hover { text-decoration: underline; }
 
 
 def repair_mojibake(text: str) -> str:
+    replacements = {
+        "鈥揳": "–a",
+        "鈥搊": "–o",
+        "鈥搃": "–i",
+        "鈥?": "’",
+        "鈥檚": "’s",
+        "鈥檛": "’t",
+        "艂": "ł",
+        "â€“": "–",
+        "â€™": "’",
+        "â€œ": "“",
+        "â€\u009d": "”",
+    }
+    for bad, good in replacements.items():
+        text = text.replace(bad, good)
     suspicious = ("\u00c2", "\u00c3", "\u00e2", "\u9225", "\ufffd")
     if not any(token in text for token in suspicious):
         return text
