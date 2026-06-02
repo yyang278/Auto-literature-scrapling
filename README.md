@@ -73,10 +73,10 @@ python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --previous-week
 
 The default production scan uses the `openalex-source` strategy. It resolves each whitelist source to an OpenAlex source id, searches each source/concept/window combination, and writes `obhrm_scan_trace.csv` so the traversal can be audited.
 
-Run a specific Tokyo-time window:
+Run a specific window with separate keyword concepts:
 
 ```powershell
-python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --start 2026-05-18T00:00 --end 2026-05-25T00:00 --keywords "AI; LLM; Large Language Model"
+python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --timezone Asia/Tokyo --start 2026-05-18T00:00 --end 2026-05-25T00:00 --keyword AI --keyword LLM --keyword "Large Language Model" --match-mode any
 ```
 
 Choose a narrower source list when broad keywords would produce too many articles:
@@ -92,7 +92,7 @@ utd24               UTD24 sources within the whitelist
 Example:
 
 ```powershell
-python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --journal-list abs-4-star --start 2000-01-01T00:00 --end 2026-06-01T00:00 --keywords "Asia; Asian"
+python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --journal-list abs-4-star --timezone Asia/Tokyo --start 2000-01-01T00:00 --end 2026-06-01T00:00 --keyword Asia --keyword Asian --match-mode any
 ```
 
 Render the Markdown report as standalone HTML:
@@ -126,16 +126,18 @@ Important permission rule: most users cannot click `Run workflow` inside another
 3. Choose `Generate OBHRM Literature Report`.
 4. Click `Run workflow`.
 5. Fill in:
-   - `keywords`: semicolon-separated concepts, such as `AI; LLM; Large Language Model`.
-   - `start_jst`: Tokyo-time inclusive start, such as `2026-05-18T00:00`.
-   - `end_jst`: Tokyo-time exclusive end, such as `2026-05-25T00:00`.
-   - `match_mode`: keep `any`.
+   - `keyword_1` to `keyword_5`: enter up to five concepts, one per field. Leave unused fields blank.
+   - `timezone`: choose `Asia/Tokyo`, `America/Chicago`, or `Asia/Shanghai`.
+   - `start_time`: inclusive start in the selected timezone, such as `2026-05-18T00:00`.
+   - `end_time`: exclusive end in the selected timezone, such as `2026-05-25T00:00`. The workflow will fail clearly if the end is not later than the start.
+   - `match_mode`: choose `any` for OR logic, or `all` for AND logic.
    - `journal_list`: choose `all-whitelist`, `abs-4-and-4-star`, `abs-4-star`, `ft50`, or `utd24`.
    - `public_site_url`: leave blank unless you maintain a custom Netlify or GitHub Pages domain.
 6. Start the workflow and wait for it to finish.
 
 The workflow runs on GitHub-hosted servers. It generates Markdown, CSV, and HTML artifacts, publishes the public HTML copy into `site/reports/<run-folder>/`, commits the updated `site/` directory, and deploys the `site/` directory to GitHub Pages.
 It also uploads `obhrm_scan_trace.csv`, which shows source-by-source traversal details: journal/platform name, OpenAlex source id, concept, API total count, fetched count, pages fetched, status, and query URL.
+Technical OpenAlex controls are intentionally hidden from the normal `Run workflow` form; production web runs use the source-first OpenAlex strategy with the repository defaults.
 
 When `public_site_url` is blank, report links are generated from the running repository's GitHub Pages URL:
 

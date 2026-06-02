@@ -10,8 +10,8 @@ description: Monitor OBHRM/HCI/preprint target-source articles, build and review
 - Treat the repository version as the source of truth. Install or sync to the local Codex skills directory only after the repo version is validated.
 - Always build or refresh the journal/platform whitelist before adding new sources to a scan.
 - Pause for user review after generating `data/whitelist/journals_review.md`; do not run production scans against a new whitelist until the user confirms it.
-- Use Asia/Tokyo for all windows. The weekly production window is previous Monday 00:00 inclusive to current Monday 00:00 exclusive.
-- Keep keywords easy to replace through `config/monitor.yaml` or command-line arguments.
+- Support `Asia/Tokyo`, `America/Chicago`, and `Asia/Shanghai` for user-entered windows. The weekly production window is previous Monday 00:00 inclusive to current Monday 00:00 exclusive in the selected timezone.
+- Keep keywords easy to replace through `config/monitor.yaml`, command-line arguments, or GitHub Actions keyword fields.
 - For team self-service runs, prefer the GitHub Actions manual workflow over asking every teacher/student to install Codex locally.
 
 ## Compliance Boundary
@@ -46,10 +46,10 @@ Only run this after the user approves the journal review list. The planned first
 Timezone: Asia/Tokyo
 ```
 
-Use active keywords from `config/monitor.yaml`, or pass a temporary keyword string separated by semicolons:
+Use active keywords from `config/monitor.yaml`, or pass up to five temporary keyword concepts. Use `--match-mode any` for OR logic and `--match-mode all` for AND logic:
 
 ```powershell
-python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --keywords "work engagement; turnover; self-sacrifice leadership"
+python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --keyword "work engagement" --keyword turnover --keyword "self-sacrifice leadership" --match-mode any
 ```
 
 The default scan strategy is `openalex-source`: resolve each whitelist source to its OpenAlex source id, then query each source/concept/window combination and write a source-by-source traversal trace. Use this for production and any research-sensitive search.
@@ -100,7 +100,7 @@ Local report generation must still work when push variables are missing.
 Lark push summaries must stay short. Include only:
 
 - active concepts/keywords
-- Tokyo-time window
+- selected timezone window
 - journal/platform names with matched article counts
 
 Do not include article titles, DOI lists, local file paths, Missing Abstract counts, or full report text in the Lark summary. Add full-report links only after a public/shared HTML hosting location is configured.
@@ -141,12 +141,15 @@ The public site copy removes email addresses found in article metadata while lea
 
 Use `.github/workflows/generate-literature-report.yml` when a collaborator needs to generate a report without local Codex or Python setup. The workflow exposes a GitHub `Run workflow` form with:
 
-- `keywords`: semicolon-separated concepts.
-- `start_jst`: Tokyo-time inclusive start, such as `2026-05-18T00:00`.
-- `end_jst`: Tokyo-time exclusive end, such as `2026-05-25T00:00`.
-- `match_mode`: currently `any`.
+- `keyword_1` to `keyword_5`: up to five concepts, one per field; blank fields are ignored.
+- `timezone`: one of `Asia/Tokyo`, `America/Chicago`, or `Asia/Shanghai`.
+- `start_time`: inclusive start in the selected timezone, such as `2026-05-18T00:00`.
+- `end_time`: exclusive end in the selected timezone, such as `2026-05-25T00:00`; the script rejects windows where end is not later than start.
+- `match_mode`: `any` for OR logic, or `all` for AND logic.
 - `journal_list`: one of `all-whitelist`, `abs-4-and-4-star`, `abs-4-star`, `ft50`, or `utd24`.
-- optional output label and scan strategy controls.
+- optional output label and public site URL.
+
+The web workflow intentionally hides low-level OpenAlex controls from ordinary users. It uses the production `openalex-source` traversal with repository defaults.
 
 GitHub only shows `Run workflow` to users with sufficient permission on that repository. For teacher/student self-service, direct them to fork the repository and run the workflow in their fork.
 

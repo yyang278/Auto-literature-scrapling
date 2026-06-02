@@ -15,6 +15,24 @@ from run_daily_scan import output_dir_for, parse_local_datetime, safe_label
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 SCRIPT_DIR = Path(__file__).resolve().parent
+TIMEZONE_CHOICES = ["Asia/Tokyo", "America/Chicago", "Asia/Shanghai"]
+
+
+def split_legacy_keywords(keywords: str | None) -> list[str]:
+    if not keywords:
+        return []
+    return [item.strip() for item in re.split(r"[;\n]", keywords) if item.strip()]
+
+
+def normalized_keywords(keyword_lines: list[str] | None, legacy_keywords: str | None) -> list[str]:
+    concepts = [item.strip() for item in keyword_lines or [] if item.strip()]
+    if not concepts:
+        concepts = split_legacy_keywords(legacy_keywords)
+    if not concepts:
+        raise ValueError("At least one keyword is required.")
+    if len(concepts) > 5:
+        raise ValueError("At most 5 keyword concepts are supported.")
+    return concepts
 
 
 def concept_slug(keywords: str) -> str:
@@ -49,11 +67,12 @@ def append_github_summary(lines: list[str]) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run scan, render HTML, publish site, and optionally push Lark.")
-    parser.add_argument("--keywords", required=True, help="Semicolon-separated keyword concepts.")
-    parser.add_argument("--start", required=True, help="Tokyo-time start datetime, e.g. 2026-05-18T00:00.")
-    parser.add_argument("--end", required=True, help="Tokyo-time end datetime, e.g. 2026-05-25T00:00.")
-    parser.add_argument("--timezone", default="Asia/Tokyo")
-    parser.add_argument("--match-mode", default="any", choices=["any"])
+    parser.add_argument("--keyword", action="append", default=[], help="One keyword concept. Repeat up to 5 times.")
+    parser.add_argument("--keywords", help="Legacy semicolon-separated keyword concepts.")
+    parser.add_argument("--start", required=True, help="Local start datetime, e.g. 2026-05-18T00:00.")
+    parser.add_argument("--end", required=True, help="Local end datetime, e.g. 2026-05-25T00:00.")
+    parser.add_argument("--timezone", default="Asia/Tokyo", choices=TIMEZONE_CHOICES)
+    parser.add_argument("--match-mode", default="any", choices=["any", "all"])
     parser.add_argument("--output-label", help="Optional output folder label.")
     parser.add_argument(
         "--strategy",
@@ -74,28 +93,34 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    if args.timezone != "Asia/Tokyo":
-        raise ValueError("This monitor currently supports Asia/Tokyo windows only.")
+    concepts = normalized_keywords(args.keyword, args.keywords)
+    keyword_text = "; ".join(concepts)
 
-    label = args.output_label or default_label(args.keywords, args.start, args.end)
+    label = args.output_label or default_label(keyword_text, args.start, args.end)
     start = parse_local_datetime(args.start, args.timezone)
     end = parse_local_datetime(args.end, args.timezone)
+    if end <= start:
+        raise ValueError(
+            "Invalid time window: end must be later than start. "
+            f"Got start={start.isoformat()} and end={end.isoformat()}."
+        )
     output_dir, _ = output_dir_for(end, label)
     report_md = output_dir / "obhrm_daily_report.md"
     report_html = output_dir / "obhrm_daily_report.html"
     csv_path = output_dir / "obhrm_daily_records.csv"
     report_slug = output_dir.name
 
-    run_command(
-        [
+    scan_args = [
             sys.executable,
             str(SCRIPT_DIR / "run_daily_scan.py"),
-            "--keywords",
-            args.keywords,
             "--start",
             args.start,
             "--end",
             args.end,
+            "--timezone",
+            args.timezone,
+            "--match-mode",
+            args.match_mode,
             "--output-label",
             label,
             "--strategy",
@@ -106,8 +131,10 @@ def main() -> int:
             str(args.max_pages),
             "--journal-list",
             args.journal_list,
-        ]
-    )
+    ]
+    for concept in concepts:
+        scan_args.extend(["--keyword", concept])
+    run_command(scan_args)
     run_command([sys.executable, str(SCRIPT_DIR / "render_report_html.py"), "--input", str(report_md)])
     run_command([sys.executable, str(SCRIPT_DIR / "publish_report_site.py"), "--input", str(report_html), "--slug", report_slug])
 
@@ -134,7 +161,7 @@ def main() -> int:
                     "--timezone",
                     args.timezone,
                     "--concepts",
-                    args.keywords,
+                    keyword_text,
                     "--public-report-url",
                     public_report_url,
                     "--public-index-url",
@@ -155,8 +182,10 @@ def main() -> int:
         [
             "## OBHRM Literature Report",
             "",
-            f"- Keywords: {args.keywords}",
+            f"- Keywords: {keyword_text}",
+            f"- Match mode: {args.match_mode}",
             f"- Journal list: {args.journal_list}",
+            f"- Timezone: {args.timezone}",
             f"- Window: {start.isoformat()} to {end.isoformat()}",
             f"- Output folder: `{report_slug}`",
             f"- Public report: {public_report_url}",

@@ -179,19 +179,31 @@ def load_config() -> dict[str, Any]:
     return simple_yaml_config(path)
 
 
-def parse_keywords(config: dict[str, Any], cli_keywords: str | None) -> tuple[str, str, list[str]]:
+def parse_keywords(
+    config: dict[str, Any],
+    cli_keywords: str | None,
+    cli_keyword_lines: list[str] | None = None,
+    cli_match_mode: str | None = None,
+) -> tuple[str, str, list[str]]:
     active = config.get("keyword_groups", {}).get("active", {})
     name = str(active.get("name", "active"))
     mode = str(active.get("match_mode", "any")).lower()
     concepts = active.get("concepts", [])
+    if cli_match_mode:
+        mode = cli_match_mode.lower()
     if cli_keywords:
         name = "cli-keywords"
         concepts = re.split(r"[;\n]", cli_keywords)
+    if cli_keyword_lines:
+        name = "cli-keywords"
+        concepts = cli_keyword_lines
     cleaned = [str(item).strip() for item in concepts if str(item).strip()]
     if not cleaned:
-        raise ValueError("No keywords configured. Add concepts to config/monitor.yaml or pass --keywords.")
-    if mode != "any":
-        raise ValueError("Only match_mode=any is implemented in this first version.")
+        raise ValueError("No keywords configured. Add concepts to config/monitor.yaml or pass --keyword/--keywords.")
+    if len(cleaned) > 5:
+        raise ValueError("At most 5 keyword concepts are supported for the GitHub Actions workflow.")
+    if mode not in {"any", "all"}:
+        raise ValueError("match_mode must be either 'any' or 'all'.")
     return name, mode, cleaned
 
 
@@ -200,6 +212,14 @@ def parse_local_datetime(value: str, timezone: str) -> datetime:
         value = f"{value}T00:00"
     normalized = value.replace(" ", "T")
     return datetime.fromisoformat(normalized).replace(tzinfo=ZoneInfo(timezone))
+
+
+def validate_window(start: datetime, end: datetime) -> None:
+    if end <= start:
+        raise ValueError(
+            "Invalid time window: end must be later than start. "
+            f"Got start={start.isoformat()} and end={end.isoformat()}."
+        )
 
 
 def default_window(timezone: str) -> tuple[datetime, datetime]:
@@ -650,7 +670,13 @@ def resolve_openalex_source(journal: Journal, log: list[str]) -> OpenAlexSource 
     return None
 
 
-def keyword_matches(article: Article, concepts: list[str]) -> bool:
+def concept_pattern(concept: str) -> re.Pattern[str]:
+    escaped = re.escape(concept.strip())
+    escaped = re.sub(r"\\\s+", r"\\s+", escaped)
+    return re.compile(rf"(?<![A-Za-z0-9]){escaped}(?![A-Za-z0-9])", flags=re.IGNORECASE)
+
+
+def keyword_matches(article: Article, concepts: list[str], match_mode: str = "any") -> bool:
     fields = {
         "title": article.title,
         "abstract": article.abstract,
@@ -659,14 +685,16 @@ def keyword_matches(article: Article, concepts: list[str]) -> bool:
     matched_concepts: list[str] = []
     matched_fields: list[str] = []
     for concept in concepts:
-        needle = concept.lower()
+        pattern = concept_pattern(concept)
         for field_name, field_value in fields.items():
-            if needle in field_value.lower():
+            if pattern.search(field_value or ""):
                 matched_concepts.append(concept)
                 matched_fields.append(field_name)
                 break
     article.matched_concepts = list(dict.fromkeys(matched_concepts))
     article.matched_fields = list(dict.fromkeys(matched_fields))
+    if match_mode == "all":
+        return len(article.matched_concepts) == len(list(dict.fromkeys(concepts)))
     return bool(article.matched_concepts)
 
 
@@ -731,6 +759,7 @@ def dedupe_articles(articles: list[Article]) -> list[Article]:
 def scan_articles(
     journals: list[Journal],
     concepts: list[str],
+    match_mode: str,
     start: datetime,
     end: datetime,
     rows_per_journal: int,
@@ -747,7 +776,7 @@ def scan_articles(
     matched: list[Article] = []
     for article in deduped:
         enrich_from_openalex(article)
-        if keyword_matches(article, concepts):
+        if keyword_matches(article, concepts, match_mode):
             matched.append(article)
         time.sleep(0.05)
     return sorted(matched, key=lambda item: (item.publication_date or "", item.journal, item.title))
@@ -894,6 +923,7 @@ def query_openalex_source_keyword(
 def scan_articles_keyword_first(
     journals: list[Journal],
     concepts: list[str],
+    match_mode: str,
     start: datetime,
     end: datetime,
     per_keyword: int,
@@ -922,7 +952,7 @@ def scan_articles_keyword_first(
             continue
         article = article_from_openalex(work)
         crossref_enrich_by_doi(article)
-        if keyword_matches(article, concepts):
+        if keyword_matches(article, concepts, match_mode):
             articles.append(article)
         time.sleep(0.05)
     log.append(f"OpenAlex whitelist-filter skipped: {skipped}")
@@ -932,6 +962,7 @@ def scan_articles_keyword_first(
 def scan_articles_source_first(
     journals: list[Journal],
     concepts: list[str],
+    match_mode: str,
     start: datetime,
     end: datetime,
     per_keyword: int,
@@ -989,7 +1020,7 @@ def scan_articles_source_first(
     for work in raw_works:
         article = article_from_openalex(work)
         crossref_enrich_by_doi(article)
-        if keyword_matches(article, concepts):
+        if keyword_matches(article, concepts, match_mode):
             articles.append(article)
         time.sleep(0.05)
     return sorted(dedupe_articles(articles), key=lambda item: (item.publication_date or "", item.journal, item.title))
@@ -1228,7 +1259,14 @@ def build_lark_summary(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run OBHRM literature monitor scan.")
-    parser.add_argument("--keywords", help="Semicolon-separated keyword concepts.")
+    parser.add_argument("--keyword", action="append", default=[], help="One keyword concept. Repeat up to 5 times.")
+    parser.add_argument("--keywords", help="Legacy semicolon-separated keyword concepts.")
+    parser.add_argument("--match-mode", choices=["any", "all"], help="Keyword matching logic.")
+    parser.add_argument(
+        "--timezone",
+        choices=["Asia/Tokyo", "America/Chicago", "Asia/Shanghai"],
+        help="Timezone used to interpret --start and --end.",
+    )
     parser.add_argument("--start", help="Local start datetime, e.g. 2026-05-25T08:00.")
     parser.add_argument("--end", help="Local end datetime, e.g. 2026-05-26T08:00.")
     parser.add_argument("--trial", action="store_true", help="Use the approved trial window.")
@@ -1259,8 +1297,8 @@ def main() -> int:
     load_dotenv()
     args = parse_args()
     config = load_config()
-    timezone = str(config.get("timezone", "Asia/Tokyo"))
-    keyword_name, match_mode, concepts = parse_keywords(config, args.keywords)
+    timezone = args.timezone or str(config.get("timezone", "Asia/Tokyo"))
+    keyword_name, match_mode, concepts = parse_keywords(config, args.keywords, args.keyword, args.match_mode)
 
     if args.trial:
         start, end = trial_window(timezone)
@@ -1271,6 +1309,7 @@ def main() -> int:
         end = parse_local_datetime(args.end, timezone)
     else:
         start, end = default_window(timezone)
+    validate_window(start, end)
 
     journals = load_journals(WHITELIST_CSV, args.journal_list)
     output_dir, log_dir = output_dir_for(end, args.output_label)
@@ -1282,7 +1321,9 @@ def main() -> int:
     log: list[str] = [
         f"Start: {datetime.now().isoformat(timespec='seconds')}",
         f"Window: {start.isoformat()} to {end.isoformat()}",
+        f"Timezone: {timezone}",
         f"Keywords: {concepts}",
+        f"Match mode: {match_mode}",
         f"Journal list: {args.journal_list} ({JOURNAL_LISTS[args.journal_list]['label']})",
         f"Journals: {len(journals)}",
         f"Strategy: {args.strategy}",
@@ -1292,6 +1333,7 @@ def main() -> int:
         articles = scan_articles(
             journals=journals,
             concepts=concepts,
+            match_mode=match_mode,
             start=start,
             end=end,
             rows_per_journal=args.rows_per_journal,
@@ -1302,6 +1344,7 @@ def main() -> int:
         articles = scan_articles_source_first(
             journals=journals,
             concepts=concepts,
+            match_mode=match_mode,
             start=start,
             end=end,
             per_keyword=args.per_keyword,
@@ -1315,6 +1358,7 @@ def main() -> int:
         articles = scan_articles_keyword_first(
             journals=selected_journals,
             concepts=concepts,
+            match_mode=match_mode,
             start=start,
             end=end,
             per_keyword=args.per_keyword,
