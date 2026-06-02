@@ -7,6 +7,7 @@ import os
 import re
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
 
@@ -65,6 +66,20 @@ def append_github_summary(lines: list[str]) -> None:
             handle.write("\n".join(lines) + "\n")
 
 
+def run_actor() -> str:
+    return (
+        os.environ.get("GITHUB_TRIGGERING_ACTOR")
+        or os.environ.get("GITHUB_ACTOR")
+        or os.environ.get("USERNAME")
+        or os.environ.get("USER")
+        or "local"
+    )
+
+
+def run_started_at() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run scan, render HTML, publish site, and optionally push Lark.")
     parser.add_argument("--keyword", action="append", default=[], help="One keyword concept. Repeat up to 5 times.")
@@ -99,6 +114,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    actor = run_actor()
+    started_at = run_started_at()
     concepts = normalized_keywords(args.keyword, args.keywords)
     keyword_text = "; ".join(concepts)
     journal_lists = normalize_journal_list_names(args.journal_list)
@@ -143,7 +160,20 @@ def main() -> int:
         scan_args.extend(["--keyword", concept])
     run_command(scan_args)
     run_command([sys.executable, str(SCRIPT_DIR / "render_report_html.py"), "--input", str(report_md)])
-    run_command([sys.executable, str(SCRIPT_DIR / "publish_report_site.py"), "--input", str(report_html), "--slug", report_slug])
+    run_command(
+        [
+            sys.executable,
+            str(SCRIPT_DIR / "publish_report_site.py"),
+            "--input",
+            str(report_html),
+            "--slug",
+            report_slug,
+            "--run-actor",
+            actor,
+            "--run-started-at",
+            started_at,
+        ]
+    )
 
     public_base = (
         args.public_site_url
@@ -194,6 +224,8 @@ def main() -> int:
             f"- Journal lists: {'; '.join(journal_lists)}",
             f"- Timezone: {args.timezone}",
             f"- Window: {start.isoformat()} to {end.isoformat()}",
+            f"- Run actor: {actor}",
+            f"- Run started: {started_at}",
             f"- Output folder: `{report_slug}`",
             f"- Public report: {public_report_url}",
             f"- Public index: {public_index_url}",
