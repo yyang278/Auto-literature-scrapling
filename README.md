@@ -118,9 +118,10 @@ The public site copy removes email addresses found in article metadata. Local Ma
 ## Run From GitHub Web Page
 
 Collaborators do not need Codex, Python, or this repository on their own computers if they use the GitHub Actions workflow.
-They do need GitHub access to this repository with permission to run Actions.
 
-1. Open the GitHub repository.
+Important permission rule: most users cannot click `Run workflow` inside another person's repository unless they have sufficient write/collaborator access. For ordinary teacher/student self-service use, fork this repository first and run Actions inside the fork. The workflow publishes that fork's reports to that fork's GitHub Pages site.
+
+1. Fork this GitHub repository into your own GitHub account.
 2. Click `Actions`.
 3. Choose `Generate OBHRM Literature Report`.
 4. Click `Run workflow`.
@@ -130,10 +131,20 @@ They do need GitHub access to this repository with permission to run Actions.
    - `end_jst`: Tokyo-time exclusive end, such as `2026-05-25T00:00`.
    - `match_mode`: keep `any`.
    - `journal_list`: choose `all-whitelist`, `abs-4-and-4-star`, `abs-4-star`, `ft50`, or `utd24`.
+   - `public_site_url`: leave blank unless you maintain a custom Netlify or GitHub Pages domain.
 6. Start the workflow and wait for it to finish.
 
-The workflow runs on GitHub-hosted servers. It generates Markdown, CSV, and HTML artifacts, publishes the public HTML copy into `site/reports/<run-folder>/`, commits the updated `site/` directory, and lets Netlify redeploy the public report page.
+The workflow runs on GitHub-hosted servers. It generates Markdown, CSV, and HTML artifacts, publishes the public HTML copy into `site/reports/<run-folder>/`, commits the updated `site/` directory, and deploys the `site/` directory to GitHub Pages.
 It also uploads `obhrm_scan_trace.csv`, which shows source-by-source traversal details: journal/platform name, OpenAlex source id, concept, API total count, fetched count, pages fetched, status, and query URL.
+
+When `public_site_url` is blank, report links are generated from the running repository's GitHub Pages URL:
+
+```text
+https://<github-user>.github.io/<repo-name>/
+https://<github-user>.github.io/<repo-name>/reports/<run-folder>/
+```
+
+If GitHub asks for a Pages source, choose `GitHub Actions` in `Settings` -> `Pages`. The workflow uses GitHub Pages deployment actions, so forks do not need the original Netlify project.
 
 If Lark secrets are configured, the workflow also sends the short Lark summary. Add these repository secrets under GitHub `Settings` -> `Secrets and variables` -> `Actions`:
 
@@ -144,16 +155,16 @@ OBHRM_LARK_WEBHOOK_SECRET
 
 The Lark summary includes only concepts, Tokyo-time window, journal/platform counts, and public report links.
 
-## Netlify Hosting
+## Optional Netlify Hosting
 
-This repository includes `netlify.toml`. In Netlify, connect this GitHub repository and use:
+This repository includes `netlify.toml`. Netlify is optional and mainly useful for a central project site. In Netlify, connect a GitHub repository and use:
 
 ```text
 Build command: leave empty
 Publish directory: site
 ```
 
-After each weekly report, run `publish_report_site.py`, commit the updated `site/` files, and push to GitHub. Netlify will redeploy the public report link automatically.
+After each weekly report, `publish_report_site.py` updates `site/`, and the workflow commits those site files. Netlify will redeploy if it is connected to that repository. Fork users can ignore Netlify and use the GitHub Pages links produced by the workflow.
 
 ## Lark Push
 

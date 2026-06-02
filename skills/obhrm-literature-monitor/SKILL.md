@@ -148,7 +148,9 @@ Use `.github/workflows/generate-literature-report.yml` when a collaborator needs
 - `journal_list`: one of `all-whitelist`, `abs-4-and-4-star`, `abs-4-star`, `ft50`, or `utd24`.
 - optional output label and scan strategy controls.
 
-The workflow runs `scripts/run_github_report.py`, which scans, renders standalone HTML, publishes the public copy under `site/reports/<run-folder>/`, uploads Markdown/HTML/CSV/log artifacts to the workflow run, and commits `site/` so Netlify can redeploy.
+GitHub only shows `Run workflow` to users with sufficient permission on that repository. For teacher/student self-service, direct them to fork the repository and run the workflow in their fork.
+
+The workflow runs `scripts/run_github_report.py`, which scans, renders standalone HTML, publishes the public copy under `site/reports/<run-folder>/`, uploads Markdown/HTML/CSV/log artifacts to the workflow run, commits `site/`, and deploys `site/` to GitHub Pages. If `public_site_url` is left blank in the workflow form, the workflow computes the fork's default GitHub Pages URL: `https://<github-user>.github.io/<repo-name>/`.
 
 The workflow also uploads `obhrm_scan_trace.csv`. Use this file to audit the traversal process: it records each source, source id, concept, API total count, fetched count, page count, status, and query URL.
 
@@ -157,4 +159,4 @@ Repository secrets for Lark push:
 - `OBHRM_LARK_WEBHOOK_URL`
 - optional `OBHRM_LARK_WEBHOOK_SECRET`
 
-If the Lark webhook secret is missing, report generation and Netlify publishing still proceed; the workflow logs that Lark push was skipped.
+If the Lark webhook secret is missing, report generation and GitHub Pages publishing still proceed; the workflow logs that Lark push was skipped.

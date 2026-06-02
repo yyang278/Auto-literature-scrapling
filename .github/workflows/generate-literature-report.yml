@@ -58,9 +58,9 @@ on:
         default: "10"
         type: string
       public_site_url:
-        description: "Public Netlify site URL"
-        required: true
-        default: "https://obhrm-literature-monitor.netlify.app"
+        description: "Optional public site URL. Leave blank to use this repository's GitHub Pages URL."
+        required: false
+        default: ""
         type: string
       push_lark:
         description: "Send the short summary to Lark if webhook secrets are configured"
@@ -70,6 +70,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -81,12 +83,15 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
@@ -110,6 +115,12 @@ jobs:
           RUN_MAX_PAGES: ${{ inputs.max_pages }}
           RUN_PUBLIC_SITE_URL: ${{ inputs.public_site_url }}
         run: |
+          if [ -n "$RUN_PUBLIC_SITE_URL" ]; then
+            PUBLIC_SITE_URL="$RUN_PUBLIC_SITE_URL"
+          else
+            REPO_NAME="${GITHUB_REPOSITORY#*/}"
+            PUBLIC_SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
+          fi
           ARGS=(
             --keywords "$RUN_KEYWORDS"
             --start "$RUN_START_JST"
@@ -119,7 +130,7 @@ jobs:
             --strategy "$RUN_STRATEGY"
             --per-keyword "$RUN_PER_KEYWORD"
             --max-pages "$RUN_MAX_PAGES"
-            --public-site-url "$RUN_PUBLIC_SITE_URL"
+            --public-site-url "$PUBLIC_SITE_URL"
           )
           if [ -n "$RUN_OUTPUT_LABEL" ]; then
             ARGS+=(--output-label "$RUN_OUTPUT_LABEL")
@@ -127,7 +138,7 @@ jobs:
           python skills/obhrm-literature-monitor/scripts/run_github_report.py "${ARGS[@]}"
 
       - name: Upload generated report artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: obhrm-report-${{ steps.generate.outputs.report_dir }}
           path: |
@@ -148,6 +159,18 @@ jobs:
             git commit -m "Publish literature report ${{ steps.generate.outputs.report_dir }}"
             git push
           fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy GitHub Pages site
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Push short Lark summary
         if: ${{ inputs.push_lark }}

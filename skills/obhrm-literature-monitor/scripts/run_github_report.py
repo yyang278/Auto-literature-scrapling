@@ -62,7 +62,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--per-keyword", type=int, default=200)
     parser.add_argument("--max-pages", type=int, default=10)
-    parser.add_argument("--public-site-url", default="https://obhrm-literature-monitor.netlify.app")
+    parser.add_argument("--public-site-url", default="")
     parser.add_argument("--push-lark", action="store_true")
     parser.add_argument(
         "--journal-list",
@@ -111,7 +111,11 @@ def main() -> int:
     run_command([sys.executable, str(SCRIPT_DIR / "render_report_html.py"), "--input", str(report_md)])
     run_command([sys.executable, str(SCRIPT_DIR / "publish_report_site.py"), "--input", str(report_html), "--slug", report_slug])
 
-    public_base = args.public_site_url.rstrip("/")
+    public_base = (
+        args.public_site_url
+        or os.environ.get("OBHRM_PUBLIC_SITE_URL")
+        or "https://obhrm-literature-monitor.netlify.app"
+    ).rstrip("/")
     public_report_url = f"{public_base}/reports/{quote(report_slug)}/"
     public_index_url = f"{public_base}/"
 
