@@ -23,6 +23,17 @@ on:
         type: choice
         options:
           - any
+      journal_list:
+        description: "Target source list"
+        required: true
+        default: "all-198"
+        type: choice
+        options:
+          - all-198
+          - abs-4-and-4-star
+          - abs-4-star
+          - ft50
+          - utd24
       output_label:
         description: "Optional URL/output label. Leave blank to auto-generate."
         required: false
@@ -92,6 +103,7 @@ jobs:
           RUN_START_JST: ${{ inputs.start_jst }}
           RUN_END_JST: ${{ inputs.end_jst }}
           RUN_MATCH_MODE: ${{ inputs.match_mode }}
+          RUN_JOURNAL_LIST: ${{ inputs.journal_list }}
           RUN_OUTPUT_LABEL: ${{ inputs.output_label }}
           RUN_STRATEGY: ${{ inputs.strategy }}
           RUN_PER_KEYWORD: ${{ inputs.per_keyword }}
@@ -103,6 +115,7 @@ jobs:
             --start "$RUN_START_JST"
             --end "$RUN_END_JST"
             --match-mode "$RUN_MATCH_MODE"
+            --journal-list "$RUN_JOURNAL_LIST"
             --strategy "$RUN_STRATEGY"
             --per-keyword "$RUN_PER_KEYWORD"
             --max-pages "$RUN_MAX_PAGES"

@@ -33,6 +33,29 @@ LOG_ROOT = REPO_ROOT / "logs"
 CROSSREF_API = "https://api.crossref.org/v1"
 OPENALEX_API = "https://api.openalex.org"
 
+JOURNAL_LISTS: dict[str, dict[str, Any]] = {
+    "all-198": {
+        "label": "All 198 OBHRM/HCI/preprint whitelist sources",
+        "tokens": set(),
+    },
+    "abs-4-and-4-star": {
+        "label": "ABS/AJG 2024 4 and 4* sources within the 198 whitelist",
+        "tokens": {"AJG2024_4", "AJG2024_4*"},
+    },
+    "abs-4-star": {
+        "label": "ABS/AJG 2024 4* sources within the 198 whitelist",
+        "tokens": {"AJG2024_4*"},
+    },
+    "ft50": {
+        "label": "FT50 sources within the 198 whitelist",
+        "tokens": {"FT50"},
+    },
+    "utd24": {
+        "label": "UTD24 sources within the 198 whitelist",
+        "tokens": {"UTD24"},
+    },
+}
+
 
 @dataclass
 class Journal:
@@ -201,12 +224,28 @@ def previous_week_window(timezone: str, reference: datetime | None = None) -> tu
     return previous_monday, this_monday
 
 
-def load_journals(path: Path) -> list[Journal]:
+def journal_list_options() -> str:
+    return ", ".join(JOURNAL_LISTS)
+
+
+def journal_matches_list(source_lists: str, journal_list: str) -> bool:
+    if journal_list not in JOURNAL_LISTS:
+        raise ValueError(f"Unknown journal list {journal_list!r}. Available: {journal_list_options()}")
+    tokens = JOURNAL_LISTS[journal_list]["tokens"]
+    if not tokens:
+        return True
+    source_tokens = {part.strip() for part in str(source_lists or "").split(";") if part.strip()}
+    return bool(source_tokens & tokens)
+
+
+def load_journals(path: Path, journal_list: str = "all-198") -> list[Journal]:
     journals: list[Journal] = []
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
             if row.get("obhrm_candidate") != "True":
+                continue
+            if not journal_matches_list(row.get("source_lists", ""), journal_list):
                 continue
             issns = []
             for field_name in ["issn", "eissn"]:
@@ -1199,6 +1238,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--push-lark", action="store_true")
     parser.add_argument("--public-report-url", help="Public URL for the full hosted HTML report.")
     parser.add_argument("--public-index-url", help="Public URL for the hosted report index page.")
+    parser.add_argument(
+        "--journal-list",
+        choices=list(JOURNAL_LISTS),
+        default="all-198",
+        help="Named source subset to scan.",
+    )
     return parser.parse_args()
 
 
@@ -1219,7 +1264,7 @@ def main() -> int:
     else:
         start, end = default_window(timezone)
 
-    journals = load_journals(WHITELIST_CSV)
+    journals = load_journals(WHITELIST_CSV, args.journal_list)
     output_dir, log_dir = output_dir_for(end, args.output_label)
     report_path = output_dir / "obhrm_daily_report.md"
     csv_path = output_dir / "obhrm_daily_records.csv"
@@ -1230,6 +1275,7 @@ def main() -> int:
         f"Start: {datetime.now().isoformat(timespec='seconds')}",
         f"Window: {start.isoformat()} to {end.isoformat()}",
         f"Keywords: {concepts}",
+        f"Journal list: {args.journal_list} ({JOURNAL_LISTS[args.journal_list]['label']})",
         f"Journals: {len(journals)}",
         f"Strategy: {args.strategy}",
     ]

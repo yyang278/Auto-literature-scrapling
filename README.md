@@ -79,6 +79,22 @@ Run a specific Tokyo-time window:
 python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --start 2026-05-18T00:00 --end 2026-05-25T00:00 --keywords "AI; LLM; Large Language Model"
 ```
 
+Choose a narrower source list when broad keywords would produce too many articles:
+
+```text
+all-198             all approved OBHRM/HCI/preprint whitelist sources
+abs-4-and-4-star    ABS/AJG 2024 4 and 4* sources within the whitelist
+abs-4-star          ABS/AJG 2024 4* sources within the whitelist
+ft50                FT50 sources within the whitelist
+utd24               UTD24 sources within the whitelist
+```
+
+Example:
+
+```powershell
+python skills/obhrm-literature-monitor/scripts/run_daily_scan.py --journal-list abs-4-star --start 2000-01-01T00:00 --end 2026-06-01T00:00 --keywords "Asia; Asian"
+```
+
 Render the Markdown report as standalone HTML:
 
 ```powershell
@@ -113,6 +129,7 @@ They do need GitHub access to this repository with permission to run Actions.
    - `start_jst`: Tokyo-time inclusive start, such as `2026-05-18T00:00`.
    - `end_jst`: Tokyo-time exclusive end, such as `2026-05-25T00:00`.
    - `match_mode`: keep `any`.
+   - `journal_list`: choose `all-198`, `abs-4-and-4-star`, `abs-4-star`, `ft50`, or `utd24`.
 6. Start the workflow and wait for it to finish.
 
 The workflow runs on GitHub-hosted servers. It generates Markdown, CSV, and HTML artifacts, publishes the public HTML copy into `site/reports/<run-folder>/`, commits the updated `site/` directory, and lets Netlify redeploy the public report page.

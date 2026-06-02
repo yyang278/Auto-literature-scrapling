@@ -64,6 +64,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-pages", type=int, default=10)
     parser.add_argument("--public-site-url", default="https://obhrm-literature-monitor.netlify.app")
     parser.add_argument("--push-lark", action="store_true")
+    parser.add_argument(
+        "--journal-list",
+        choices=["all-198", "abs-4-and-4-star", "abs-4-star", "ft50", "utd24"],
+        default="all-198",
+    )
     return parser.parse_args()
 
 
@@ -99,6 +104,8 @@ def main() -> int:
             str(args.per_keyword),
             "--max-pages",
             str(args.max_pages),
+            "--journal-list",
+            args.journal_list,
         ]
     )
     run_command([sys.executable, str(SCRIPT_DIR / "render_report_html.py"), "--input", str(report_md)])
@@ -145,6 +152,7 @@ def main() -> int:
             "## OBHRM Literature Report",
             "",
             f"- Keywords: {args.keywords}",
+            f"- Journal list: {args.journal_list}",
             f"- Window: {start.isoformat()} to {end.isoformat()}",
             f"- Output folder: `{report_slug}`",
             f"- Public report: {public_report_url}",
