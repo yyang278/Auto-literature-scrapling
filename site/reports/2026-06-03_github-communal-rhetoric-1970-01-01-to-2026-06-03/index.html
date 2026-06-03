@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBHRM Weekly Literature Report</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #647084;
+  --line: #d9e0ea;
+  --soft: #f7f9fc;
+  --panel: #ffffff;
+  --accent: #1f5fbf;
+  --accent-strong: #123b77;
+  --accent-soft: #eaf2ff;
+  --warn: #b42318;
+  --warn-soft: #fff1f0;
+  --ok: #067647;
+  --ok-soft: #ecfdf3;
+  --shadow: 0 18px 44px rgba(24, 33, 47, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Microsoft YaHei", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #f4f7fb 0%, #eef3f8 260px, #f7f9fc 100%);
+  line-height: 1.55;
+}
+main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 34px auto 56px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px 34px;
+  box-shadow: var(--shadow);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--accent), #6a9af6);
+}
+h1 {
+  margin: 0 0 18px;
+  color: var(--accent-strong);
+  font-size: 34px;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+.meta-item {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.meta-label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section {
+  margin-top: 30px;
+}
+h2 {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-size: 23px;
+  line-height: 1.25;
+}
+h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+  line-height: 1.35;
+}
+.article {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0;
+  margin: 18px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfe;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.article-content {
+  padding: 18px 24px 22px;
+}
+.note {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 6px;
+  color: #243b63;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(24, 33, 47, 0.04);
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.stat-value {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent-strong);
+  font-size: 26px;
+  font-weight: 800;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  vertical-align: top;
+}
+th {
+  background: #f1f4f9;
+  color: #344054;
+  text-align: left;
+}
+tr:last-child td { border-bottom: 0; }
+.field-name {
+  width: 170px;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 18px;
+}
+.field-value {
+  color: #263244;
+}
+.abstract-block {
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.abstract-label {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.abstract-text {
+  margin: 0;
+  color: #263244;
+  hyphens: auto;
+  text-align: justify;
+  text-wrap: pretty;
+}
+.affiliation-table {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.affiliation-table th,
+.affiliation-table td {
+  padding: 10px 12px;
+}
+.affiliation-table th {
+  background: #f5f8fc;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.affiliation-author {
+  width: 24%;
+  color: #263244;
+  font-weight: 800;
+}
+.affiliation-value {
+  color: #263244;
+  text-align: left;
+}
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.badge.available { color: var(--ok); background: var(--ok-soft); }
+.badge.missing { color: var(--warn); background: var(--warn-soft); }
+.badge.journal {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+.badge.date {
+  color: #475467;
+  background: #f2f4f7;
+}
+.doi-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #b7cdfb;
+  border-radius: 999px;
+  background: #f7faff;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+a:hover { text-decoration: underline; }
+@media (max-width: 720px) {
+  main { width: min(100% - 20px, 1120px); margin-top: 16px; }
+  .hero { padding: 22px 20px; }
+  h1 { font-size: 26px; }
+  .article-header {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .article-meta {
+    justify-content: flex-start;
+  }
+  .article-content { padding: 16px 18px 18px; }
+  tr, td { display: block; width: 100%; }
+  td { border-bottom: 0; padding: 4px 0; }
+  tr {
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0;
+  }
+  .field-name { white-space: normal; }
+  .affiliation-table,
+  .affiliation-table thead,
+  .affiliation-table tbody,
+  .affiliation-table tr,
+  .affiliation-table th,
+  .affiliation-table td {
+    display: block;
+    width: 100%;
+  }
+  .affiliation-table th { display: none; }
+  .affiliation-author {
+    padding-bottom: 0;
+  }
+  .affiliation-value {
+    padding-top: 2px;
+  }
+}
+</style>
+</head>
+<body>
+  <main>
+<section class="hero">
+<h1>OBHRM Weekly Literature Report</h1>
+<div class="meta-grid"><div class="meta-item"><span class="meta-label">Window</span><strong>1970-01-01T00:00:00+09:00 to 2026-06-03T00:00:00+09:00</strong></div>
+<div class="meta-item"><span class="meta-label">Concepts</span><strong>Communal Rhetoric</strong></div>
+<div class="meta-item"><span class="meta-label">Target journal/platform whitelist size</span><strong>60</strong></div>
+<div class="meta-item"><span class="meta-label">Matched articles</span><strong>0</strong></div>
+<div class="meta-item"><span class="meta-label">Missing abstracts</span><strong>0</strong></div></div>
+</section>
+<section class="section"><h2>At a Glance</h2>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-label">Matched articles</span><span class="stat-value">0</span></div>
+<div class="stat-card"><span class="stat-label">Articles with abstracts</span><span class="stat-value">0</span></div>
+<div class="stat-card"><span class="stat-label">Missing abstracts</span><span class="stat-value">0</span></div>
+<div class="stat-card"><span class="stat-label">Target sources</span><span class="stat-value">60</span></div>
+</div>
+<p class="note">Publication metadata often has date-level rather than hour-level precision. This report uses the requested local timezone window and public metadata API date filters.</p>
+<p class="note">Full-text boundary: this report provides DOI and publisher links only. Readers must manually use their own authorized university account for full-text access. The monitor does not log in, bypass access controls, or download PDFs.</p>
+<section class="section"><h2>Articles With Abstracts</h2>
+<section class="section"><h2>Missing Abstract</h2>
+  </main>
+</body>
+</html>
