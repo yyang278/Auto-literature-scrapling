@@ -220,6 +220,8 @@ def main() -> int:
     write_github_output("report_dir", report_slug)
     write_github_output("public_report_url", public_report_url)
     write_github_output("public_index_url", public_index_url)
+    write_github_output("run_actor", actor)
+    write_github_output("run_started_at", started_at)
     append_github_summary(
         [
             "## OBHRM Literature Report",

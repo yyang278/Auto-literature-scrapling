@@ -222,15 +222,42 @@ jobs:
             logs/${{ steps.generate.outputs.report_dir }}/run.log
 
       - name: Commit published site
+        env:
+          REPORT_DIR: ${{ steps.generate.outputs.report_dir }}
+          RUN_ACTOR: ${{ steps.generate.outputs.run_actor }}
+          RUN_STARTED_AT: ${{ steps.generate.outputs.run_started_at }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash push --include-untracked -- site || true
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          python skills/obhrm-literature-monitor/scripts/publish_report_site.py \
+            --input "outputs/${REPORT_DIR}/obhrm_daily_report.html" \
+            --slug "$REPORT_DIR" \
+            --run-actor "$RUN_ACTOR" \
+            --run-started-at "$RUN_STARTED_AT"
           git add site
           if git diff --cached --quiet; then
             echo "No site changes to commit."
           else
             git commit -m "Publish literature report ${{ steps.generate.outputs.report_dir }}"
-            git push
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+              echo "Push failed on attempt ${attempt}; rebasing on latest remote and retrying."
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+              python skills/obhrm-literature-monitor/scripts/publish_report_site.py \
+                --input "outputs/${REPORT_DIR}/obhrm_daily_report.html" \
+                --slug "$REPORT_DIR" \
+                --run-actor "$RUN_ACTOR" \
+                --run-started-at "$RUN_STARTED_AT"
+              git add site
+              git commit --amend --no-edit
+            done
+            echo "Failed to push site after retries."
+            exit 1
           fi
 
       - name: Configure GitHub Pages
@@ -247,6 +274,7 @@ jobs:
 
       - name: Push short Lark summary
         if: ${{ inputs.push_lark }}
+        continue-on-error: true
         env:
           OBHRM_LARK_WEBHOOK_URL: ${{ secrets.OBHRM_LARK_WEBHOOK_URL }}
           OBHRM_LARK_WEBHOOK_SECRET: ${{ secrets.OBHRM_LARK_WEBHOOK_SECRET }}
