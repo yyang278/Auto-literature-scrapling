@@ -139,7 +139,7 @@ Generate the standalone HTML report from Markdown with:
 python skills/obhrm-literature-monitor/scripts/render_report_html.py --input outputs/<run-folder>/obhrm_daily_report.md
 ```
 
-When `obhrm_keyword_trends.json` exists beside the Markdown report, the HTML renderer adds a `Keyword Trajectories` section with clickable per-keyword SVG charts and a combined multi-line chart. The combined chart defaults to `% of keyword peak` so low-frequency keywords remain legible, and also provides `Raw counts`. Hover details use raw yearly counts and the top-cited OpenAlex candidate for that keyword/year. The trend charts show per-keyword yearly candidate counts within the selected sources/window; final article inclusion is still controlled by `match_mode`.
+When `obhrm_keyword_trends.json` exists beside the Markdown report, the HTML renderer adds a `Keyword Trajectories` section with clickable per-keyword SVG charts and a combined multi-line chart. The combined chart defaults to `% of keyword peak` so low-frequency keywords remain legible, and also provides `Raw counts`. Hover details use raw yearly counts and the top-cited OpenAlex candidate for that keyword/year. Single-keyword reports show one interactive trajectory chart instead of a combined chart plus duplicate card; multi-keyword reports add jump links to each keyword-specific article list, and enlarged per-keyword charts keep the same hover and scale-toggle interactions as the combined chart. The trend charts show per-keyword yearly candidate counts within the selected sources/window; final article inclusion is still controlled by `match_mode`.
 
 Publish the HTML report into the Netlify static site directory with:
 

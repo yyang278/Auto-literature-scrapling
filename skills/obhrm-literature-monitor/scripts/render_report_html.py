@@ -35,6 +35,7 @@ STYLE = """
   --shadow: 0 18px 44px rgba(24, 33, 47, 0.10);
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
@@ -189,6 +190,53 @@ h3 {
   border: 1px dashed var(--line);
   border-radius: 10px;
   padding: 14px 16px;
+}
+.keyword-nav {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.keyword-nav h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.keyword-nav-intro {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.keyword-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.keyword-nav-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 12px 14px;
+}
+.keyword-nav-title {
+  color: var(--accent-strong);
+  display: block;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.keyword-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.keyword-nav-links a {
+  border: 1px solid #b7cdfb;
+  border-radius: 999px;
+  background: #f7faff;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 9px;
 }
 table {
   width: 100%;
@@ -541,6 +589,12 @@ a:hover { text-decoration: underline; }
   }
   .trend-modal { padding: 12px; }
   .trend-modal-card { padding: 18px; }
+  .combined-trend-header {
+    display: block;
+  }
+  .chart-mode-toggle {
+    margin-top: 10px;
+  }
 }
 """
 
@@ -583,7 +637,11 @@ REPORT_SCRIPT = """
 
     const showMode = (mode) => {
       chart.querySelectorAll(".combined-svg").forEach((svg) => {
-        svg.hidden = svg.dataset.mode !== mode;
+        if (svg.dataset.mode === mode) {
+          svg.removeAttribute("hidden");
+        } else {
+          svg.setAttribute("hidden", "");
+        }
       });
       chart.querySelectorAll(".chart-mode-button").forEach((button) => {
         button.classList.toggle("active", button.dataset.chartMode === mode);
@@ -698,6 +756,49 @@ def inline_markdown(text: str) -> str:
         escaped,
     )
     return escaped
+
+
+def slugify_fragment(text: str) -> str:
+    text = repair_mojibake(text).strip().lower()
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return text.strip("-") or "section"
+
+
+def render_keyword_nav(markdown: str) -> str:
+    articles: dict[str, str] = {}
+    missing: dict[str, str] = {}
+    for line in markdown.splitlines():
+        if line.startswith("## Articles With Abstracts - "):
+            concept = line.removeprefix("## Articles With Abstracts - ").strip()
+            articles[concept] = slugify_fragment(line[3:].strip())
+        elif line.startswith("## Missing Abstract - "):
+            concept = line.removeprefix("## Missing Abstract - ").strip()
+            missing[concept] = slugify_fragment(line[3:].strip())
+    concepts = sorted(set(articles) | set(missing), key=str.casefold)
+    if len(concepts) <= 1:
+        return ""
+    cards = []
+    for concept in concepts:
+        links = []
+        if concept in articles:
+            links.append(f'<a href="#{articles[concept]}">Articles with abstracts</a>')
+        if concept in missing:
+            links.append(f'<a href="#{missing[concept]}">Missing abstracts</a>')
+        cards.append(
+            '<div class="keyword-nav-card">'
+            f'<span class="keyword-nav-title">{html.escape(repair_mojibake(concept))}</span>'
+            '<div class="keyword-nav-links">'
+            + "\n".join(links)
+            + "</div></div>"
+        )
+    return (
+        '<nav class="keyword-nav" aria-label="Keyword result shortcuts">'
+        "<h2>Jump to Keyword Results</h2>"
+        '<p class="keyword-nav-intro">Use these shortcuts to move directly to each keyword-specific article list.</p>'
+        '<div class="keyword-nav-grid">'
+        + "\n".join(cards)
+        + "</div></nav>"
+    )
 
 
 def render_author_affiliations(value: str) -> str:
@@ -929,7 +1030,13 @@ def render_single_chart(
 """
 
 
-def render_combined_chart(data: dict, years: list[int]) -> str:
+def render_combined_chart(
+    data: dict,
+    years: list[int],
+    title: str = "Combined Keyword Trajectories",
+    show_legend: bool = True,
+    extra_class: str = "",
+) -> str:
     series = data.get("series", [])
     width = 900
     height = 290
@@ -1004,18 +1111,16 @@ def render_combined_chart(data: dict, years: list[int]) -> str:
         .replace(">", "\\u003e")
     )
     return (
-        '<div class="combined-trend">'
+        f'<div class="combined-trend {html.escape(extra_class)}">'
         '<div class="combined-trend-header">'
-        "<h3>Combined Keyword Trajectories</h3>"
+        f"<h3>{html.escape(title)}</h3>"
         '<div class="chart-mode-toggle" role="group" aria-label="Chart scale mode">'
         '<button class="chart-mode-button active" type="button" data-chart-mode="indexed">% of keyword peak</button>'
         '<button class="chart-mode-button" type="button" data-chart-mode="raw">Raw counts</button>'
         "</div></div>"
         + chart_svg("indexed", 100, indexed_counts_by_series)
         + chart_svg("raw", raw_max_y, raw_counts_by_series).replace('class="trend-svg combined-svg"', 'class="trend-svg combined-svg" hidden')
-        + '<div class="trend-legend">'
-        + "\n".join(legend)
-        + "</div>"
+        + (('<div class="trend-legend">' + "\n".join(legend) + "</div>") if show_legend else "")
         + '<div class="trend-tooltip" role="status"></div>'
         + f'<script type="application/json" class="trend-data">{payload_json}</script>'
         + "</div>"
@@ -1029,16 +1134,33 @@ def render_keyword_trends(path: Path) -> str:
     years = trend_years(data)
     if not years:
         return ""
+    series = data.get("series", [])
+    if len(series) == 1:
+        concept = str(series[0].get("concept", "Keyword"))
+        return (
+            '<section class="trend-section">'
+            "<h2>Keyword Trajectory</h2>"
+            '<p class="trend-intro">This chart shows yearly candidate appearances for the selected keyword within the selected source lists and time window. Hover along the year axis to inspect raw yearly counts and top-cited candidate metadata.</p>'
+            + render_combined_chart(data, years, title=f"{concept} Keyword Trajectory", show_legend=False)
+            + "</section>"
+        )
     cards = []
     modals = []
-    for index, item in enumerate(data.get("series", [])):
+    for index, item in enumerate(series):
         color = CHART_COLORS[index % len(CHART_COLORS)]
         concept = str(item.get("concept", "Keyword"))
         total = int(item.get("total", 0) or 0)
         peak_year = item.get("peak_year") or "n/a"
         peak_count = int(item.get("peak_count", 0) or 0)
         chart = render_single_chart(item, years, color)
-        large_chart = render_single_chart(item, years, color, width=900, height=360, padding=52)
+        single_data = {**data, "series": [item]}
+        large_chart = render_combined_chart(
+            single_data,
+            years,
+            title=f"{concept} Interactive Trajectory",
+            show_legend=False,
+            extra_class="modal-trend-chart",
+        )
         cards.append(
             f'<a class="trend-card" href="#trend-{index}" style="--trend-color:{color}">'
             '<div class="trend-card-header">'
@@ -1114,7 +1236,11 @@ def markdown_to_html(markdown: str) -> str:
             in_hero = False
             continue
         if line.startswith("## "):
-            body.append(f'<section class="section"><h2>{html.escape(line[3:].strip())}</h2>')
+            heading = line[3:].strip()
+            body.append(
+                f'<section class="section" id="{slugify_fragment(heading)}">'
+                f"<h2>{html.escape(heading)}</h2>"
+            )
             index += 1
             continue
         if line.startswith("### "):
@@ -1191,8 +1317,15 @@ def render(markdown_path: Path, output_path: Path) -> None:
     content = markdown_path.read_text(encoding="utf-8")
     html_body = markdown_to_html(content)
     trend_html = render_keyword_trends(markdown_path.with_name("obhrm_keyword_trends.json"))
+    keyword_nav_html = render_keyword_nav(content)
     if trend_html:
-        html_body = html_body.replace("</section>", "</section>\n" + trend_html, 1)
+        html_body = html_body.replace(
+            "</section>",
+            "</section>\n" + trend_html + keyword_nav_html,
+            1,
+        )
+    elif keyword_nav_html:
+        html_body = html_body.replace("</section>", "</section>\n" + keyword_nav_html, 1)
     document = f"""<!doctype html>
 <html lang="en">
 <head>
