@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBHRM Weekly Literature Report</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #647084;
+  --line: #d9e0ea;
+  --soft: #f7f9fc;
+  --panel: #ffffff;
+  --accent: #1f5fbf;
+  --accent-strong: #123b77;
+  --accent-soft: #eaf2ff;
+  --warn: #b42318;
+  --warn-soft: #fff1f0;
+  --ok: #067647;
+  --ok-soft: #ecfdf3;
+  --shadow: 0 18px 44px rgba(24, 33, 47, 0.10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Microsoft YaHei", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #f4f7fb 0%, #eef3f8 260px, #f7f9fc 100%);
+  line-height: 1.55;
+}
+main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 34px auto 56px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px 34px;
+  box-shadow: var(--shadow);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--accent), #6a9af6);
+}
+h1 {
+  margin: 0 0 18px;
+  color: var(--accent-strong);
+  font-size: 34px;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+.meta-item {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.meta-label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section {
+  margin-top: 30px;
+}
+h2 {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-size: 23px;
+  line-height: 1.25;
+}
+h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+  line-height: 1.35;
+}
+.article {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0;
+  margin: 18px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfe;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.article-content {
+  padding: 18px 24px 22px;
+}
+.note {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 6px;
+  color: #243b63;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(24, 33, 47, 0.04);
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.stat-value {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent-strong);
+  font-size: 26px;
+  font-weight: 800;
+}
+.summary-table {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(24, 33, 47, 0.04);
+}
+.summary-table th,
+.summary-table td {
+  padding: 12px 14px;
+}
+.summary-table th {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.empty-note {
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.keyword-nav {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.keyword-nav h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.keyword-nav-intro {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.keyword-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.keyword-nav-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 12px 14px;
+}
+.keyword-nav-title {
+  color: var(--accent-strong);
+  display: block;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.keyword-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.keyword-nav-links a {
+  border: 1px solid #b7cdfb;
+  border-radius: 999px;
+  background: #f7faff;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 9px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  vertical-align: top;
+}
+th {
+  background: #f1f4f9;
+  color: #344054;
+  text-align: left;
+}
+tr:last-child td { border-bottom: 0; }
+.field-name {
+  width: 170px;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 18px;
+}
+.field-value {
+  color: #263244;
+}
+.abstract-block {
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.abstract-label {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.abstract-text {
+  margin: 0;
+  color: #263244;
+  hyphens: auto;
+  text-align: justify;
+  text-wrap: pretty;
+}
+.affiliation-table {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.affiliation-table th,
+.affiliation-table td {
+  padding: 10px 12px;
+}
+.affiliation-table th {
+  background: #f5f8fc;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.affiliation-author {
+  width: 24%;
+  color: #263244;
+  font-weight: 800;
+}
+.affiliation-value {
+  color: #263244;
+  text-align: left;
+}
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.badge.available { color: var(--ok); background: var(--ok-soft); }
+.badge.missing { color: var(--warn); background: var(--warn-soft); }
+.badge.journal {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+.badge.date {
+  color: #475467;
+  background: #f2f4f7;
+}
+.doi-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #b7cdfb;
+  border-radius: 999px;
+  background: #f7faff;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+a:hover { text-decoration: underline; }
+.trend-section {
+  margin-top: 30px;
+}
+.trend-intro {
+  color: var(--muted);
+  margin: -8px 0 18px;
+}
+.combined-trend {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.combined-trend-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+.chart-mode-toggle {
+  display: inline-flex;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  background: #f8fafc;
+}
+.chart-mode-button {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 10px;
+}
+.chart-mode-button.active {
+  background: var(--panel);
+  color: var(--accent-strong);
+  box-shadow: 0 2px 7px rgba(24, 33, 47, 0.10);
+}
+.combined-svg[hidden] {
+  display: none;
+}
+.trend-hover-zone {
+  fill: transparent;
+  pointer-events: all;
+}
+.trend-hover-line {
+  display: none;
+  stroke: #94a3b8;
+  stroke-dasharray: 4 4;
+  stroke-width: 1.4;
+}
+.trend-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  max-width: min(460px, calc(100% - 40px));
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--ink);
+  box-shadow: 0 16px 42px rgba(24, 33, 47, 0.16);
+  font-size: 13px;
+}
+.trend-tooltip-title {
+  color: var(--accent-strong);
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.trend-tooltip-row {
+  border-top: 1px solid #edf1f6;
+  padding-top: 7px;
+  margin-top: 7px;
+}
+.trend-tooltip-keyword {
+  font-weight: 900;
+}
+.trend-tooltip-meta {
+  color: var(--muted);
+}
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.trend-card {
+  display: block;
+  min-height: 236px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  color: inherit;
+  box-shadow: 0 8px 22px rgba(24, 33, 47, 0.06);
+}
+.trend-card:hover {
+  border-color: #b7cdfb;
+  box-shadow: 0 14px 30px rgba(24, 33, 47, 0.10);
+  text-decoration: none;
+}
+.trend-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 54px;
+}
+.trend-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--trend-color, var(--accent));
+}
+.trend-count {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 3px;
+}
+.trend-open {
+  color: var(--trend-color, var(--accent));
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+}
+.trend-svg {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.trend-axis {
+  fill: #9aa5b5;
+  font-size: 11px;
+}
+.trend-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+.trend-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+.trend-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.trend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--trend-color, var(--accent));
+}
+.trend-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(15, 23, 42, 0.48);
+}
+.trend-modal:target {
+  display: flex;
+}
+.trend-modal-card {
+  width: min(1040px, 100%);
+  max-height: min(760px, calc(100vh - 56px));
+  overflow: auto;
+  background: var(--panel);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 22px 24px;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.25);
+}
+.trend-modal-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+.trend-close {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: var(--muted);
+  font-weight: 800;
+}
+@media (max-width: 720px) {
+  main { width: min(100% - 20px, 1120px); margin-top: 16px; }
+  .hero { padding: 22px 20px; }
+  h1 { font-size: 26px; }
+  .article-header {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .article-meta {
+    justify-content: flex-start;
+  }
+  .article-content { padding: 16px 18px 18px; }
+  tr, td { display: block; width: 100%; }
+  td { border-bottom: 0; padding: 4px 0; }
+  tr {
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0;
+  }
+  .field-name { white-space: normal; }
+  .affiliation-table,
+  .affiliation-table thead,
+  .affiliation-table tbody,
+  .affiliation-table tr,
+  .affiliation-table th,
+  .affiliation-table td {
+    display: block;
+    width: 100%;
+  }
+  .affiliation-table th { display: none; }
+  .affiliation-author {
+    padding-bottom: 0;
+  }
+  .affiliation-value {
+    padding-top: 2px;
+  }
+  .trend-modal { padding: 12px; }
+  .trend-modal-card { padding: 18px; }
+  .combined-trend-header {
+    display: block;
+  }
+  .chart-mode-toggle {
+    margin-top: 10px;
+  }
+}
+</style>
+</head>
+<body>
+  <main>
+<section class="hero">
+<h1>OBHRM Weekly Literature Report</h1>
+<div class="meta-grid"><div class="meta-item"><span class="meta-label">Window</span><strong>2000-01-01T00:00:00+09:00 to 2026-06-09T00:00:00+09:00</strong></div>
+<div class="meta-item"><span class="meta-label">Concepts</span><strong>autonomous; help seeking</strong></div>
+<div class="meta-item"><span class="meta-label">Match mode</span><strong>all</strong></div>
+<div class="meta-item"><span class="meta-label">Selected journal lists</span><strong>abs-4-and-4-star; abs-4-star; ft50; utd24</strong></div>
+<div class="meta-item"><span class="meta-label">Target journal/platform whitelist size</span><strong>60</strong></div>
+<div class="meta-item"><span class="meta-label">Workflow version</span><strong>7cd0eb8a533b</strong></div>
+<div class="meta-item"><span class="meta-label">Matched articles</span><strong>1</strong></div>
+<div class="meta-item"><span class="meta-label">Missing abstracts</span><strong>0</strong></div></div>
+</section>
+<section class="trend-section"><h2>Keyword Trajectories</h2><p class="trend-intro">Each chart shows yearly candidate appearances for one keyword within the selected source lists and time window. Click a card to enlarge it.</p><div class="combined-trend "><div class="combined-trend-header"><h3>Combined Keyword Trajectories</h3><div class="chart-mode-toggle" role="group" aria-label="Chart scale mode"><button class="chart-mode-button active" type="button" data-chart-mode="indexed">% of keyword peak</button><button class="chart-mode-button" type="button" data-chart-mode="raw">Raw counts</button></div></div><svg class="trend-svg combined-svg" data-mode="indexed" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, indexed mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">100</text>
+<polyline points="44.0,167.4 75.2,178.7 106.5,206.7 137.7,184.3 168.9,173.1 200.2,212.3 231.4,167.4 262.6,145.0 293.8,167.4 325.1,178.7 356.3,133.8 387.5,139.4 418.8,122.6 450.0,100.1 481.2,145.0 512.5,133.8 543.7,100.1 574.9,139.4 606.2,150.6 637.4,122.6 668.6,105.7 699.8,100.1 731.1,122.6 762.3,66.4 793.5,66.4 824.8,44.0 856.0,150.6" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="44.0,215.3 75.2,197.7 106.5,197.7 137.7,210.9 168.9,184.5 200.2,215.3 231.4,206.5 262.6,180.1 293.8,193.3 325.1,188.9 356.3,149.4 387.5,149.4 418.8,162.6 450.0,175.7 481.2,158.2 512.5,140.6 543.7,79.1 574.9,149.4 606.2,145.0 637.4,136.2 668.6,79.1 699.8,96.7 731.1,66.0 762.3,52.8 793.5,74.7 824.8,44.0 856.0,202.1" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><svg class="trend-svg combined-svg" hidden data-mode="raw" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, raw mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">46</text>
+<polyline points="44.0,184.5 75.2,193.3 106.5,215.3 137.7,197.7 168.9,188.9 200.2,219.7 231.4,184.5 262.6,167.0 293.8,184.5 325.1,193.3 356.3,158.2 387.5,162.6 418.8,149.4 450.0,131.8 481.2,167.0 512.5,158.2 543.7,131.8 574.9,162.6 606.2,171.3 637.4,149.4 668.6,136.2 699.8,131.8 731.1,149.4 762.3,105.5 793.5,105.5 824.8,87.9 856.0,171.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="44.0,215.3 75.2,197.7 106.5,197.7 137.7,210.9 168.9,184.5 200.2,215.3 231.4,206.5 262.6,180.1 293.8,193.3 325.1,188.9 356.3,149.4 387.5,149.4 418.8,162.6 450.0,175.7 481.2,158.2 512.5,140.6 543.7,79.1 574.9,149.4 606.2,145.0 637.4,136.2 668.6,79.1 699.8,96.7 731.1,66.0 762.3,52.8 793.5,74.7 824.8,44.0 856.0,202.1" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><div class="trend-legend"><span class="trend-legend-item"><span class="trend-swatch" style="--trend-color:#10b981"></span>autonomous</span>
+<span class="trend-legend-item"><span class="trend-swatch" style="--trend-color:#3b82f6"></span>help seeking</span></div><div class="trend-tooltip" role="status"></div><script type="application/json" class="trend-data">{"years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "series": [{"concept": "autonomous", "color": "#10b981", "counts": [14, 12, 7, 11, 13, 6, 14, 18, 14, 12, 20, 19, 22, 26, 18, 20, 26, 19, 17, 22, 25, 26, 22, 32, 32, 36, 17], "top_by_year": {"2000": {"title": "Strategic networks", "journal": "Strategic Management Journal", "publication_date": "2000-03-01", "doi_url": "https://doi.org/10.1002/(sici)1097-0266(200003)21:3\u003c203::aid-smj102\u003e3.0.co;2-k", "openalex_url": "https://openalex.org/W4231501241", "cited_by_count": 2544}, "2001": {"title": "Supply networks and complex adaptive systems: control versus emergence", "journal": "Journal of Operations Management", "publication_date": "2001-03-19", "doi_url": "https://doi.org/10.1016/s0272-6963(00)00068-1", "openalex_url": "https://openalex.org/W2169589185", "cited_by_count": 1561}, "2002": {"title": "Strategy as Vector and the Inertia of Coevolutionary Lock-in", "journal": "Administrative Science Quarterly", "publication_date": "2002-06-01", "doi_url": "https://doi.org/10.2307/3094808", "openalex_url": "https://openalex.org/W2156076652", "cited_by_count": 764}, "2003": {"title": "Les passions de l'âme: On obsessive and harmonious passion.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2003-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.85.4.756", "openalex_url": "https://openalex.org/W2135799338", "cited_by_count": 2459}, "2004": {"title": "Motivating Learning, Performance, and Persistence: The Synergistic Effects of Intrinsic Goal Contents and Autonomy-Supportive Contexts.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2004-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.87.2.246", "openalex_url": "https://openalex.org/W1967605054", "cited_by_count": 1741}, "2005": {"title": "From Psychological Need Satisfaction to Intentional Behavior: Testing a Motivational Sequence in Two Behavioral Contexts", "journal": "Personality and Social Psychology Bulletin", "publication_date": "2005-12-28", "doi_url": "https://doi.org/10.1177/0146167205279905", "openalex_url": "https://openalex.org/W2153198188", "cited_by_count": 279}, "2006": {"title": "Orchestrating Innovation Networks", "journal": "Academy of Management Review", "publication_date": "2006-07-01", "doi_url": "https://doi.org/10.5465/amr.2006.21318923", "openalex_url": "https://openalex.org/W2051878139", "cited_by_count": 1722}, "2007": {"title": "The role of need fulfillment in relationship functioning and well-being: A self-determination theory perspective.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2007-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.92.3.434", "openalex_url": "https://openalex.org/W2005289012", "cited_by_count": 727}, "2008": {"title": "Giving Commitment: Employee Support Programs and The Prosocial Sensemaking Process", "journal": "Academy of Management Journal", "publication_date": "2008-10-01", "doi_url": "https://doi.org/10.5465/amj.2008.34789652", "openalex_url": "https://openalex.org/W2117181340", "cited_by_count": 544}, "2009": {"title": "Secure attachment: implications for hope, trust, burnout, and performance", "journal": "Journal of Organizational Behavior", "publication_date": "2009-01-29", "doi_url": "https://doi.org/10.1002/job.585", "openalex_url": "https://openalex.org/W2042931080", "cited_by_count": 210}, "2010": {"title": "When helping helps: Autonomous motivation for prosocial behavior and its influence on well-being for the helper and recipient.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2010-01-20", "doi_url": "https://doi.org/10.1037/a0016984", "openalex_url": "https://openalex.org/W2160104153", "cited_by_count": 1461}, "2011": {"title": "Why a Central Network Position Isn't Enough: The Role of Motivation and Ability for Knowledge Sharing in Employee Networks", "journal": "Academy of Management Journal", "publication_date": "2011-12-01", "doi_url": "https://doi.org/10.5465/amj.2009.0007", "openalex_url": "https://openalex.org/W2028992555", "cited_by_count": 540}, "2012": {"title": "Meta‐organization design: Rethinking design in interorganizational and community contexts", "journal": "Strategic Management Journal", "publication_date": "2012-04-04", "doi_url": "https://doi.org/10.1002/smj.1975", "openalex_url": "https://openalex.org/W2118206779", "cited_by_count": 846}, "2013": {"title": "The Autonomy Paradox: The Implications of Mobile Email Devices for Knowledge Professionals", "journal": "Organization Science", "publication_date": "2013-02-13", "doi_url": "https://doi.org/10.1287/orsc.1120.0806", "openalex_url": "https://openalex.org/W2132254598", "cited_by_count": 1183}, "2014": {"title": "The mind in the machine: Anthropomorphism increases trust in an autonomous vehicle", "journal": "Journal of Experimental Social Psychology", "publication_date": "2014-01-23", "doi_url": "https://doi.org/10.1016/j.jesp.2014.01.005", "openalex_url": "https://openalex.org/W2095953405", "cited_by_count": 1330}, "2015": {"title": "Linking servant leadership to individual performance: Differentiating the mediating role of autonomy, competence and relatedness need satisfaction", "journal": "The Leadership Quarterly", "publication_date": "2015-09-27", "doi_url": "https://doi.org/10.1016/j.leaqua.2015.08.004", "openalex_url": "https://openalex.org/W1818192987", "cited_by_count": 524}, "2016": {"title": "Motivation profiles at work: A self-determination theory approach", "journal": "Journal of Vocational Behavior", "publication_date": "2016-07-17", "doi_url": "https://doi.org/10.1016/j.jvb.2016.07.004", "openalex_url": "https://openalex.org/W2490715667", "cited_by_count": 476}, "2017": {"title": "When does proactivity have a cost? Motivation at work moderates the effects of proactive work behavior on employee job strain", "journal": "Journal of Vocational Behavior", "publication_date": "2017-02-10", "doi_url": "https://doi.org/10.1016/j.jvb.2017.02.001", "openalex_url": "https://openalex.org/W2586744745", "cited_by_count": 182}, "2018": {"title": "Scheduling last-mile deliveries with truck-based autonomous robots", "journal": "European Journal of Operational Research", "publication_date": "2018-06-01", "doi_url": "https://doi.org/10.1016/j.ejor.2018.05.058", "openalex_url": "https://openalex.org/W2806974714", "cited_by_count": 279}, "2019": {"title": "Generativity Tension and Value Creation in Platform Ecosystems", "journal": "Organization Science", "publication_date": "2019-05-01", "doi_url": "https://doi.org/10.1287/orsc.2018.1270", "openalex_url": "https://openalex.org/W2946420406", "cited_by_count": 357}, "2020": {"title": "Humans and Technology: Forms of Conjoined Agency in Organizations", "journal": "Academy of Management Review", "publication_date": "2020-03-03", "doi_url": "https://doi.org/10.5465/amr.2019.0186", "openalex_url": "https://openalex.org/W3010543446", "cited_by_count": 429}, "2021": {"title": "Planning and control of autonomous mobile robots for intralogistics: Literature review and research agenda", "journal": "European Journal of Operational Research", "publication_date": "2021-01-18", "doi_url": "https://doi.org/10.1016/j.ejor.2021.01.019", "openalex_url": "https://openalex.org/W3125055412", "cited_by_count": 604}, "2022": {"title": "Task management in decentralized autonomous organization", "journal": "Journal of Operations Management", "publication_date": "2022-04-19", "doi_url": "https://doi.org/10.1002/joom.1179", "openalex_url": "https://openalex.org/W4224224573", "cited_by_count": 140}, "2023": {"title": "Digital transformation in operations management: Fundamental change through agency reversal", "journal": "Journal of Operations Management", "publication_date": "2023-08-13", "doi_url": "https://doi.org/10.1002/joom.1271", "openalex_url": "https://openalex.org/W4385792115", "cited_by_count": 83}, "2024": {"title": "Combining Human and Artificial Intelligence: Hybrid Problem-Solving in Organizations", "journal": "Academy of Management Review", "publication_date": "2024-01-05", "doi_url": "https://doi.org/10.5465/amr.2021.0421", "openalex_url": "https://openalex.org/W4390605317", "cited_by_count": 210}, "2025": {"title": "Platform design and governance in industrial markets: Charting the meta-organizational logic", "journal": "Research Policy", "publication_date": "2025-05-03", "doi_url": "https://doi.org/10.1016/j.respol.2025.105236", "openalex_url": "https://openalex.org/W4410050721", "cited_by_count": 38}, "2026": {"title": "Collusion-proof decentralized autonomous organizations", "journal": "Research Policy", "publication_date": "2026-05-12", "doi_url": "https://doi.org/10.1016/j.respol.2026.105509", "openalex_url": "https://openalex.org/W7160960755", "cited_by_count": 1}}}, {"concept": "help seeking", "color": "#3b82f6", "counts": [7, 11, 11, 8, 14, 7, 9, 15, 12, 13, 22, 22, 19, 16, 20, 24, 38, 22, 23, 25, 38, 34, 41, 44, 39, 46, 10], "top_by_year": {"2000": {"title": "Volunteering", "journal": "Annual Review of Sociology", "publication_date": "2000-08-01", "doi_url": "https://doi.org/10.1146/annurev.soc.26.1.215", "openalex_url": "https://openalex.org/W4212987155", "cited_by_count": 1767}, "2001": {"title": "Integrating entrepreneurship and strategic management actions to create firm wealth", "journal": "Academy of Management Perspectives", "publication_date": "2001-02-01", "doi_url": "https://doi.org/10.5465/ame.2001.4251393", "openalex_url": "https://openalex.org/W2170492480", "cited_by_count": 787}, "2002": {"title": "Social Capital: Prospects for a New Concept", "journal": "Academy of Management Review", "publication_date": "2002-01-01", "doi_url": "https://doi.org/10.5465/amr.2002.5922314", "openalex_url": "https://openalex.org/W2129658695", "cited_by_count": 7854}, "2003": {"title": "Market-seeking MNEs in an emerging market: How parent–subsidiary links shape overseas success", "journal": "Journal of International Business Studies", "publication_date": "2003-05-01", "doi_url": "https://doi.org/10.1057/palgrave.jibs.8400027", "openalex_url": "https://openalex.org/W2072872098", "cited_by_count": 343}, "2004": {"title": "Strategic flexibility:Organizational preparedness to reverse ineffective strategic decisions", "journal": "Academy of Management Perspectives", "publication_date": "2004-11-01", "doi_url": "https://doi.org/10.5465/ame.2004.15268683", "openalex_url": "https://openalex.org/W2125447326", "cited_by_count": 474}, "2005": {"title": "The Financial Impact of ISO 9000 Certification in the United States: An Empirical Analysis", "journal": "Management Science", "publication_date": "2005-07-01", "doi_url": "https://doi.org/10.1287/mnsc.1040.0358", "openalex_url": "https://openalex.org/W2097978394", "cited_by_count": 652}, "2006": {"title": "When Collections of Creatives Become Creative Collectives: A Field Study of Problem Solving at Work", "journal": "Organization Science", "publication_date": "2006-07-13", "doi_url": "https://doi.org/10.1287/orsc.1060.0200", "openalex_url": "https://openalex.org/W2123285750", "cited_by_count": 1278}, "2007": {"title": "Do bridging ties complement strong ties? An empirical examination of alliance ambidexterity", "journal": "Strategic Management Journal", "publication_date": "2007-10-31", "doi_url": "https://doi.org/10.1002/smj.666", "openalex_url": "https://openalex.org/W2007950782", "cited_by_count": 608}, "2008": {"title": "HRM and Performance: Achievements, Methodological Issues and Prospects", "journal": "Journal of Management Studies", "publication_date": "2008-12-11", "doi_url": "https://doi.org/10.1111/j.1467-6486.2008.00809.x", "openalex_url": "https://openalex.org/W2152285987", "cited_by_count": 725}, "2009": {"title": "Perspective—Tacit Knowledge and Knowledge Conversion: Controversy and Advancement in Organizational Knowledge Creation Theory", "journal": "Organization Science", "publication_date": "2009-01-23", "doi_url": "https://doi.org/10.1287/orsc.1080.0412", "openalex_url": "https://openalex.org/W2165040403", "cited_by_count": 1897}, "2010": {"title": "The impact of supply chain structure on the use of supplier socially responsible practices", "journal": "International Journal of Operations \u0026 Production Management", "publication_date": "2010-11-16", "doi_url": "https://doi.org/10.1108/01443571011094253", "openalex_url": "https://openalex.org/W2030327658", "cited_by_count": 540}, "2011": {"title": "The relationships between organizational culture, total quality management practices and operational performance", "journal": "International Journal of Operations \u0026 Production Management", "publication_date": "2011-06-18", "doi_url": "https://doi.org/10.1108/01443571111144850", "openalex_url": "https://openalex.org/W2092314775", "cited_by_count": 387}, "2012": {"title": "A Systematic Literature Review of Servant Leadership Theory in Organizational Contexts", "journal": "Journal of Business Ethics", "publication_date": "2012-04-21", "doi_url": "https://doi.org/10.1007/s10551-012-1322-6", "openalex_url": "https://openalex.org/W2002980572", "cited_by_count": 930}, "2013": {"title": "Managing to Stay in the Dark: Managerial Self-Efficacy, Ego Defensiveness, and the Aversion to Employee Voice", "journal": "Academy of Management Journal", "publication_date": "2013-09-14", "doi_url": "https://doi.org/10.5465/amj.2012.0393", "openalex_url": "https://openalex.org/W2103492954", "cited_by_count": 428}, "2014": {"title": "Understanding the physical environment of work and employee behavior: An affective events perspective", "journal": "Journal of Organizational Behavior", "publication_date": "2014-11-01", "doi_url": "https://doi.org/10.1002/job.1973", "openalex_url": "https://openalex.org/W1909271049", "cited_by_count": 208}, "2015": {"title": "Rage against the Iron Cage", "journal": "American Sociological Review", "publication_date": "2015-09-01", "doi_url": "https://doi.org/10.1177/0003122415596416", "openalex_url": "https://openalex.org/W2223652573", "cited_by_count": 353}, "2016": {"title": "How entrepreneurs leverage institutional intermediaries in emerging economies to acquire public resources", "journal": "Strategic Management Journal", "publication_date": "2016-08-18", "doi_url": "https://doi.org/10.1002/smj.2575", "openalex_url": "https://openalex.org/W2529863368", "cited_by_count": 335}, "2017": {"title": "A general theory of springboard MNEs", "journal": "Journal of International Business Studies", "publication_date": "2017-10-11", "doi_url": "https://doi.org/10.1057/s41267-017-0114-8", "openalex_url": "https://openalex.org/W2760866236", "cited_by_count": 600}, "2018": {"title": "Why resource‐based theory's model of profit appropriation must incorporate a stakeholder perspective", "journal": "Strategic Management Journal", "publication_date": "2018-08-30", "doi_url": "https://doi.org/10.1002/smj.2949", "openalex_url": "https://openalex.org/W2889048231", "cited_by_count": 649}, "2019": {"title": "Soliciting Resources from Others: An Integrative Review", "journal": "Academy of Management Annals", "publication_date": "2019-10-15", "doi_url": "https://doi.org/10.5465/annals.2018.0034", "openalex_url": "https://openalex.org/W2980928202", "cited_by_count": 134}, "2020": {"title": "Capturing Causal Complexity: Heuristics for Configurational Theorizing", "journal": "Academy of Management Review", "publication_date": "2020-05-27", "doi_url": "https://doi.org/10.5465/amr.2019.0298", "openalex_url": "https://openalex.org/W3031530685", "cited_by_count": 721}, "2021": {"title": "Researching for Desirable Futures: From Real Utopias to Imagining Alternatives", "journal": "Journal of Management Studies", "publication_date": "2021-03-28", "doi_url": "https://doi.org/10.1111/joms.12709", "openalex_url": "https://openalex.org/W3148657662", "cited_by_count": 247}, "2022": {"title": "Theory‐based learning and experimentation: How strategists can systematically generate knowledge at the edge between the known and the unknown", "journal": "Strategic Management Journal", "publication_date": "2022-01-20", "doi_url": "https://doi.org/10.1002/smj.3381", "openalex_url": "https://openalex.org/W4206921982", "cited_by_count": 85}, "2023": {"title": "Externalities and complementarities in platforms and ecosystems: From structural solutions to endogenous failures", "journal": "Research Policy", "publication_date": "2023-11-04", "doi_url": "https://doi.org/10.1016/j.respol.2023.104906", "openalex_url": "https://openalex.org/W4388361755", "cited_by_count": 175}, "2024": {"title": "Generative artificial intelligence and evaluating strategic decisions", "journal": "Strategic Management Journal", "publication_date": "2024-11-14", "doi_url": "https://doi.org/10.1002/smj.3677", "openalex_url": "https://openalex.org/W4404389403", "cited_by_count": 133}, "2025": {"title": "Concentration in cross‐border research collaborations and \u003cscp\u003eMNCs\u003c/scp\u003e ' knowledge creation in a host country", "journal": "Strategic Management Journal", "publication_date": "2025-10-05", "doi_url": "https://doi.org/10.1002/smj.70025", "openalex_url": "https://openalex.org/W4414837805", "cited_by_count": 20}, "2026": {"title": "\u003cscp\u003e \u003ci\u003eJOM\u003c/i\u003e \u003c/scp\u003e Forum: Theory Testing Is Theory Generation", "journal": "Journal of Operations Management", "publication_date": "2026-03-09", "doi_url": "https://doi.org/10.1002/joom.70039", "openalex_url": "https://openalex.org/W7134246101", "cited_by_count": 1}}}]}</script></div><div class="trend-grid"><a class="trend-card" href="#trend-0" style="--trend-color:#10b981"><div class="trend-card-header"><div><h3 class="trend-title">autonomous</h3><span class="trend-count">520 candidate appearances</span></div><span class="trend-open" title="Open enlarged chart" aria-hidden="true">&#x26F6;</span></div>
+<svg class="trend-svg" viewBox="0 0 320 130" role="img" aria-label="autonomous yearly trend">
+  <line x1="24" y1="106" x2="296" y2="106" stroke="#d9e0ea" stroke-width="1"/>
+  <text class="trend-axis" x="24" y="124">2000</text>
+  <text class="trend-axis" x="296" y="124" text-anchor="end">2026</text>
+  <text class="trend-axis" x="24" y="16">36</text>
+  <polygon points="24.0,106.0 24.0,74.1 34.5,78.7 44.9,90.1 55.4,80.9 65.8,76.4 76.3,92.3 86.8,74.1 97.2,65.0 107.7,74.1 118.2,78.7 128.6,60.4 139.1,62.7 149.5,55.9 160.0,46.8 170.5,65.0 180.9,60.4 191.4,46.8 201.8,62.7 212.3,67.3 222.8,55.9 233.2,49.1 243.7,46.8 254.2,55.9 264.6,33.1 275.1,33.1 285.5,24.0 296.0,67.3 296.0,106.0" fill="#10b981" opacity="0.13"/>
+  <polyline points="24.0,74.1 34.5,78.7 44.9,90.1 55.4,80.9 65.8,76.4 76.3,92.3 86.8,74.1 97.2,65.0 107.7,74.1 118.2,78.7 128.6,60.4 139.1,62.7 149.5,55.9 160.0,46.8 170.5,65.0 180.9,60.4 191.4,46.8 201.8,62.7 212.3,67.3 222.8,55.9 233.2,49.1 243.7,46.8 254.2,55.9 264.6,33.1 275.1,33.1 285.5,24.0 296.0,67.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="285.5" cy="24.0" r="4" fill="#10b981" stroke="#fff" stroke-width="2"/>
+</svg>
+<div class="trend-footer"><span>Peak: 2025</span><span>36 papers</span></div></a>
+<a class="trend-card" href="#trend-1" style="--trend-color:#3b82f6"><div class="trend-card-header"><div><h3 class="trend-title">help seeking</h3><span class="trend-count">590 candidate appearances</span></div><span class="trend-open" title="Open enlarged chart" aria-hidden="true">&#x26F6;</span></div>
+<svg class="trend-svg" viewBox="0 0 320 130" role="img" aria-label="help seeking yearly trend">
+  <line x1="24" y1="106" x2="296" y2="106" stroke="#d9e0ea" stroke-width="1"/>
+  <text class="trend-axis" x="24" y="124">2000</text>
+  <text class="trend-axis" x="296" y="124" text-anchor="end">2026</text>
+  <text class="trend-axis" x="24" y="16">46</text>
+  <polygon points="24.0,106.0 24.0,93.5 34.5,86.4 44.9,86.4 55.4,91.7 65.8,81.0 76.3,93.5 86.8,90.0 97.2,79.3 107.7,84.6 118.2,82.8 128.6,66.8 139.1,66.8 149.5,72.1 160.0,77.5 170.5,70.3 180.9,63.2 191.4,38.3 201.8,66.8 212.3,65.0 222.8,61.4 233.2,38.3 243.7,45.4 254.2,32.9 264.6,27.6 275.1,36.5 285.5,24.0 296.0,88.2 296.0,106.0" fill="#3b82f6" opacity="0.13"/>
+  <polyline points="24.0,93.5 34.5,86.4 44.9,86.4 55.4,91.7 65.8,81.0 76.3,93.5 86.8,90.0 97.2,79.3 107.7,84.6 118.2,82.8 128.6,66.8 139.1,66.8 149.5,72.1 160.0,77.5 170.5,70.3 180.9,63.2 191.4,38.3 201.8,66.8 212.3,65.0 222.8,61.4 233.2,38.3 243.7,45.4 254.2,32.9 264.6,27.6 275.1,36.5 285.5,24.0 296.0,88.2" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="285.5" cy="24.0" r="4" fill="#3b82f6" stroke="#fff" stroke-width="2"/>
+</svg>
+<div class="trend-footer"><span>Peak: 2025</span><span>46 papers</span></div></a></div><div id="trend-0" class="trend-modal"><div class="trend-modal-card"><div class="trend-modal-top"><div><h2 style="color:#10b981; margin-bottom:4px;">autonomous</h2><p class="trend-intro">520 candidate appearances; peak 2025: 36 papers.</p></div><a class="trend-close" href="#">Close</a></div><div class="combined-trend modal-trend-chart"><div class="combined-trend-header"><h3>autonomous Interactive Trajectory</h3><div class="chart-mode-toggle" role="group" aria-label="Chart scale mode"><button class="chart-mode-button active" type="button" data-chart-mode="indexed">% of keyword peak</button><button class="chart-mode-button" type="button" data-chart-mode="raw">Raw counts</button></div></div><svg class="trend-svg combined-svg" data-mode="indexed" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, indexed mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">100</text>
+<polyline points="44.0,167.4 75.2,178.7 106.5,206.7 137.7,184.3 168.9,173.1 200.2,212.3 231.4,167.4 262.6,145.0 293.8,167.4 325.1,178.7 356.3,133.8 387.5,139.4 418.8,122.6 450.0,100.1 481.2,145.0 512.5,133.8 543.7,100.1 574.9,139.4 606.2,150.6 637.4,122.6 668.6,105.7 699.8,100.1 731.1,122.6 762.3,66.4 793.5,66.4 824.8,44.0 856.0,150.6" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><svg class="trend-svg combined-svg" hidden data-mode="raw" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, raw mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">36</text>
+<polyline points="44.0,167.4 75.2,178.7 106.5,206.7 137.7,184.3 168.9,173.1 200.2,212.3 231.4,167.4 262.6,145.0 293.8,167.4 325.1,178.7 356.3,133.8 387.5,139.4 418.8,122.6 450.0,100.1 481.2,145.0 512.5,133.8 543.7,100.1 574.9,139.4 606.2,150.6 637.4,122.6 668.6,105.7 699.8,100.1 731.1,122.6 762.3,66.4 793.5,66.4 824.8,44.0 856.0,150.6" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><div class="trend-tooltip" role="status"></div><script type="application/json" class="trend-data">{"years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "series": [{"concept": "autonomous", "color": "#10b981", "counts": [14, 12, 7, 11, 13, 6, 14, 18, 14, 12, 20, 19, 22, 26, 18, 20, 26, 19, 17, 22, 25, 26, 22, 32, 32, 36, 17], "top_by_year": {"2000": {"title": "Strategic networks", "journal": "Strategic Management Journal", "publication_date": "2000-03-01", "doi_url": "https://doi.org/10.1002/(sici)1097-0266(200003)21:3\u003c203::aid-smj102\u003e3.0.co;2-k", "openalex_url": "https://openalex.org/W4231501241", "cited_by_count": 2544}, "2001": {"title": "Supply networks and complex adaptive systems: control versus emergence", "journal": "Journal of Operations Management", "publication_date": "2001-03-19", "doi_url": "https://doi.org/10.1016/s0272-6963(00)00068-1", "openalex_url": "https://openalex.org/W2169589185", "cited_by_count": 1561}, "2002": {"title": "Strategy as Vector and the Inertia of Coevolutionary Lock-in", "journal": "Administrative Science Quarterly", "publication_date": "2002-06-01", "doi_url": "https://doi.org/10.2307/3094808", "openalex_url": "https://openalex.org/W2156076652", "cited_by_count": 764}, "2003": {"title": "Les passions de l'âme: On obsessive and harmonious passion.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2003-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.85.4.756", "openalex_url": "https://openalex.org/W2135799338", "cited_by_count": 2459}, "2004": {"title": "Motivating Learning, Performance, and Persistence: The Synergistic Effects of Intrinsic Goal Contents and Autonomy-Supportive Contexts.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2004-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.87.2.246", "openalex_url": "https://openalex.org/W1967605054", "cited_by_count": 1741}, "2005": {"title": "From Psychological Need Satisfaction to Intentional Behavior: Testing a Motivational Sequence in Two Behavioral Contexts", "journal": "Personality and Social Psychology Bulletin", "publication_date": "2005-12-28", "doi_url": "https://doi.org/10.1177/0146167205279905", "openalex_url": "https://openalex.org/W2153198188", "cited_by_count": 279}, "2006": {"title": "Orchestrating Innovation Networks", "journal": "Academy of Management Review", "publication_date": "2006-07-01", "doi_url": "https://doi.org/10.5465/amr.2006.21318923", "openalex_url": "https://openalex.org/W2051878139", "cited_by_count": 1722}, "2007": {"title": "The role of need fulfillment in relationship functioning and well-being: A self-determination theory perspective.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2007-01-01", "doi_url": "https://doi.org/10.1037/0022-3514.92.3.434", "openalex_url": "https://openalex.org/W2005289012", "cited_by_count": 727}, "2008": {"title": "Giving Commitment: Employee Support Programs and The Prosocial Sensemaking Process", "journal": "Academy of Management Journal", "publication_date": "2008-10-01", "doi_url": "https://doi.org/10.5465/amj.2008.34789652", "openalex_url": "https://openalex.org/W2117181340", "cited_by_count": 544}, "2009": {"title": "Secure attachment: implications for hope, trust, burnout, and performance", "journal": "Journal of Organizational Behavior", "publication_date": "2009-01-29", "doi_url": "https://doi.org/10.1002/job.585", "openalex_url": "https://openalex.org/W2042931080", "cited_by_count": 210}, "2010": {"title": "When helping helps: Autonomous motivation for prosocial behavior and its influence on well-being for the helper and recipient.", "journal": "Journal of Personality and Social Psychology", "publication_date": "2010-01-20", "doi_url": "https://doi.org/10.1037/a0016984", "openalex_url": "https://openalex.org/W2160104153", "cited_by_count": 1461}, "2011": {"title": "Why a Central Network Position Isn't Enough: The Role of Motivation and Ability for Knowledge Sharing in Employee Networks", "journal": "Academy of Management Journal", "publication_date": "2011-12-01", "doi_url": "https://doi.org/10.5465/amj.2009.0007", "openalex_url": "https://openalex.org/W2028992555", "cited_by_count": 540}, "2012": {"title": "Meta‐organization design: Rethinking design in interorganizational and community contexts", "journal": "Strategic Management Journal", "publication_date": "2012-04-04", "doi_url": "https://doi.org/10.1002/smj.1975", "openalex_url": "https://openalex.org/W2118206779", "cited_by_count": 846}, "2013": {"title": "The Autonomy Paradox: The Implications of Mobile Email Devices for Knowledge Professionals", "journal": "Organization Science", "publication_date": "2013-02-13", "doi_url": "https://doi.org/10.1287/orsc.1120.0806", "openalex_url": "https://openalex.org/W2132254598", "cited_by_count": 1183}, "2014": {"title": "The mind in the machine: Anthropomorphism increases trust in an autonomous vehicle", "journal": "Journal of Experimental Social Psychology", "publication_date": "2014-01-23", "doi_url": "https://doi.org/10.1016/j.jesp.2014.01.005", "openalex_url": "https://openalex.org/W2095953405", "cited_by_count": 1330}, "2015": {"title": "Linking servant leadership to individual performance: Differentiating the mediating role of autonomy, competence and relatedness need satisfaction", "journal": "The Leadership Quarterly", "publication_date": "2015-09-27", "doi_url": "https://doi.org/10.1016/j.leaqua.2015.08.004", "openalex_url": "https://openalex.org/W1818192987", "cited_by_count": 524}, "2016": {"title": "Motivation profiles at work: A self-determination theory approach", "journal": "Journal of Vocational Behavior", "publication_date": "2016-07-17", "doi_url": "https://doi.org/10.1016/j.jvb.2016.07.004", "openalex_url": "https://openalex.org/W2490715667", "cited_by_count": 476}, "2017": {"title": "When does proactivity have a cost? Motivation at work moderates the effects of proactive work behavior on employee job strain", "journal": "Journal of Vocational Behavior", "publication_date": "2017-02-10", "doi_url": "https://doi.org/10.1016/j.jvb.2017.02.001", "openalex_url": "https://openalex.org/W2586744745", "cited_by_count": 182}, "2018": {"title": "Scheduling last-mile deliveries with truck-based autonomous robots", "journal": "European Journal of Operational Research", "publication_date": "2018-06-01", "doi_url": "https://doi.org/10.1016/j.ejor.2018.05.058", "openalex_url": "https://openalex.org/W2806974714", "cited_by_count": 279}, "2019": {"title": "Generativity Tension and Value Creation in Platform Ecosystems", "journal": "Organization Science", "publication_date": "2019-05-01", "doi_url": "https://doi.org/10.1287/orsc.2018.1270", "openalex_url": "https://openalex.org/W2946420406", "cited_by_count": 357}, "2020": {"title": "Humans and Technology: Forms of Conjoined Agency in Organizations", "journal": "Academy of Management Review", "publication_date": "2020-03-03", "doi_url": "https://doi.org/10.5465/amr.2019.0186", "openalex_url": "https://openalex.org/W3010543446", "cited_by_count": 429}, "2021": {"title": "Planning and control of autonomous mobile robots for intralogistics: Literature review and research agenda", "journal": "European Journal of Operational Research", "publication_date": "2021-01-18", "doi_url": "https://doi.org/10.1016/j.ejor.2021.01.019", "openalex_url": "https://openalex.org/W3125055412", "cited_by_count": 604}, "2022": {"title": "Task management in decentralized autonomous organization", "journal": "Journal of Operations Management", "publication_date": "2022-04-19", "doi_url": "https://doi.org/10.1002/joom.1179", "openalex_url": "https://openalex.org/W4224224573", "cited_by_count": 140}, "2023": {"title": "Digital transformation in operations management: Fundamental change through agency reversal", "journal": "Journal of Operations Management", "publication_date": "2023-08-13", "doi_url": "https://doi.org/10.1002/joom.1271", "openalex_url": "https://openalex.org/W4385792115", "cited_by_count": 83}, "2024": {"title": "Combining Human and Artificial Intelligence: Hybrid Problem-Solving in Organizations", "journal": "Academy of Management Review", "publication_date": "2024-01-05", "doi_url": "https://doi.org/10.5465/amr.2021.0421", "openalex_url": "https://openalex.org/W4390605317", "cited_by_count": 210}, "2025": {"title": "Platform design and governance in industrial markets: Charting the meta-organizational logic", "journal": "Research Policy", "publication_date": "2025-05-03", "doi_url": "https://doi.org/10.1016/j.respol.2025.105236", "openalex_url": "https://openalex.org/W4410050721", "cited_by_count": 38}, "2026": {"title": "Collusion-proof decentralized autonomous organizations", "journal": "Research Policy", "publication_date": "2026-05-12", "doi_url": "https://doi.org/10.1016/j.respol.2026.105509", "openalex_url": "https://openalex.org/W7160960755", "cited_by_count": 1}}}]}</script></div></div></div>
+<div id="trend-1" class="trend-modal"><div class="trend-modal-card"><div class="trend-modal-top"><div><h2 style="color:#3b82f6; margin-bottom:4px;">help seeking</h2><p class="trend-intro">590 candidate appearances; peak 2025: 46 papers.</p></div><a class="trend-close" href="#">Close</a></div><div class="combined-trend modal-trend-chart"><div class="combined-trend-header"><h3>help seeking Interactive Trajectory</h3><div class="chart-mode-toggle" role="group" aria-label="Chart scale mode"><button class="chart-mode-button active" type="button" data-chart-mode="indexed">% of keyword peak</button><button class="chart-mode-button" type="button" data-chart-mode="raw">Raw counts</button></div></div><svg class="trend-svg combined-svg" data-mode="indexed" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, indexed mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">100</text>
+<polyline points="44.0,215.3 75.2,197.7 106.5,197.7 137.7,210.9 168.9,184.5 200.2,215.3 231.4,206.5 262.6,180.1 293.8,193.3 325.1,188.9 356.3,149.4 387.5,149.4 418.8,162.6 450.0,175.7 481.2,158.2 512.5,140.6 543.7,79.1 574.9,149.4 606.2,145.0 637.4,136.2 668.6,79.1 699.8,96.7 731.1,66.0 762.3,52.8 793.5,74.7 824.8,44.0 856.0,202.1" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><svg class="trend-svg combined-svg" hidden data-mode="raw" viewBox="0 0 900 290" role="img" aria-label="Combined keyword yearly trend, raw mode"><line x1="44" y1="246" x2="856" y2="246" stroke="#d9e0ea" stroke-width="1"/>
+<text class="trend-axis" x="44" y="276">2000</text>
+<text class="trend-axis" x="856" y="276" text-anchor="end">2026</text>
+<text class="trend-axis" x="44" y="30">46</text>
+<polyline points="44.0,215.3 75.2,197.7 106.5,197.7 137.7,210.9 168.9,184.5 200.2,215.3 231.4,206.5 262.6,180.1 293.8,193.3 325.1,188.9 356.3,149.4 387.5,149.4 418.8,162.6 450.0,175.7 481.2,158.2 512.5,140.6 543.7,79.1 574.9,149.4 606.2,145.0 637.4,136.2 668.6,79.1 699.8,96.7 731.1,66.0 762.3,52.8 793.5,74.7 824.8,44.0 856.0,202.1" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line class="trend-hover-line" x1="44.0" y1="44" x2="44.0" y2="246"/>
+<rect class="trend-hover-zone" data-year="2000" x="29.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2001" x="60.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2002" x="91.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2003" x="122.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2004" x="153.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2005" x="185.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2006" x="216.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2007" x="247.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2008" x="278.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2009" x="310.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2010" x="341.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2011" x="372.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2012" x="403.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2013" x="435.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2014" x="466.2" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2015" x="497.4" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2016" x="528.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2017" x="559.9" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2018" x="591.1" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2019" x="622.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2020" x="653.6" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2021" x="684.8" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2022" x="716.0" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2023" x="747.3" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2024" x="778.5" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2025" x="809.7" y="44" width="30.1" height="202"/>
+<rect class="trend-hover-zone" data-year="2026" x="841.0" y="44" width="30.1" height="202"/></svg><div class="trend-tooltip" role="status"></div><script type="application/json" class="trend-data">{"years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "series": [{"concept": "help seeking", "color": "#10b981", "counts": [7, 11, 11, 8, 14, 7, 9, 15, 12, 13, 22, 22, 19, 16, 20, 24, 38, 22, 23, 25, 38, 34, 41, 44, 39, 46, 10], "top_by_year": {"2000": {"title": "Volunteering", "journal": "Annual Review of Sociology", "publication_date": "2000-08-01", "doi_url": "https://doi.org/10.1146/annurev.soc.26.1.215", "openalex_url": "https://openalex.org/W4212987155", "cited_by_count": 1767}, "2001": {"title": "Integrating entrepreneurship and strategic management actions to create firm wealth", "journal": "Academy of Management Perspectives", "publication_date": "2001-02-01", "doi_url": "https://doi.org/10.5465/ame.2001.4251393", "openalex_url": "https://openalex.org/W2170492480", "cited_by_count": 787}, "2002": {"title": "Social Capital: Prospects for a New Concept", "journal": "Academy of Management Review", "publication_date": "2002-01-01", "doi_url": "https://doi.org/10.5465/amr.2002.5922314", "openalex_url": "https://openalex.org/W2129658695", "cited_by_count": 7854}, "2003": {"title": "Market-seeking MNEs in an emerging market: How parent–subsidiary links shape overseas success", "journal": "Journal of International Business Studies", "publication_date": "2003-05-01", "doi_url": "https://doi.org/10.1057/palgrave.jibs.8400027", "openalex_url": "https://openalex.org/W2072872098", "cited_by_count": 343}, "2004": {"title": "Strategic flexibility:Organizational preparedness to reverse ineffective strategic decisions", "journal": "Academy of Management Perspectives", "publication_date": "2004-11-01", "doi_url": "https://doi.org/10.5465/ame.2004.15268683", "openalex_url": "https://openalex.org/W2125447326", "cited_by_count": 474}, "2005": {"title": "The Financial Impact of ISO 9000 Certification in the United States: An Empirical Analysis", "journal": "Management Science", "publication_date": "2005-07-01", "doi_url": "https://doi.org/10.1287/mnsc.1040.0358", "openalex_url": "https://openalex.org/W2097978394", "cited_by_count": 652}, "2006": {"title": "When Collections of Creatives Become Creative Collectives: A Field Study of Problem Solving at Work", "journal": "Organization Science", "publication_date": "2006-07-13", "doi_url": "https://doi.org/10.1287/orsc.1060.0200", "openalex_url": "https://openalex.org/W2123285750", "cited_by_count": 1278}, "2007": {"title": "Do bridging ties complement strong ties? An empirical examination of alliance ambidexterity", "journal": "Strategic Management Journal", "publication_date": "2007-10-31", "doi_url": "https://doi.org/10.1002/smj.666", "openalex_url": "https://openalex.org/W2007950782", "cited_by_count": 608}, "2008": {"title": "HRM and Performance: Achievements, Methodological Issues and Prospects", "journal": "Journal of Management Studies", "publication_date": "2008-12-11", "doi_url": "https://doi.org/10.1111/j.1467-6486.2008.00809.x", "openalex_url": "https://openalex.org/W2152285987", "cited_by_count": 725}, "2009": {"title": "Perspective—Tacit Knowledge and Knowledge Conversion: Controversy and Advancement in Organizational Knowledge Creation Theory", "journal": "Organization Science", "publication_date": "2009-01-23", "doi_url": "https://doi.org/10.1287/orsc.1080.0412", "openalex_url": "https://openalex.org/W2165040403", "cited_by_count": 1897}, "2010": {"title": "The impact of supply chain structure on the use of supplier socially responsible practices", "journal": "International Journal of Operations \u0026 Production Management", "publication_date": "2010-11-16", "doi_url": "https://doi.org/10.1108/01443571011094253", "openalex_url": "https://openalex.org/W2030327658", "cited_by_count": 540}, "2011": {"title": "The relationships between organizational culture, total quality management practices and operational performance", "journal": "International Journal of Operations \u0026 Production Management", "publication_date": "2011-06-18", "doi_url": "https://doi.org/10.1108/01443571111144850", "openalex_url": "https://openalex.org/W2092314775", "cited_by_count": 387}, "2012": {"title": "A Systematic Literature Review of Servant Leadership Theory in Organizational Contexts", "journal": "Journal of Business Ethics", "publication_date": "2012-04-21", "doi_url": "https://doi.org/10.1007/s10551-012-1322-6", "openalex_url": "https://openalex.org/W2002980572", "cited_by_count": 930}, "2013": {"title": "Managing to Stay in the Dark: Managerial Self-Efficacy, Ego Defensiveness, and the Aversion to Employee Voice", "journal": "Academy of Management Journal", "publication_date": "2013-09-14", "doi_url": "https://doi.org/10.5465/amj.2012.0393", "openalex_url": "https://openalex.org/W2103492954", "cited_by_count": 428}, "2014": {"title": "Understanding the physical environment of work and employee behavior: An affective events perspective", "journal": "Journal of Organizational Behavior", "publication_date": "2014-11-01", "doi_url": "https://doi.org/10.1002/job.1973", "openalex_url": "https://openalex.org/W1909271049", "cited_by_count": 208}, "2015": {"title": "Rage against the Iron Cage", "journal": "American Sociological Review", "publication_date": "2015-09-01", "doi_url": "https://doi.org/10.1177/0003122415596416", "openalex_url": "https://openalex.org/W2223652573", "cited_by_count": 353}, "2016": {"title": "How entrepreneurs leverage institutional intermediaries in emerging economies to acquire public resources", "journal": "Strategic Management Journal", "publication_date": "2016-08-18", "doi_url": "https://doi.org/10.1002/smj.2575", "openalex_url": "https://openalex.org/W2529863368", "cited_by_count": 335}, "2017": {"title": "A general theory of springboard MNEs", "journal": "Journal of International Business Studies", "publication_date": "2017-10-11", "doi_url": "https://doi.org/10.1057/s41267-017-0114-8", "openalex_url": "https://openalex.org/W2760866236", "cited_by_count": 600}, "2018": {"title": "Why resource‐based theory's model of profit appropriation must incorporate a stakeholder perspective", "journal": "Strategic Management Journal", "publication_date": "2018-08-30", "doi_url": "https://doi.org/10.1002/smj.2949", "openalex_url": "https://openalex.org/W2889048231", "cited_by_count": 649}, "2019": {"title": "Soliciting Resources from Others: An Integrative Review", "journal": "Academy of Management Annals", "publication_date": "2019-10-15", "doi_url": "https://doi.org/10.5465/annals.2018.0034", "openalex_url": "https://openalex.org/W2980928202", "cited_by_count": 134}, "2020": {"title": "Capturing Causal Complexity: Heuristics for Configurational Theorizing", "journal": "Academy of Management Review", "publication_date": "2020-05-27", "doi_url": "https://doi.org/10.5465/amr.2019.0298", "openalex_url": "https://openalex.org/W3031530685", "cited_by_count": 721}, "2021": {"title": "Researching for Desirable Futures: From Real Utopias to Imagining Alternatives", "journal": "Journal of Management Studies", "publication_date": "2021-03-28", "doi_url": "https://doi.org/10.1111/joms.12709", "openalex_url": "https://openalex.org/W3148657662", "cited_by_count": 247}, "2022": {"title": "Theory‐based learning and experimentation: How strategists can systematically generate knowledge at the edge between the known and the unknown", "journal": "Strategic Management Journal", "publication_date": "2022-01-20", "doi_url": "https://doi.org/10.1002/smj.3381", "openalex_url": "https://openalex.org/W4206921982", "cited_by_count": 85}, "2023": {"title": "Externalities and complementarities in platforms and ecosystems: From structural solutions to endogenous failures", "journal": "Research Policy", "publication_date": "2023-11-04", "doi_url": "https://doi.org/10.1016/j.respol.2023.104906", "openalex_url": "https://openalex.org/W4388361755", "cited_by_count": 175}, "2024": {"title": "Generative artificial intelligence and evaluating strategic decisions", "journal": "Strategic Management Journal", "publication_date": "2024-11-14", "doi_url": "https://doi.org/10.1002/smj.3677", "openalex_url": "https://openalex.org/W4404389403", "cited_by_count": 133}, "2025": {"title": "Concentration in cross‐border research collaborations and \u003cscp\u003eMNCs\u003c/scp\u003e ' knowledge creation in a host country", "journal": "Strategic Management Journal", "publication_date": "2025-10-05", "doi_url": "https://doi.org/10.1002/smj.70025", "openalex_url": "https://openalex.org/W4414837805", "cited_by_count": 20}, "2026": {"title": "\u003cscp\u003e \u003ci\u003eJOM\u003c/i\u003e \u003c/scp\u003e Forum: Theory Testing Is Theory Generation", "journal": "Journal of Operations Management", "publication_date": "2026-03-09", "doi_url": "https://doi.org/10.1002/joom.70039", "openalex_url": "https://openalex.org/W7134246101", "cited_by_count": 1}}}]}</script></div></div></div></section><nav class="keyword-nav" aria-label="Keyword result shortcuts"><h2>Jump to Keyword Results</h2><p class="keyword-nav-intro">Use these shortcuts to move directly to each keyword-specific article list.</p><div class="keyword-nav-grid"><div class="keyword-nav-card"><span class="keyword-nav-title">autonomous</span><div class="keyword-nav-links"><a href="#articles-with-abstracts-autonomous">Articles with abstracts</a>
+<a href="#missing-abstract-autonomous">Missing abstracts</a></div></div>
+<div class="keyword-nav-card"><span class="keyword-nav-title">help seeking</span><div class="keyword-nav-links"><a href="#articles-with-abstracts-help-seeking">Articles with abstracts</a>
+<a href="#missing-abstract-help-seeking">Missing abstracts</a></div></div></div></nav>
+<section class="section" id="at-a-glance"><h2>At a Glance</h2>
+<table class="summary-table"><tr><th>Keyword</th><th>Matched articles</th><th>Articles with abstracts</th><th>Missing abstracts</th></tr>
+<tr><td>autonomous</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>help seeking</td><td>1</td><td>1</td><td>0</td></tr></table>
+<p class="note">Publication metadata often has date-level rather than hour-level precision. This report uses the requested local timezone window and public metadata API date filters.</p>
+<p class="note">Full-text boundary: this report provides DOI and publisher links only. Readers must manually use their own authorized university account for full-text access. The monitor does not log in, bypass access controls, or download PDFs.</p>
+<section class="section" id="articles-with-abstracts-autonomous"><h2>Articles With Abstracts - autonomous</h2>
+<article class="article">
+<div class="article-header">
+<h3>1. The impact of help seeking on individual task performance: The moderating effect of help seekers&#x27; logics of action.</h3>
+<div class="article-meta"><span class="badge journal">Journal of Applied Psychology</span>
+<span class="badge date">2011-11-14</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Journal of Applied Psychology</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2011-11-14</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1037/a0026014" target="_blank" rel="noopener">https://doi.org/10.1037/a0026014</a></td></tr>
+<tr><td class="field-name">Author &amp; affiliation</td><td class="field-value"><table class="affiliation-table"><thead><tr><th>Author</th><th>Affiliation</th></tr></thead><tbody><tr><td class="affiliation-author">Dvora Geller</td><td class="affiliation-value">College of Management Academic Studies; School of Business Administration, College of Management, Rishon LeZion, Israel</td></tr>
+<tr><td class="affiliation-author">Peter Bamberger</td><td class="affiliation-value">Tel Aviv University; Recanati Graduate School of Business Administration, Tel Aviv University, Ramat Aviv, Israel</td></tr></tbody></table></td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text" lang="en">Drawing from achievement-goal theory and the social psychological literature on help seeking, we propose that it is the variance in the logic underpinning employees&#x27; help seeking that explains divergent findings regarding the relationship between help seeking and task performance. Using a sample of 110 newly hired customer contact employees, a prospective study design, and archival performance data, we found no evidence of a hypothesized main effect of help seeking on performance. However, we did find that the help seeking-performance relationship was conditioned by the degree to which help seekers endorse 2 alternative help-seeking logics (autonomous vs. dependent logic) such that the level of help seeking is more strongly related to performance among those either more strongly endorsing an autonomous help-seeking logic or more weakly endorsing a dependent help-seeking logic.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Job Satisfaction and Organizational Behavior; Gender Diversity and Inequality; Family Business Performance and Succession; Psychology; Seekers; Task (project management); Variance (accounting); Help-seeking; Social psychology; Action (physics); Sample (material); Mental health; Accounting; Chromatography; Psychotherapist; Physics; Management; Economics; Political science; Business; Chemistry; Law; Quantum mechanics</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">autonomous; help seeking</td></tr>
+<tr><td class="field-name">Matched fields</td><td class="field-value">abstract; title</td></tr></table>
+</div>
+</article>
+<section class="section" id="articles-with-abstracts-help-seeking"><h2>Articles With Abstracts - help seeking</h2>
+<article class="article">
+<div class="article-header">
+<h3>1. The impact of help seeking on individual task performance: The moderating effect of help seekers&#x27; logics of action.</h3>
+<div class="article-meta"><span class="badge journal">Journal of Applied Psychology</span>
+<span class="badge date">2011-11-14</span>
+<span class="badge available">Available</span></div>
+</div>
+<div class="article-content">
+<table class="field-table"><tr><td class="field-name">Journal</td><td class="field-value">Journal of Applied Psychology</td></tr>
+<tr><td class="field-name">Publication date</td><td class="field-value">2011-11-14</td></tr>
+<tr><td class="field-name">DOI URL</td><td class="field-value"><a class="doi-link" href="https://doi.org/10.1037/a0026014" target="_blank" rel="noopener">https://doi.org/10.1037/a0026014</a></td></tr>
+<tr><td class="field-name">Author &amp; affiliation</td><td class="field-value"><table class="affiliation-table"><thead><tr><th>Author</th><th>Affiliation</th></tr></thead><tbody><tr><td class="affiliation-author">Dvora Geller</td><td class="affiliation-value">College of Management Academic Studies; School of Business Administration, College of Management, Rishon LeZion, Israel</td></tr>
+<tr><td class="affiliation-author">Peter Bamberger</td><td class="affiliation-value">Tel Aviv University; Recanati Graduate School of Business Administration, Tel Aviv University, Ramat Aviv, Israel</td></tr></tbody></table></td></tr>
+<tr><td class="field-name">Abstract status</td><td class="field-value"><span class="badge available">Available</span></td></tr></table>
+<div class="abstract-block"><span class="abstract-label">Abstract</span><p class="abstract-text" lang="en">Drawing from achievement-goal theory and the social psychological literature on help seeking, we propose that it is the variance in the logic underpinning employees&#x27; help seeking that explains divergent findings regarding the relationship between help seeking and task performance. Using a sample of 110 newly hired customer contact employees, a prospective study design, and archival performance data, we found no evidence of a hypothesized main effect of help seeking on performance. However, we did find that the help seeking-performance relationship was conditioned by the degree to which help seekers endorse 2 alternative help-seeking logics (autonomous vs. dependent logic) such that the level of help seeking is more strongly related to performance among those either more strongly endorsing an autonomous help-seeking logic or more weakly endorsing a dependent help-seeking logic.</p></div>
+<table class="field-table"><tr><td class="field-name">Keywords</td><td class="field-value">Job Satisfaction and Organizational Behavior; Gender Diversity and Inequality; Family Business Performance and Succession; Psychology; Seekers; Task (project management); Variance (accounting); Help-seeking; Social psychology; Action (physics); Sample (material); Mental health; Accounting; Chromatography; Psychotherapist; Physics; Management; Economics; Political science; Business; Chemistry; Law; Quantum mechanics</td></tr>
+<tr><td class="field-name">Matched concepts</td><td class="field-value">autonomous; help seeking</td></tr>
+<tr><td class="field-name">Matched fields</td><td class="field-value">abstract; title</td></tr></table>
+</div>
+</article>
+<section class="section" id="missing-abstract-autonomous"><h2>Missing Abstract - autonomous</h2>
+<p class="empty-note">No matched articles in this category for autonomous.</p>
+<section class="section" id="missing-abstract-help-seeking"><h2>Missing Abstract - help seeking</h2>
+<p class="empty-note">No matched articles in this category for help seeking.</p>
+  </main>
+
+<script>
+(() => {
+  const escapeHtml = (value) => String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+  const formatTopWork = (work) => {
+    if (!work || !work.title) return "No top-cited candidate metadata available.";
+    const parts = [];
+    if (work.journal) parts.push(escapeHtml(work.journal));
+    if (work.publication_date) parts.push(escapeHtml(work.publication_date));
+    parts.push(`${Number(work.cited_by_count || 0)} citations`);
+    const link = work.doi_url || work.openalex_url;
+    const title = link
+      ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(work.title)}</a>`
+      : escapeHtml(work.title);
+    return `${title}<br><span class="trend-tooltip-meta">${parts.join(" · ")}</span>`;
+  };
+
+  document.querySelectorAll(".combined-trend").forEach((chart) => {
+    const dataNode = chart.querySelector(".trend-data");
+    const tooltip = chart.querySelector(".trend-tooltip");
+    if (!dataNode || !tooltip) return;
+    let data;
+    try {
+      data = JSON.parse(dataNode.textContent || "{}");
+    } catch {
+      return;
+    }
+
+    const showMode = (mode) => {
+      chart.querySelectorAll(".combined-svg").forEach((svg) => {
+        if (svg.dataset.mode === mode) {
+          svg.removeAttribute("hidden");
+        } else {
+          svg.setAttribute("hidden", "");
+        }
+      });
+      chart.querySelectorAll(".chart-mode-button").forEach((button) => {
+        button.classList.toggle("active", button.dataset.chartMode === mode);
+      });
+    };
+
+    chart.querySelectorAll(".chart-mode-button").forEach((button) => {
+      button.addEventListener("click", () => showMode(button.dataset.chartMode || "indexed"));
+    });
+
+    const showTooltip = (event, year, svg) => {
+      const yearIndex = data.years.indexOf(Number(year));
+      if (yearIndex < 0) return;
+      const rows = data.series.map((series) => {
+        const top = (series.top_by_year || {})[String(year)] || {};
+        const count = Number((series.counts || [])[yearIndex] || 0);
+        return `<div class="trend-tooltip-row">
+          <span class="trend-tooltip-keyword" style="color:${escapeHtml(series.color)}">${escapeHtml(series.concept)}</span>:
+          <strong>${count}</strong> candidate appearances
+          <div>${formatTopWork(top)}</div>
+        </div>`;
+      }).join("");
+      tooltip.innerHTML = `<div class="trend-tooltip-title">${escapeHtml(year)}</div>${rows}`;
+      tooltip.style.display = "block";
+      const chartRect = chart.getBoundingClientRect();
+      const tooltipWidth = Math.min(460, chartRect.width - 40);
+      const left = Math.min(
+        Math.max(event.clientX - chartRect.left + 14, 12),
+        chartRect.width - tooltipWidth - 12
+      );
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${Math.max(event.clientY - chartRect.top - 12, 70)}px`;
+      const line = svg.querySelector(".trend-hover-line");
+      const zone = event.currentTarget;
+      if (line && zone) {
+        const x = Number(zone.getAttribute("x")) + Number(zone.getAttribute("width")) / 2;
+        line.setAttribute("x1", x);
+        line.setAttribute("x2", x);
+        line.style.display = "block";
+      }
+    };
+
+    chart.querySelectorAll(".trend-hover-zone").forEach((zone) => {
+      zone.addEventListener("mousemove", (event) => {
+        const svg = zone.closest("svg");
+        showTooltip(event, zone.dataset.year, svg);
+      });
+      zone.addEventListener("mouseenter", (event) => {
+        const svg = zone.closest("svg");
+        showTooltip(event, zone.dataset.year, svg);
+      });
+    });
+
+    chart.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+      chart.querySelectorAll(".trend-hover-line").forEach((line) => {
+        line.style.display = "none";
+      });
+    });
+
+    showMode("indexed");
+  });
+})();
+</script>
+
+</body>
+</html>
